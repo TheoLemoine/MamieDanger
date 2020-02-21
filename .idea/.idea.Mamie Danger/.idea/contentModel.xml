@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\theo\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\theo\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Mamie Danger.-1526186229.00" t="ExcludeRecursive" />
+    <e p="D:\theo\study\gobelins\unity\Mamie Danger" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="PlayerController.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Mamie Danger.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
