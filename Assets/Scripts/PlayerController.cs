@@ -10,16 +10,17 @@ public class PlayerController : MonoBehaviour
     
     private NavMeshAgent _agent;
     private Camera _cam;
-    private LayerMask _groundLayer;
+    
+    [SerializeField] private LayerMask groundLayer;
 
+    [SerializeField] private float maxRaycastDistance = 100f;
+    
     private Vector2 _cursorPos;
 
     private void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
         _cam = Camera.main;
-        
-        _groundLayer = LayerMask.GetMask("Ground");
     }
 
     public void OnClick()
@@ -27,7 +28,7 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
         var ray = _cam.ScreenPointToRay(_cursorPos);
 
-        if (Physics.Raycast(ray, out hit, _groundLayer))
+        if (Physics.Raycast(ray, out hit, maxRaycastDistance, groundLayer))
         {
             _agent.destination = hit.point;
         }
