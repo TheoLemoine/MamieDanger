@@ -59,6 +59,7 @@ sysinfo.txt
 crashlytics-build.properties
 
 # Rider config files
-
 .idea/
 
+# VSCode config files
+.vscode/
