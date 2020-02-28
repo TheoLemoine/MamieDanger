@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    
+
     private NavMeshAgent _agent;
     private Camera _cam;
-    
+
     [SerializeField] private LayerMask groundLayer;
 
     [SerializeField] private float maxRaycastDistance = 100f;
-    
+
     private Vector2 _cursorPos;
 
     private void Start()
