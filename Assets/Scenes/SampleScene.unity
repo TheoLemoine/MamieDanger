@@ -1379,7 +1379,7 @@ GameObject:
   - component: {fileID: 247645382}
   - component: {fileID: 247645381}
   - component: {fileID: 247645385}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Walls 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3577,14 +3577,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 682777966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 975d6e924e9a4d14182c7b89c0b466c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 94de1dc88d24fef48a0c99350f8d7e11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 682777967}
   cameraTransform: {fileID: 1729175509}
   layerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 1024
 --- !u!1 &693930183
 GameObject:
   m_ObjectHideFlags: 0
