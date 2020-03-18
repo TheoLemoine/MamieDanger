@@ -6,5 +6,6 @@ namespace Interfaces
     {
         void AddInRange(int gameObjectId, IInteractable interactable);
         void RemoveFromRange(int gameObjectId);
+        bool IsInteracting();
     }
 }

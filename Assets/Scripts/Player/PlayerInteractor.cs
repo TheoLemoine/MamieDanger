@@ -16,6 +16,7 @@ namespace Player
         private Transform _transform;
         
         private Dictionary<int, IInteractable> _onRangeObjects = new Dictionary<int, IInteractable>();
+        private bool _isInteracting;
         
         private void Start()
         {
@@ -33,7 +34,12 @@ namespace Player
         {
             _onRangeObjects.Remove(gameObjectId);
         }
-        
+
+        public bool IsInteracting()
+        {
+            return _isInteracting;
+        }
+
         public void OnTap(Vector2 cursor)
         {
             var ray = _cam.ScreenPointToRay(cursor);
@@ -42,12 +48,21 @@ namespace Player
             {
                 var id = hit.collider.gameObject.GetInstanceID();
                 
-                if (_onRangeObjects.TryGetValue(id, out var interactor))
+                if (_onRangeObjects.TryGetValue(id, out var interactable))
                 {
                     // prevent from moving
                     _agent.SetDestination(_transform.position);
-                    
-                    interactor.ToggleInteract(gameObject);
+
+                    if (interactable.IsInteracting())
+                    {
+                        interactable.InteractStop();
+                        _isInteracting = false;
+                    }
+                    else
+                    {
+                        interactable.InteractStart(gameObject);
+                        _isInteracting = true;
+                    }
                 }
             }
         }
