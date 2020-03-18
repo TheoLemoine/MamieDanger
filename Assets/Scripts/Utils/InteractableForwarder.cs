@@ -6,13 +6,13 @@ namespace Utils
 {
     public class InteractableForwarder : MonoBehaviour, IInteractable
     {
-        [SerializeField] private GameObject to;
+        [SerializeField] private GameObject forwardTo;
         
         private IInteractable _next;
 
-        private void Awake()
+        private void Start()
         {
-            _next = to.GetComponent<IInteractable>();
+            _next = forwardTo.GetComponent<IInteractable>();
         }
 
         public void InteractStart(GameObject interactor)
@@ -20,9 +20,14 @@ namespace Utils
             _next.InteractStart(interactor);
         }
 
-        public void InteractStop(GameObject interactor)
+        public void InteractStop()
         {
-            _next.InteractStop(interactor);
+            _next.InteractStop();
+        }
+
+        public bool IsInteracting()
+        {
+            return _next.IsInteracting();
         }
     }
 }

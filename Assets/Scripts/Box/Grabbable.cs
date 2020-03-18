@@ -1,4 +1,5 @@
 ﻿using Interfaces;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Box
@@ -47,7 +48,7 @@ namespace Box
             _rb.useGravity = false;
         }
 
-        public void InteractStop(GameObject interactor)
+        public void InteractStop()
         {
             if(!_isGrabbing) return;
             
@@ -58,5 +59,14 @@ namespace Box
             _rb.useGravity = true;
         }
 
+        public bool IsInteracting()
+        {
+            return _isGrabbing && _grabber != null;
+        }
+
+        public GameObject GetInteractor()
+        {
+            return _grabber.gameObject;
+        }
     }
 }

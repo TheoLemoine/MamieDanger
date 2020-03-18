@@ -1,38 +1,33 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+namespace Player
 {
-
-    private NavMeshAgent _agent;
-    private Camera _cam;
-
-    [SerializeField] private LayerMask groundLayer;
-
-    [SerializeField] private float maxRaycastDistance = 100f;
-
-    private Vector2 _cursorPos;
-
-    private void Start()
+    public class PlayerController : MonoBehaviour
     {
-        _agent = GetComponent<NavMeshAgent>();
-        _cam = Camera.main;
-    }
 
-    public void OnClick()
-    {
-        RaycastHit hit;
-        var ray = _cam.ScreenPointToRay(_cursorPos);
+        private NavMeshAgent _agent;
+        private Camera _cam;
 
-        if (Physics.Raycast(ray, out hit, maxRaycastDistance, groundLayer))
+        [SerializeField] private LayerMask groundLayer;
+        [SerializeField] private float maxRaycastDistance = 100f;
+
+        private void Start()
         {
-            _agent.destination = hit.point;
+            _agent = GetComponent<NavMeshAgent>();
+            _cam = Camera.main;
         }
-    }
 
-    public void OnCursorMove(InputAction.CallbackContext value)
-    {
-        _cursorPos = value.ReadValue<Vector2>();
+        public void OnTap(Vector2 cursor)
+        {
+            RaycastHit hit;
+            var ray = _cam.ScreenPointToRay(cursor);
+
+            if (Physics.Raycast(ray, out hit, maxRaycastDistance, groundLayer))
+            {
+                _agent.SetDestination(hit.point);
+            }
+        }
+
     }
 }
