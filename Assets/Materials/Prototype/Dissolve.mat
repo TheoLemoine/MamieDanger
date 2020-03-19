@@ -109,12 +109,13 @@ Material:
     - _ZWrite: 1
     - c_metallic: 0
     - c_occlusion: 1
-    - c_smoothness: 0.5
+    - c_smoothness: 0.3
     - c_step: 0.2
     - c_use_albedo_map: 0
     - c_use_emission_map: 0
     - c_use_metallic_map: 0
     - c_use_smoothness_map: 0
+    - hole_opacity: 0.4
     - use_occlusion_map: 0
     m_Colors:
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -123,4 +124,4 @@ Material:
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - c_albedo: {r: 0.090826966, g: 0.46226418, b: 0.085039176, a: 0}
     - c_emission: {r: 0, g: 0, b: 0, a: 0}
-    - player_position: {r: -0.4442258, g: 1.2033343, b: 27.658098, a: 0}
+    - player_position: {r: -15.2664385, g: 1.1200008, b: -19.243761, a: 0}
