@@ -1,81 +1,79 @@
-﻿ using UnityEngine;
+﻿ using System;
+ using UnityEngine;
  using System.Collections.Generic;
- using UnityEngine.Serialization;
+ using Utils;
 
  namespace Terrain
  {
          
      public class HideWalls : MonoBehaviour
      {
-         //The player to shoot the ray at
-         [SerializeField]
-         public Transform playerTransform;
-         //The camera to shoot the ray from
-         [SerializeField]
-         public Transform cameraTransform;
-         //Layers to hide
-         [SerializeField]
-         public LayerMask layerMask;
+         private Transform _playerTransform;
+         [SerializeField] private Transform cameraTransform;
+         [SerializeField] private string wallLayerName;
+         [SerializeField] private string targetLayerName;
          
-         //List of all objects that we have hidden.
          private List<Transform> _hiddenObjects;
 
          private void Start()
          {
-             //Initialize the list
+             _playerTransform = transform;
              _hiddenObjects = new List<Transform>();
          }
      
          private void Update()
          {
-             //Find the direction from the camera to the player
-             var direction = playerTransform.position - cameraTransform.position;
-     
-             //The magnitude of the direction is the distance of the ray
+             var hits = Raycast();
+             HideHitObjects(hits);
+             RevealPreviouslyHitObjects(hits);
+         }
+         
+
+         private RaycastHit[] Raycast()
+         {
+             var cameraPos = cameraTransform.position;
+             var direction = _playerTransform.position - cameraPos;
              var distance = direction.magnitude;
 
-             //Raycast and store all hit objects in an array. Also include the layermaks so we only hit the layers we have specified
-             RaycastHit[] hits = Physics.RaycastAll(cameraTransform.position, direction, distance, layerMask);
-     
-             //Go through the objects
-             for (int i = 0; i < hits.Length; i++)
+             string[] layersToCheck = {wallLayerName, targetLayerName};
+
+             return Physics.RaycastAll(cameraPos, direction, distance, LayerMask.GetMask(layersToCheck));
+         }
+         
+
+         private void HideHitObjects(RaycastHit[] hits)
+         {
+             foreach (var currentHit in hits)
              {
-                 var currentHit = hits[i].transform;
-     
-                 //Only do something if the object is not already in the list
-                 if (!_hiddenObjects.Contains(currentHit))
+                 var currentTransform = currentHit.transform;
+                 if (!_hiddenObjects.Contains(currentTransform))
                  {
-                     //Add to list and disable renderer
-                     _hiddenObjects.Add(currentHit);
-                     currentHit.GetComponent<Renderer>().enabled = false;
+                     _hiddenObjects.Add(currentTransform);
+                    currentTransform.gameObject.layer = LayerMask.NameToLayer(targetLayerName);
                  }
              }
-     
-             //clean the list of objects that are in the list but not currently hit.
+         }
+         
+
+         private void RevealPreviouslyHitObjects(RaycastHit[] hits)
+         {
              for (var i = 0; i < _hiddenObjects.Count; i++)
              {
+                 var hiddenObject = _hiddenObjects[i];
+
                  var isHit = false;
-                 //Check every object in the list against every hit
-                 for (int j = 0; j < hits.Length; j++)
+                 foreach (var hit in hits)
                  {
-                     if (hits[j].transform == _hiddenObjects[i])
-                     {
-                         isHit = true;
-                         break;
-                     }
+                     if (hit.transform != hiddenObject) continue;
+                     isHit = true;
+                     break;
                  }
-     
-                 //If it is not among the hits
-                 if (!isHit)
-                 {
-                     //Enable renderer, remove from list, and decrement the counter because the list is one smaller now
-                     Transform wasHidden = _hiddenObjects[i];
-                     wasHidden.GetComponent<Renderer>().enabled = true;
-                     _hiddenObjects.RemoveAt(i);
-                     i--;
-                 }
+                 
+                 if (isHit) continue;
+                 hiddenObject.gameObject.layer = LayerMask.NameToLayer(wallLayerName);
+                 _hiddenObjects.RemoveAt(i);
+                 i--;
              }
-             
          }
      }
  }
