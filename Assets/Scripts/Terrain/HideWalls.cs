@@ -8,8 +8,8 @@
          
      public class HideWalls : MonoBehaviour
      {
-         private Transform _playerTransform;
-         [SerializeField] private Transform cameraTransform;
+         private Transform _cameraTransform;
+         [SerializeField] private Transform playerTransform;
          [SerializeField] private string wallLayerName;
          [SerializeField] private string targetLayerName;
 
@@ -23,11 +23,11 @@
          [Range(0f, 1f)][SerializeField] private float maxFractionDistance;
          
          private List<Transform> _hiddenObjects;
-         private float rayDistance;
+         private float _rayDistance;
 
          private void Start()
          {
-             _playerTransform = transform;
+             _cameraTransform = transform;
              _hiddenObjects = new List<Transform>();
          }
      
@@ -41,19 +41,19 @@
 
          private RaycastHit[] Raycast()
          {
-             var playerPos = _playerTransform.position;
-             var direction = cameraTransform.position -  playerPos;
-             rayDistance = direction.magnitude;
+             var playerPos = playerTransform.position;
+             var direction = _cameraTransform.position -  playerPos;
+             _rayDistance = direction.magnitude;
 
              string[] layersToCheck = {wallLayerName, targetLayerName};
 
-             return Physics.RaycastAll( playerPos, direction, rayDistance, LayerMask.GetMask(layersToCheck));
+             return Physics.RaycastAll( playerPos, direction, _rayDistance, LayerMask.GetMask(layersToCheck));
          }
          
 
          private void HideHitObjects(RaycastHit[] hits)
          {
-             var closestCollideDist = rayDistance;
+             var closestCollideDist = _rayDistance;
              foreach (var currentHit in hits)
              {
                  if (currentHit.distance < closestCollideDist) closestCollideDist = currentHit.distance;
@@ -64,11 +64,15 @@
                     currentTransform.gameObject.layer = LayerMask.NameToLayer(targetLayerName);
                  }
              }
+             SetOpacity(closestCollideDist);
+         }
 
-             var closestFrac = 1f - closestCollideDist / rayDistance;
+         private void SetOpacity(float closestCollideDist)
+         {
+             var closestFrac = 1f - closestCollideDist / _rayDistance;
              var baseColor = seeThroughMaterial.GetColor(colorProperty);
              baseColor.a = closestFrac.Remap(minFractionDistance, maxFractionDistance, minOpacity, maxOpacity);
-             seeThroughMaterial.SetColor(colorProperty, baseColor); 
+             seeThroughMaterial.SetColor(colorProperty, baseColor);
          }
          
 

@@ -11052,6 +11052,16 @@ PrefabInstance:
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 1729175509}
+    - target: {fileID: 6337107055873667090, guid: d83d9be3e38cc2844bb7535f0779ed17,
+        type: 3}
+      propertyPath: minOpacity
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6337107055873667090, guid: d83d9be3e38cc2844bb7535f0779ed17,
+        type: 3}
+      propertyPath: maxOpacity
+      value: 0.05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d83d9be3e38cc2844bb7535f0779ed17, type: 3}
 --- !u!1001 &6651263534590309469
@@ -11200,6 +11210,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cinemachine
       objectReference: {fileID: 0}
+    - target: {fileID: 7967809023880644355, guid: 60ebdfd35dedc884989bb09dc644bd28,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7967809023880644355, guid: 60ebdfd35dedc884989bb09dc644bd28,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7967809023880644355, guid: 60ebdfd35dedc884989bb09dc644bd28,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9208738019685314314, guid: 60ebdfd35dedc884989bb09dc644bd28,
+        type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 682777967}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60ebdfd35dedc884989bb09dc644bd28, type: 3}
 --- !u!1001 &7972154717239449658

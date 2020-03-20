@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 6337107055873667093}
   - component: {fileID: 6337107055873667103}
   - component: {fileID: 6337107055873667095}
-  - component: {fileID: 6337107055873667090}
   - component: {fileID: 9001363241267415930}
   m_Layer: 8
   m_Name: Player
@@ -206,27 +205,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   maxRaycastDistance: 100
---- !u!114 &6337107055873667090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6337107055873667081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94de1dc88d24fef48a0c99350f8d7e11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraTransform: {fileID: 0}
-  wallLayerName: Walls
-  targetLayerName: TransparentWalls
-  seeThroughMaterial: {fileID: 2100000, guid: 225299e9a98da6f4fb8ea2066c708376, type: 2}
-  colorProperty: _BaseColor
-  minOpacity: 0.2
-  maxOpacity: 0.7
-  minFractionDistance: 0.5
-  maxFractionDistance: 1
 --- !u!114 &9001363241267415930
 MonoBehaviour:
   m_ObjectHideFlags: 0
