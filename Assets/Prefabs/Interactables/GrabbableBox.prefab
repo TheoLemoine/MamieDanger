@@ -59,6 +59,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 7972154717785386713}
   notify: {fileID: 0}
+  clickableLayer:
+    m_LayerIndex: 11
+  notClickableLayer:
+    m_LayerIndex: 0
 --- !u!1 &7972154717785386713
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,7 +77,7 @@ GameObject:
   - component: {fileID: 7972154717785386716}
   - component: {fileID: 7972154717785386719}
   - component: {fileID: 7972154717785386718}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: GrabbableBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
