@@ -2,6 +2,7 @@ using System;
 using Interfaces;
 using Player;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace Utils
 {
@@ -9,12 +10,16 @@ namespace Utils
     {
         [SerializeField] private GameObject target;
         [SerializeField] private GameObject notify;
-
+        
+        [SerializeField] private SingleUnityLayer clickableLayer;
+        [SerializeField] private SingleUnityLayer notClickableLayer;
+        
         private IInteractable _targetInteractable;
         private IInteractor _notifyInteractor;
 
         private int _targetId;
         private int _notifyId;
+
         
         private void Start()
         {
@@ -29,6 +34,7 @@ namespace Utils
         {
             if (other.gameObject.GetInstanceID() == _notifyId)
             {
+                target.layer = clickableLayer.LayerIndex;
                 _notifyInteractor.AddInRange(_targetId, _targetInteractable);
             }
         }
@@ -37,6 +43,7 @@ namespace Utils
         {
             if (other.gameObject.GetInstanceID() == _notifyId)
             {
+                target.layer = notClickableLayer.LayerIndex;
                 _notifyInteractor.RemoveFromRange(_targetId);
             }
         }
