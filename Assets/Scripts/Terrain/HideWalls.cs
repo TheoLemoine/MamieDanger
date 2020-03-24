@@ -10,8 +10,8 @@
      {
          private Transform _cameraTransform;
          [SerializeField] private Transform playerTransform;
-         [SerializeField] private string wallLayerName;
-         [SerializeField] private string targetLayerName;
+         [SerializeField] private SingleUnityLayer wallLayer;
+         [SerializeField] private SingleUnityLayer targetLayer;
 
          [SerializeField] private Material seeThroughMaterial;
          [SerializeField] private string colorProperty;
@@ -45,9 +45,9 @@
              var direction = _cameraTransform.position -  playerPos;
              _rayDistance = direction.magnitude;
 
-             string[] layersToCheck = {wallLayerName, targetLayerName};
+             var layerMask = 1 << wallLayer.LayerIndex | 1 << targetLayer.LayerIndex;
 
-             return Physics.RaycastAll( playerPos, direction, _rayDistance, LayerMask.GetMask(layersToCheck));
+             return Physics.RaycastAll( playerPos, direction, _rayDistance, layerMask);
          }
          
 
@@ -61,7 +61,7 @@
                  if (!_hiddenObjects.Contains(currentTransform))
                  {
                      _hiddenObjects.Add(currentTransform);
-                    currentTransform.gameObject.layer = LayerMask.NameToLayer(targetLayerName);
+                    currentTransform.gameObject.layer = targetLayer.LayerIndex;
                  }
              }
              SetOpacity(closestCollideDist);
@@ -91,7 +91,7 @@
                  }
                  
                  if (isHit) continue;
-                 hiddenObject.gameObject.layer = LayerMask.NameToLayer(wallLayerName);
+                 hiddenObject.gameObject.layer = wallLayer.LayerIndex;
                  _hiddenObjects.RemoveAt(i);
                  i--;
              }
