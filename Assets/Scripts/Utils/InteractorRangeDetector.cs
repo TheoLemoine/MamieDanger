@@ -9,43 +9,37 @@ namespace Utils
     public class InteractorRangeDetector : MonoBehaviour
     {
         [SerializeField] private GameObject target;
-        [SerializeField] private GameObject notify;
         
         [SerializeField] private SingleUnityLayer clickableLayer;
         [SerializeField] private SingleUnityLayer notClickableLayer;
+        [SerializeField] [TagSelector] private string playerTag = "Player";
         
         private IInteractable _targetInteractable;
-        private IInteractor _notifyInteractor;
-
-        private int _targetId;
-        private int _notifyId;
 
         
         private void Start()
         {
             _targetInteractable = target.GetComponent<IInteractable>();
-            _notifyInteractor = notify.GetComponent<IInteractor>();
-            
-            _targetId = target.GetInstanceID();
-            _notifyId = notify.GetInstanceID();
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.GetInstanceID() == _notifyId)
-            {
+            var interactor = other.GetComponent<IInteractor>();
+            
+            if (other.gameObject.CompareTag(playerTag))
                 target.layer = clickableLayer.LayerIndex;
-                _notifyInteractor.RegisterToRange(_targetInteractable);
-            }
+            
+            interactor?.RegisterToRange(_targetInteractable);
         }
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.gameObject.GetInstanceID() == _notifyId)
-            {
+            var interactor = other.GetComponent<IInteractor>();
+            
+            if (other.gameObject.CompareTag(playerTag))
                 target.layer = notClickableLayer.LayerIndex;
-                _notifyInteractor.DeregisterFromRange(_targetInteractable);
-            }
+            
+            interactor?.DeregisterFromRange(_targetInteractable);
         }
     }
 }
