@@ -35,7 +35,7 @@ namespace Utils
             if (other.gameObject.GetInstanceID() == _notifyId)
             {
                 target.layer = clickableLayer.LayerIndex;
-                _notifyInteractor.AddInRange(_targetId, _targetInteractable);
+                _notifyInteractor.RegisterToRange(_targetInteractable);
             }
         }
 
@@ -44,7 +44,7 @@ namespace Utils
             if (other.gameObject.GetInstanceID() == _notifyId)
             {
                 target.layer = notClickableLayer.LayerIndex;
-                _notifyInteractor.RemoveFromRange(_targetId);
+                _notifyInteractor.DeregisterFromRange(_targetInteractable);
             }
         }
     }

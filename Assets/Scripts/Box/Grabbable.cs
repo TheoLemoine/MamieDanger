@@ -1,10 +1,10 @@
 ﻿using Interfaces;
-using JetBrains.Annotations;
 using UnityEngine;
+using Abstract;
 
 namespace Box
 {
-    public class Grabbable : MonoBehaviour, IInteractable
+    public class Grabbable : AInteracToggleBehaviour
     {
         
         [SerializeField] private float liftHeight = 0f;
@@ -15,7 +15,6 @@ namespace Box
         private Transform _transform;
 
         private Transform _grabber;
-        private bool _isGrabbing;
         private Vector3 _relativeTargetPos;
 
         private void Start()
@@ -28,7 +27,7 @@ namespace Box
         
         private void FixedUpdate()
         {
-            if (_isGrabbing)
+            if (IsInteracting())
             {
                 var targetPos = _grabber.TransformPoint(_relativeTargetPos);
 
@@ -37,36 +36,20 @@ namespace Box
             }
         }
 
-        public void InteractStart(GameObject interactor)
+        protected override void InteractStart(IInteractor interactor)
         {
-            if(_isGrabbing) return;
-            
-            _grabber = interactor.GetComponent<Transform>();
-            _isGrabbing = true;
+            _grabber = interactor.GetGameObject().GetComponent<Transform>();
 
             _rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
             _rb.useGravity = false;
         }
 
-        public void InteractStop()
+        protected override void InteractStop(IInteractor interactor)
         {
-            if(!_isGrabbing) return;
-            
             _grabber = null;
-            _isGrabbing = false;
             
             _rb.constraints = RigidbodyConstraints.None;
             _rb.useGravity = true;
-        }
-
-        public bool IsInteracting()
-        {
-            return _isGrabbing && _grabber != null;
-        }
-
-        public GameObject GetInteractor()
-        {
-            return _grabber.gameObject;
         }
     }
 }

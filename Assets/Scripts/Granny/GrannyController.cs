@@ -1,11 +1,11 @@
-using System;
-using Interfaces;
 using UnityEngine;
 using UnityEngine.AI;
+using Abstract;
+using Interfaces;
 
 namespace Granny
 {
-    public class GrannyController : MonoBehaviour, IInteractable
+    public class GrannyController : AInteracToggleBehaviour
     {
         [SerializeField] private Vector3 offset;
         [SerializeField] private float slowFactor = 1.5f;
@@ -14,7 +14,6 @@ namespace Granny
         private Transform _followTransform;
         private NavMeshAgent _followAgent;
 
-        private bool _isFollowing;
 
         private void Start()
         {
@@ -23,33 +22,26 @@ namespace Granny
 
         private void Update()
         {
-            if (_isFollowing)
+            if (IsInteracting())
             {
                 _agent.SetDestination(_followTransform.TransformPoint(offset));
             }
         }
 
-        public void InteractStart(GameObject interactor)
+        protected override void InteractStart(IInteractor interactor)
         {
-            _followTransform = interactor.GetComponent<Transform>();
-            _followAgent = interactor.GetComponent<NavMeshAgent>();
-            _isFollowing = true;
-
+            var interactorGO = interactor.GetGameObject();
+            _followTransform = interactorGO.GetComponent<Transform>();
+            _followAgent = interactorGO.GetComponent<NavMeshAgent>();
             _followAgent.speed /= slowFactor;
         }
 
-        public void InteractStop()
+        protected override void InteractStop(IInteractor interactor)
         {
             _followAgent.speed *= slowFactor;
             
             _followTransform = null;
             _followAgent = null;
-            _isFollowing = false;
-        }
-
-        public bool IsInteracting()
-        {
-            return _isFollowing;
         }
     }
 }

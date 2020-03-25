@@ -7,23 +7,15 @@ namespace Interfaces
 {
     public interface IInteractable
     {
-        void InteractStart(GameObject interactor);
-        void InteractStop();
-        bool IsInteracting();
+        void Interact(IInteractor interactor);
+        GameObject GetGameObject();
     }
 
-    public static class InteractableExtentions
+    public static class InteractableExtensions
     {
-        public static void ToggleInteract(this IInteractable interactable, GameObject interactor)
+        public static int GetGameObjectId(this IInteractable interactable)
         {
-            if (interactable.IsInteracting())
-            {
-                interactable.InteractStop();
-            }
-            else
-            {
-                interactable.InteractStart(interactor);
-            }
+            return interactable.GetGameObject().GetInstanceID();
         }
     }
 }

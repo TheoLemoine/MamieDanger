@@ -323,8 +323,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 141764253}
-  - component: {fileID: 141764254}
-  - component: {fileID: 141764255}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -348,34 +346,6 @@ Transform:
   m_Father: {fileID: 1149184808}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &141764254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 141764252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 539492490e3dc184f9900a4b34331176, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorModel: {fileID: 137832207}
-  hingeTransform: {fileID: 142710515}
-  animationDuration: 1
---- !u!65 &141764255
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 141764252}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 2.5, z: 2}
-  m_Center: {x: 0.39, y: 0, z: 0}
 --- !u!1 &142710514
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,6 +355,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 142710515}
+  - component: {fileID: 142710516}
+  - component: {fileID: 142710517}
   m_Layer: 0
   m_Name: DoorHinge
   m_TagString: Untagged
@@ -399,7 +371,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 142710514}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -407,6 +379,34 @@ Transform:
   m_Father: {fileID: 141764253}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &142710516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142710514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 539492490e3dc184f9900a4b34331176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorModel: {fileID: 137832207}
+  hingeTransform: {fileID: 142710515}
+  animationDuration: 1
+--- !u!65 &142710517
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142710514}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2, y: 2.5, z: 1.8}
+  m_Center: {x: 0, y: 0, z: -0.9}
 --- !u!1 &152455164
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,22 +946,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrabbableBox (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 7972154717785386713, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7972154717785386716, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: d392e40e3796f4644a8874a22b0b6a2c,
-        type: 2}
-    - target: {fileID: 7972154717785386717, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: c3746cf5f9a4fd64abd38b0962e30f16, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe8b517d9fb1b3f41a32a054d4155fd0, type: 3}
 --- !u!4 &478379987 stripped
@@ -1166,12 +1150,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrabbableBox (6)
       objectReference: {fileID: 0}
-    - target: {fileID: 7972154717785386716, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: d392e40e3796f4644a8874a22b0b6a2c,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe8b517d9fb1b3f41a32a054d4155fd0, type: 3}
 --- !u!4 &767669552 stripped
@@ -1383,17 +1361,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrabbableBox (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 7972154717785386713, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7972154717785386716, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: d392e40e3796f4644a8874a22b0b6a2c,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe8b517d9fb1b3f41a32a054d4155fd0, type: 3}
 --- !u!1 &1024052354
@@ -1648,12 +1615,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrabbableBox (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 7972154717785386716, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: d392e40e3796f4644a8874a22b0b6a2c,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe8b517d9fb1b3f41a32a054d4155fd0, type: 3}
 --- !u!4 &1148846831 stripped
@@ -1757,7 +1718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c259fb69b92945f4a6f8394829a6df90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 141764252}
+  target: {fileID: 142710514}
   notify: {fileID: 682777966}
   clickableLayer:
     m_LayerIndex: 11
@@ -2288,12 +2249,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrabbableBox (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 7972154717785386716, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: d392e40e3796f4644a8874a22b0b6a2c,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe8b517d9fb1b3f41a32a054d4155fd0, type: 3}
 --- !u!4 &1506589614 stripped
@@ -2842,12 +2797,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrabbableBox (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 7972154717785386716, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: d392e40e3796f4644a8874a22b0b6a2c,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe8b517d9fb1b3f41a32a054d4155fd0, type: 3}
 --- !u!4 &1971554576 stripped
@@ -3394,11 +3343,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrabbableBox
       objectReference: {fileID: 0}
-    - target: {fileID: 7972154717785386716, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: d392e40e3796f4644a8874a22b0b6a2c,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe8b517d9fb1b3f41a32a054d4155fd0, type: 3}
