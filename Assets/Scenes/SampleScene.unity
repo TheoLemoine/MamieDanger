@@ -1202,7 +1202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 5191499951122987045, guid: 49a8843c2668bb640bf1a25200ca2acc, type: 3}
-  period: 5
+  period: 1
 --- !u!1 &830177695
 GameObject:
   m_ObjectHideFlags: 0
