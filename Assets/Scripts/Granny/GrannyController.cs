@@ -36,7 +36,7 @@ namespace Granny
             _followAgent.speed /= slowFactor;
         }
 
-        protected override void InteractStop(IInteractor interactor)
+        protected override void InteractStop()
         {
             _followAgent.speed *= slowFactor;
             

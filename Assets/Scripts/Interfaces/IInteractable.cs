@@ -8,6 +8,7 @@ namespace Interfaces
     public interface IInteractable
     {
         void Interact(IInteractor interactor);
+        void StopInteraction();
         GameObject GetGameObject();
     }
 

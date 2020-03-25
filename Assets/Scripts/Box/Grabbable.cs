@@ -44,7 +44,7 @@ namespace Box
             _rb.useGravity = false;
         }
 
-        protected override void InteractStop(IInteractor interactor)
+        protected override void InteractStop()
         {
             _grabber = null;
             

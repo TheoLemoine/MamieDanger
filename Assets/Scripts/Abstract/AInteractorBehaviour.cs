@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Interfaces;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Abstract
@@ -8,7 +9,7 @@ namespace Abstract
     public abstract class AInteractorBehaviour : MonoBehaviour, IInteractor
     {
         protected Dictionary<int, IInteractable> _interactablesInRange = new Dictionary<int, IInteractable>();
-        protected Dictionary<int, IInteractable> _interactingInteractables = new Dictionary<int, IInteractable>();
+        protected IInteractable _currentInteracting = null;
             
         public void RegisterToRange(IInteractable interactable)
         {
@@ -22,12 +23,13 @@ namespace Abstract
 
         public void RegisterInteracting(IInteractable interactable)
         {
-            _interactingInteractables.Add(interactable.GetGameObjectId(), interactable);
+            _currentInteracting?.StopInteraction();
+            _currentInteracting = interactable;
         }
 
         public void DeregisterInteracting(IInteractable interactable)
         {
-            _interactingInteractables.Remove(interactable.GetGameObjectId());
+            _currentInteracting = null;
         }
 
         public GameObject GetGameObject()

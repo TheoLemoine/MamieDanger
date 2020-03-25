@@ -1,29 +1,38 @@
 ﻿using DG.Tweening;
 using UnityEngine;
-using Abstract;
 using Interfaces;
 
-public class Openable : AInteracToggleBehaviour
+public class Openable : MonoBehaviour, IInteractable
 {
-    [SerializeField] private GameObject doorModel;
     [SerializeField] private Transform hingeTransform;
     [SerializeField] [Range(0f, 2f)] private float animationDuration = 1f;
     
     private Quaternion _baseHingeRotation;
+    private bool _isOpen;
     
     void Start()
     {
         _baseHingeRotation = hingeTransform.rotation;
     }
 
-    protected override void InteractStart(IInteractor interactor)
+    public void Interact(IInteractor interactor)
     {
-        hingeTransform.DORotateQuaternion(_baseHingeRotation * Quaternion.Euler(0, -90, 0), animationDuration);
+        if (!_isOpen)
+        {
+            hingeTransform.DORotateQuaternion(_baseHingeRotation * Quaternion.Euler(0, -90, 0), animationDuration);
+            _isOpen = true;
+        }
+        else
+        {
+            hingeTransform.DORotateQuaternion(_baseHingeRotation, animationDuration);
+            _isOpen = false;
+        }
     }
 
-    protected override void InteractStop(IInteractor interactor)
+    public void StopInteraction(){}
+
+    public GameObject GetGameObject()
     {
-        hingeTransform.DORotateQuaternion(_baseHingeRotation, animationDuration);
-        
+        return gameObject;
     }
 }

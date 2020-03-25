@@ -14,12 +14,23 @@ namespace Abstract
             if (!_isInteracting)
             {
                 InteractStart(interactor);
+                interactor.RegisterInteracting(this);
                 _isInteracting = true;
             }
             else
             {
-                InteractStop(interactor);
+                InteractStop();
+                interactor.DeregisterInteracting(this);
                 _isInteracting = false;
+            }
+        }
+
+        public void StopInteraction()
+        {
+            if (IsInteracting())
+            {
+                _isInteracting = false;
+                InteractStop();
             }
         }
 
@@ -30,7 +41,7 @@ namespace Abstract
 
         protected abstract void InteractStart(IInteractor interactor);
 
-        protected abstract void InteractStop(IInteractor interactor);
+        protected abstract void InteractStop();
 
         public GameObject GetGameObject()
         {
