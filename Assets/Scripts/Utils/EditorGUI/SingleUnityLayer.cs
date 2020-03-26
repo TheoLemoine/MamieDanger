@@ -1,46 +1,42 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace Utils
+namespace Utils.EditorGUI
 {
  
     [System.Serializable]
     public class SingleUnityLayer
     {
         [SerializeField]
-        private int m_LayerIndex = 0;
-        public int LayerIndex
+        private int layerIndex = 0;
+        public int LayerIndex => layerIndex;
+        public int Mask => 1 << layerIndex;
+
+        public void Set(int newLayerIndex)
         {
-            get { return m_LayerIndex; }
-        }
- 
-        public void Set(int _layerIndex)
-        {
-            if (_layerIndex > 0 && _layerIndex < 32)
+            if (newLayerIndex > 0 && newLayerIndex < 32)
             {
-                m_LayerIndex = _layerIndex;
+                layerIndex = newLayerIndex;
             }
-        }
- 
-        public int Mask
-        {
-            get { return 1 << m_LayerIndex; }
         }
     }
     
     [CustomPropertyDrawer(typeof(SingleUnityLayer))]
     public class SingleUnityLayerPropertyDrawer : PropertyDrawer 
     {
-        public override void OnGUI(Rect _position, SerializedProperty _property, GUIContent _label)
+        public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
-            EditorGUI.BeginProperty(_position, GUIContent.none, _property);
-            SerializedProperty layerIndex = _property.FindPropertyRelative("m_LayerIndex");
-            _position = EditorGUI.PrefixLabel(_position, GUIUtility.GetControlID(FocusType.Passive), _label);
+            UnityEditor.EditorGUI.BeginProperty(position, GUIContent.none, property);
+            
+            var layerIndex = property.FindPropertyRelative("layerIndex");
+            position = UnityEditor.EditorGUI.PrefixLabel(position, GUIUtility.GetControlID(FocusType.Passive), label);
+            
             if (layerIndex != null)
             {
-                layerIndex.intValue = EditorGUI.LayerField(_position, layerIndex.intValue);
+                layerIndex.intValue = UnityEditor.EditorGUI.LayerField(position, layerIndex.intValue);
             }
-            EditorGUI.EndProperty( );
+            
+            UnityEditor.EditorGUI.EndProperty();
         }
     }
 }

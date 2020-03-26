@@ -3,6 +3,7 @@ using Interfaces;
 using Player;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Utils.EditorGUI;
 
 namespace Utils
 {
