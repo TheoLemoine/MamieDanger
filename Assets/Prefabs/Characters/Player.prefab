@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6337107055873667092}
   - component: {fileID: 6337107055873667094}
   - component: {fileID: 6337107055873667093}
-  - component: {fileID: 6337107055873667103}
   - component: {fileID: 6337107055873667095}
   - component: {fileID: 9001363241267415930}
   - component: {fileID: 3745104397177386556}
@@ -119,54 +118,6 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6337107055873667103}
-        m_MethodName: OnClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: c7f09867-3802-4288-a265-35a3fb05e903
-    m_ActionName: Movement/Move
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6337107055873667103}
-        m_MethodName: OnCursorMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 89a0949e-278d-4d40-8630-ee3517ba32fe
-    m_ActionName: Movement/Cursor
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Navigation
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
---- !u!114 &6337107055873667103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6337107055873667081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e57f49ba0df496ea2eb8e0fab92dffa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onTap:
-    m_PersistentCalls:
-      m_Calls:
       - m_Target: {fileID: 6337107055873667095}
         m_MethodName: OnTap
         m_Mode: 0
@@ -178,18 +129,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 9001363241267415930}
-        m_MethodName: OnTap
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  currentPos: {x: 0, y: 0}
+    m_ActionId: 03b4c779-1aab-4a9f-84d4-d0f898146b4f
+    m_ActionName: Navigation/Tap
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Navigation
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!114 &6337107055873667095
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,18 +6,10 @@
             "id": "e7fb0efb-83fc-46be-9b5a-d515b971c6c4",
             "actions": [
                 {
-                    "name": "Click",
+                    "name": "Tap",
                     "type": "Button",
-                    "id": "c7f09867-3802-4288-a265-35a3fb05e903",
+                    "id": "03b4c779-1aab-4a9f-84d4-d0f898146b4f",
                     "expectedControlType": "",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "CursorMove",
-                    "type": "PassThrough",
-                    "id": "89a0949e-278d-4d40-8630-ee3517ba32fe",
-                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
                 }
@@ -25,45 +17,12 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "2a42158a-a08d-45b8-81e1-4d36a7591cb0",
-                    "path": "<Touchscreen>/touch0/tap",
-                    "interactions": "",
+                    "id": "c44a7e2c-cebc-466c-a739-1b4e918b2334",
+                    "path": "<Touchscreen>/primaryTouch/position",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "Touch",
-                    "action": "Click",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "643c638c-0448-426a-bc1b-1805c03ea7f5",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Mouse",
-                    "action": "Click",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "a0951340-3f18-4131-8e88-c6b2182ad91f",
-                    "path": "<Touchscreen>/touch0/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Touch",
-                    "action": "CursorMove",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "e2fb3a7b-e2a3-4fc1-97fb-bc21fe967254",
-                    "path": "<Mouse>/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Mouse",
-                    "action": "CursorMove",
+                    "action": "Tap",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -77,22 +36,6 @@
             "devices": [
                 {
                     "devicePath": "<Touchscreen>",
-                    "isOptional": false,
-                    "isOR": false
-                }
-            ]
-        },
-        {
-            "name": "Mouse",
-            "bindingGroup": "Mouse",
-            "devices": [
-                {
-                    "devicePath": "<Mouse>",
-                    "isOptional": false,
-                    "isOR": false
-                },
-                {
-                    "devicePath": "<VirtualMouse>",
                     "isOptional": false,
                     "isOR": false
                 }
