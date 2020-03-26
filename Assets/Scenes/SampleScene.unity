@@ -1184,7 +1184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 5191499951122987045, guid: 49a8843c2668bb640bf1a25200ca2acc, type: 3}
-  period: 1
+  period: 6
 --- !u!1 &830177695
 GameObject:
   m_ObjectHideFlags: 0
@@ -3233,6 +3233,16 @@ PrefabInstance:
         type: 3}
       propertyPath: maxOpacity
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6337107055873667093, guid: d83d9be3e38cc2844bb7535f0779ed17,
+        type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6337107055873667093, guid: d83d9be3e38cc2844bb7535f0779ed17,
+        type: 3}
+      propertyPath: m_NeverAutoSwitchControlSchemes
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d83d9be3e38cc2844bb7535f0779ed17, type: 3}

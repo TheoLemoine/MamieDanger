@@ -2,16 +2,16 @@
     "name": "PlayerControls",
     "maps": [
         {
-            "name": "Navigation",
+            "name": "Player",
             "id": "e7fb0efb-83fc-46be-9b5a-d515b971c6c4",
             "actions": [
                 {
-                    "name": "Tap",
-                    "type": "Button",
+                    "name": "Move",
+                    "type": "Value",
                     "id": "03b4c779-1aab-4a9f-84d4-d0f898146b4f",
-                    "expectedControlType": "",
+                    "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -19,10 +19,21 @@
                     "name": "",
                     "id": "c44a7e2c-cebc-466c-a739-1b4e918b2334",
                     "path": "<Touchscreen>/primaryTouch/position",
-                    "interactions": "Press",
+                    "interactions": "",
                     "processors": "",
                     "groups": "Touch",
-                    "action": "Tap",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6002e8c2-e3b7-4f73-92d1-0c6de4eedf80",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mouse",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -40,6 +51,11 @@
                     "isOR": false
                 }
             ]
+        },
+        {
+            "name": "Mouse",
+            "bindingGroup": "Mouse",
+            "devices": []
         }
     ]
 }

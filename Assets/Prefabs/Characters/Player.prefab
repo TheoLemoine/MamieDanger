@@ -131,9 +131,9 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 03b4c779-1aab-4a9f-84d4-d0f898146b4f
     m_ActionName: Navigation/Tap
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Navigation
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: Touch
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &6337107055873667095
