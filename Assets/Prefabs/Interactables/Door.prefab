@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6314585698118328415}
   - component: {fileID: 6314585698118328408}
   - component: {fileID: 6314585698118328409}
+  - component: {fileID: 8733454878865023749}
   m_Layer: 0
   m_Name: DoorHinge
   m_TagString: Untagged
@@ -46,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationDuration: 1
-  _blockingArea: {fileID: 6314585698375453523}
+  blockingArea: {fileID: 6314585698375453523}
 --- !u!65 &6314585698118328409
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60,6 +61,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 2.5, z: 1.8}
   m_Center: {x: 0, y: 0, z: -0.9}
+--- !u!208 &8733454878865023749
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6314585698118328414}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.1, y: 1.25, z: 0.9}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: -0.9}
+  m_TimeToStationary: 0.5
 --- !u!1 &6314585698127860131
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,8 +88,6 @@ GameObject:
   - component: {fileID: 6314585698127860156}
   - component: {fileID: 6314585698127860159}
   - component: {fileID: 6314585698127860158}
-  - component: {fileID: 6314585698127860157}
-  - component: {fileID: 6314585698127860152}
   m_Layer: 0
   m_Name: DoorModel
   m_TagString: Untagged
@@ -141,35 +156,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6314585698127860157
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6314585698127860131}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!208 &6314585698127860152
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6314585698127860131}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 1
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &6314585698131791920
 GameObject:
   m_ObjectHideFlags: 0
