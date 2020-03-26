@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Cinemachine;
+﻿using System.Collections.Generic;
 using UnityEngine;
+using Utils.Attributes;
 
 public class BlockingTrigger : MonoBehaviour
 {

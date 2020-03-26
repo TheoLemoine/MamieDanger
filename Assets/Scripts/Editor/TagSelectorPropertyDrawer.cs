@@ -2,23 +2,23 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace Utils.EditorGUI
+namespace Utils.Attributes
 {
     [CustomPropertyDrawer(typeof(TagSelectorAttribute))]
     public class TagSelectorPropertyDrawer : PropertyDrawer
     {
- 
+        
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
             if (property.propertyType == SerializedPropertyType.String)
             {
-                UnityEditor.EditorGUI.BeginProperty(position, label, property);
+                EditorGUI.BeginProperty(position, label, property);
  
                 var attrib = attribute as TagSelectorAttribute;
  
                 if (attrib.UseDefaultTagFieldDrawer)
                 {
-                    property.stringValue = UnityEditor.EditorGUI.TagField(position, label, property.stringValue);
+                    property.stringValue = EditorGUI.TagField(position, label, property.stringValue);
                 }
                 else
                 {
@@ -65,11 +65,11 @@ namespace Utils.EditorGUI
                     }
                 }
  
-                UnityEditor.EditorGUI.EndProperty();
+                EditorGUI.EndProperty();
             }
             else
             {
-                UnityEditor.EditorGUI.PropertyField(position, property, label);
+                EditorGUI.PropertyField(position, property, label);
             }
         }
     }
