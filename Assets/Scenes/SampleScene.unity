@@ -73,7 +73,7 @@ LightmapSettings:
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 1
-    m_BakeBackend: 1
+    m_BakeBackend: 2
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 256
@@ -3236,6 +3236,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6337107055873667093, guid: d83d9be3e38cc2844bb7535f0779ed17,
         type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6337107055873667093, guid: d83d9be3e38cc2844bb7535f0779ed17,
+        type: 3}
       propertyPath: m_DefaultControlScheme
       value: 
       objectReference: {fileID: 0}
@@ -3243,6 +3248,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NeverAutoSwitchControlSchemes
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6337107055873667093, guid: d83d9be3e38cc2844bb7535f0779ed17,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdatePointer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6337107055873667093, guid: d83d9be3e38cc2844bb7535f0779ed17,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
+      value: 22ff414a-78e1-432a-8d90-876f05ef8c0f
+      objectReference: {fileID: 0}
+    - target: {fileID: 6337107055873667093, guid: d83d9be3e38cc2844bb7535f0779ed17,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
+      value: Player/Go[/Mouse/leftButton]
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d83d9be3e38cc2844bb7535f0779ed17, type: 3}

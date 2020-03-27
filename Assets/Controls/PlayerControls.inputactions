@@ -6,19 +6,49 @@
             "id": "e7fb0efb-83fc-46be-9b5a-d515b971c6c4",
             "actions": [
                 {
-                    "name": "Move",
+                    "name": "UpdatePointer",
                     "type": "Value",
                     "id": "03b4c779-1aab-4a9f-84d4-d0f898146b4f",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": ""
+                },
+                {
+                    "name": "Move",
+                    "type": "Button",
+                    "id": "22ff414a-78e1-432a-8d90-876f05ef8c0f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
                 {
                     "name": "",
                     "id": "c44a7e2c-cebc-466c-a739-1b4e918b2334",
-                    "path": "<Touchscreen>/primaryTouch/position",
+                    "path": "<Touchscreen>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Touch",
+                    "action": "UpdatePointer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6002e8c2-e3b7-4f73-92d1-0c6de4eedf80",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mouse",
+                    "action": "UpdatePointer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c0c3f988-122f-46ed-bf23-768c8ef4c2fd",
+                    "path": "<Touchscreen>/press",
                     "interactions": "",
                     "processors": "",
                     "groups": "Touch",
@@ -28,8 +58,8 @@
                 },
                 {
                     "name": "",
-                    "id": "6002e8c2-e3b7-4f73-92d1-0c6de4eedf80",
-                    "path": "<Mouse>/position",
+                    "id": "176c68a7-42b1-4362-b1e2-261b3b0a4329",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "Mouse",
