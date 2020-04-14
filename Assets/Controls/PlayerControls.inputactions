@@ -85,7 +85,18 @@
         {
             "name": "Mouse",
             "bindingGroup": "Mouse",
-            "devices": []
+            "devices": [
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<VirtualMouse>",
+                    "isOptional": true,
+                    "isOR": false
+                }
+            ]
         }
     ]
 }
