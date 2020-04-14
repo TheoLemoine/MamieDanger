@@ -7,22 +7,17 @@ namespace Car
     public class CarController : MonoBehaviour
     {
         [SerializeField]
-        private float speed = 7f;
+        private float motorTorque = 7f;
 
-        private Transform _transform;
-        private Rigidbody _rb;
+        [SerializeField] private WheelCollider wheelBackRight;
+        [SerializeField] private WheelCollider wheelBackLeft;
+        [SerializeField] private WheelCollider wheelFrontRight;
+        [SerializeField] private WheelCollider wheelFrontLeft;
 
-        private void Start()
-        {
-            _rb = GetComponent<Rigidbody>();
-            _transform = GetComponent<Transform>();
-        }
-
-        
         private void FixedUpdate()
         {
-            var movement = Vector3.forward * (speed * Time.fixedDeltaTime);
-            _rb.MovePosition(_transform.TransformPoint(movement));
+            wheelBackLeft.motorTorque = motorTorque;
+            wheelBackRight.motorTorque = motorTorque;
         }
 
         private void OnCollisionEnter(Collision other)
