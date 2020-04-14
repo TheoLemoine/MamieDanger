@@ -98,8 +98,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7967809023880644354}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.847019, y: 18.281643, z: 30.331886}
+  m_LocalRotation: {x: 0.1984223, y: 0.16195248, z: -0.1561228, w: 0.95395267}
+  m_LocalPosition: {x: -9.482451, y: 12.897899, z: 20.777397}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7967809023859858471}
@@ -251,9 +251,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
   wallLayer:
-    m_LayerIndex: 10
+    layerIndex: 0
   targetLayer:
-    m_LayerIndex: 13
+    layerIndex: 0
   seeThroughMaterial: {fileID: 2100000, guid: 225299e9a98da6f4fb8ea2066c708376, type: 2}
   colorProperty: _BaseColor
   minOpacity: 0.3
@@ -271,7 +271,6 @@ GameObject:
   - component: {fileID: 7967809023910416569}
   - component: {fileID: 7967809023910416548}
   - component: {fileID: 7967809023910416551}
-  - component: {fileID: 7967809023910416550}
   m_Layer: 12
   m_Name: Wall Mask Sphere
   m_TagString: Untagged
@@ -340,19 +339,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &7967809023910416550
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7967809023910416568}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7967809024996777906
 GameObject:
   m_ObjectHideFlags: 0
