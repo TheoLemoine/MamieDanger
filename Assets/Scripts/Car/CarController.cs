@@ -7,6 +7,9 @@ namespace Car
     public class CarController : MonoBehaviour
     {
         [SerializeField]
+        private float targetSpeed = 5f;
+        
+        [SerializeField]
         private float motorTorque = 7f;
 
         [SerializeField] private WheelCollider wheelBackRight;
@@ -14,10 +17,29 @@ namespace Car
         [SerializeField] private WheelCollider wheelFrontRight;
         [SerializeField] private WheelCollider wheelFrontLeft;
 
+        private Rigidbody _rb;
+        private Transform _transform;
+        
+        private void Start()
+        {
+            _rb = GetComponent<Rigidbody>();
+            _transform = GetComponent<Transform>();
+        }
+
         private void FixedUpdate()
         {
-            wheelBackLeft.motorTorque = motorTorque;
-            wheelBackRight.motorTorque = motorTorque;
+            var relVel = _transform.InverseTransformDirection(_rb.velocity);
+            
+            if (relVel.z < targetSpeed)
+            {
+                wheelBackLeft.motorTorque = motorTorque;
+                wheelBackRight.motorTorque = motorTorque;
+            }
+            else
+            {
+                wheelBackLeft.motorTorque = 0;
+                wheelBackRight.motorTorque = 0;
+            }
         }
 
         private void OnCollisionEnter(Collision other)
