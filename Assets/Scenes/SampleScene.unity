@@ -3407,7 +3407,7 @@ PrefabInstance:
     - target: {fileID: 6337107055873667080, guid: d83d9be3e38cc2844bb7535f0779ed17,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28.16
+      value: 28.11
       objectReference: {fileID: 0}
     - target: {fileID: 6337107055873667080, guid: d83d9be3e38cc2844bb7535f0779ed17,
         type: 3}
@@ -3468,36 +3468,6 @@ PrefabInstance:
         type: 3}
       propertyPath: maxOpacity
       value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 6337107055873667093, guid: d83d9be3e38cc2844bb7535f0779ed17,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6337107055873667093, guid: d83d9be3e38cc2844bb7535f0779ed17,
-        type: 3}
-      propertyPath: m_DefaultControlScheme
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6337107055873667093, guid: d83d9be3e38cc2844bb7535f0779ed17,
-        type: 3}
-      propertyPath: m_NeverAutoSwitchControlSchemes
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6337107055873667093, guid: d83d9be3e38cc2844bb7535f0779ed17,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpdatePointer
-      objectReference: {fileID: 0}
-    - target: {fileID: 6337107055873667093, guid: d83d9be3e38cc2844bb7535f0779ed17,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
-      value: 22ff414a-78e1-432a-8d90-876f05ef8c0f
-      objectReference: {fileID: 0}
-    - target: {fileID: 6337107055873667093, guid: d83d9be3e38cc2844bb7535f0779ed17,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
-      value: Player/Go[/Mouse/leftButton]
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d83d9be3e38cc2844bb7535f0779ed17, type: 3}
@@ -3674,7 +3644,7 @@ PrefabInstance:
     - target: {fileID: 7967809023859858471, guid: 60ebdfd35dedc884989bb09dc644bd28,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.667484
+      value: 0.6174858
       objectReference: {fileID: 0}
     - target: {fileID: 7967809023859858471, guid: 60ebdfd35dedc884989bb09dc644bd28,
         type: 3}
