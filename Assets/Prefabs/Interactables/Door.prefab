@@ -290,8 +290,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.5, y: 0.2, z: 2.5}
-  m_Center: {x: 1, y: 0, z: 0}
+  m_Size: {x: 4.4317865, y: 0.2, z: 3.398592}
+  m_Center: {x: 0.53410673, y: 0, z: -0.097670555}
 --- !u!114 &6314585699392649675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 6314585698118328414}
   clickableLayer:
-    m_LayerIndex: 11
+    layerIndex: 11
   notClickableLayer:
-    m_LayerIndex: 0
+    layerIndex: 0
   playerTag: Player

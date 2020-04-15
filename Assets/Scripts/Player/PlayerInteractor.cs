@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 using Abstract;
+using UnityEngine.InputSystem;
 
 namespace Player
 {
@@ -13,6 +14,8 @@ namespace Player
         private NavMeshAgent _agent;
         private Transform _transform;
 
+        private Vector2 _pointer;
+
         private void Start()
         {
             _cam = Camera.main;
@@ -20,9 +23,14 @@ namespace Player
             _transform = GetComponent<Transform>();
         }
         
-        public void OnTap(Vector2 cursor)
+        public void UpdatePointer(InputAction.CallbackContext value)
         {
-            var ray = _cam.ScreenPointToRay(cursor);
+            _pointer = value.ReadValue<Vector2>();
+        }
+        
+        public void Interact()
+        {
+            var ray = _cam.ScreenPointToRay(_pointer);
 
             if (Physics.Raycast(ray, out var hit, maxRaycastDistance, clickableLayer))
             {
