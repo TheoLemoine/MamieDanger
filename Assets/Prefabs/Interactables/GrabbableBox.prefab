@@ -45,11 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 7972154717785386713}
-  notify: {fileID: 0}
   clickableLayer:
-    m_LayerIndex: 11
+    layerIndex: 11
   notClickableLayer:
-    m_LayerIndex: 0
+    layerIndex: 0
+  playerTag: Player
 --- !u!135 &6753187302335514381
 SphereCollider:
   m_ObjectHideFlags: 0

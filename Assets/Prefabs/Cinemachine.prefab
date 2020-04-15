@@ -251,9 +251,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
   wallLayer:
-    layerIndex: 0
+    layerIndex: 10
   targetLayer:
-    layerIndex: 0
+    layerIndex: 13
   seeThroughMaterial: {fileID: 2100000, guid: 225299e9a98da6f4fb8ea2066c708376, type: 2}
   colorProperty: _BaseColor
   minOpacity: 0.3
