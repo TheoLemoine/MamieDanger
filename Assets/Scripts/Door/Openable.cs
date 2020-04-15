@@ -4,24 +4,33 @@ using DG.Tweening;
 using UnityEngine;
 using Interfaces;
 using UnityEngine.AI;
+using UnityEngine.Events;
+
+[Serializable]
+public class OpenEvent : UnityEvent<bool>
+{
+}
 
 public class Openable : MonoBehaviour, IInteractable
 {
     [SerializeField] [Range(0f, 2f)] private float animationDuration = 1f;
     [SerializeField] private BlockingTrigger blockingArea = null;
-
+    [SerializeField] private OpenEvent openEvent;
+    
     private NavMeshObstacle _navMeshObstacle;
     private Quaternion _baseHingeRotation;
     private bool _isOpen;
     
     void Start()
     {
+        openEvent = new OpenEvent();
         _baseHingeRotation = transform.rotation;
         _navMeshObstacle = GetComponent<NavMeshObstacle>();
     }
 
     public void Interact(IInteractor interactor)
     {
+        openEvent.Invoke(_isOpen);
         if (!_isOpen)
         {
             if (blockingArea != null && blockingArea.IsAreaBlocked())
