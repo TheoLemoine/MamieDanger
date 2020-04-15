@@ -34,7 +34,11 @@ public class TargetDirection : MonoBehaviour
             return;
         }
 
+        var cameraTransform = _camera.transform;
         var angle = Mathf.Atan2(cursorPoint.y, cursorPoint.x);
+        // Revert angle if the target is behind the camera  
+        if(Vector3.Dot(cameraTransform.forward, targetTransform.position - cameraTransform.position) < 0f) angle -= Mathf.PI;
+        
         var cornerAngle = Mathf.Atan2(cursorBoxCenter.x, cursorBoxCenter.y);
         
         var newPos = Vector3.zero;
