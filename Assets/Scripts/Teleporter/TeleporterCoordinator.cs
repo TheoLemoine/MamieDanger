@@ -1,12 +1,13 @@
 ﻿using System;
 using UnityEngine;
 using Utils;
+using Utils.Attributes;
 
 public class TeleporterCoordinator : MonoBehaviour
 {
     [SerializeField] private TeleporterEntry entry1;
     [SerializeField] private TeleporterEntry entry2;
-    [SerializeField] private SingleUnityLayer playerLayer;
+    [SerializeField][TagSelector] private string playerTag;
     [SerializeField] private bool startDisabled;
     
     void Start()
@@ -15,7 +16,7 @@ public class TeleporterCoordinator : MonoBehaviour
         entry2.RegisterCoordinator(this, startDisabled);
     }
     
-    public int PlayerLayer => playerLayer.LayerIndex;
+    public string PlayerTag => playerTag;
 
     public TeleporterEntry GetExitFromEntry(TeleporterEntry from)
     {

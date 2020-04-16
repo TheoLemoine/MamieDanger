@@ -47,8 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entry1: {fileID: 7044506801365264248}
   entry2: {fileID: 6662850460941744274}
-  playerLayer:
-    layerIndex: 8
+  playerTag: Player
   startDisabled: 0
 --- !u!1001 &6890517691415512574
 PrefabInstance:

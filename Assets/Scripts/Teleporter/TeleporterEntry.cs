@@ -33,7 +33,7 @@ public class TeleporterEntry : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == _coordinator.PlayerLayer && !_disableTeleport)
+        if (other.gameObject.CompareTag(_coordinator.PlayerTag) && !_disableTeleport)
             StartCoroutine(Teleport(other));
     }
 
