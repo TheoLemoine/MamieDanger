@@ -11,7 +11,7 @@ public class TeleporterEntry : MonoBehaviour
     [SerializeField] private MeshRenderer shadow;
     [SerializeField] private string alphaPropName;
     [SerializeField] [Range(0.2f, 3f)] private float fadeDuration = 2f;
-    [SerializeField] [Range(0f, 1f)] private float disableAlpha = 0.1f;
+    [SerializeField] [Range(0f, 1f)] private float disabledAlpha = 0.1f;
     private int _alphaPropId;
     private TeleporterEntry _exitTeleporter;
     private TeleporterCoordinator _coordinator;
@@ -22,13 +22,13 @@ public class TeleporterEntry : MonoBehaviour
         _alphaPropId = Shader.PropertyToID(alphaPropName);
         _coordinator = coordinator;
         _disableTeleport = startDisabled;
-        if (startDisabled) shadow.material.SetFloat(_alphaPropId, disableAlpha);
+        if (startDisabled) shadow.material.SetFloat(_alphaPropId, disabledAlpha);
     }
 
     public void DisableEntry(bool value)
     {
         _disableTeleport = value;
-        shadow.material.DOFloat(value ? disableAlpha : 1f, _alphaPropId, fadeDuration);
+        shadow.material.DOFloat(value ? disabledAlpha : 1f, _alphaPropId, fadeDuration);
     }
 
     private void OnTriggerEnter(Collider other)

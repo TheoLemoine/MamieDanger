@@ -23,7 +23,8 @@ public class Openable : MonoBehaviour, IInteractable
     
     void Start()
     {
-        openEvent = new OpenEvent();
+        if(openEvent == null)
+            openEvent = new OpenEvent();
         _baseHingeRotation = transform.rotation;
         _navMeshObstacle = GetComponent<NavMeshObstacle>();
     }
@@ -31,6 +32,8 @@ public class Openable : MonoBehaviour, IInteractable
     public void Interact(IInteractor interactor)
     {
         openEvent.Invoke(_isOpen);
+        Debug.Log("Is Open");
+        Debug.Log(_isOpen);
         if (!_isOpen)
         {
             if (blockingArea != null && blockingArea.IsAreaBlocked())

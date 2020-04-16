@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 using Utils;
 
 public class TeleporterCoordinator : MonoBehaviour
@@ -33,5 +30,10 @@ public class TeleporterCoordinator : MonoBehaviour
     {
         entry1.DisableEntry(value);
         entry2.DisableEntry(value);
+    }
+
+    public void HandleOpenEvent(bool value)
+    {
+        DisableTunnel(!value);
     }
 }
