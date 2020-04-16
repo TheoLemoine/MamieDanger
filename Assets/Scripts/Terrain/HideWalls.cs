@@ -7,8 +7,9 @@
          
      public class HideWalls : MonoBehaviour
      {
-         private Transform _cameraTransform;
          [SerializeField] private Transform playerTransform;
+         [SerializeField] private Transform stencilSphereTransform;
+         [SerializeField] private float sphereDistance = 40f;
          [SerializeField] private SingleUnityLayer wallLayer;
          [SerializeField] private SingleUnityLayer targetLayer;
 
@@ -20,7 +21,9 @@
          
          [Range(0f, 1f)][SerializeField] private float minFractionDistance;
          [Range(0f, 1f)][SerializeField] private float maxFractionDistance;
+
          
+         private Transform _cameraTransform;
          private List<Transform> _hiddenObjects;
          private float _rayDistance;
 
@@ -32,6 +35,7 @@
      
          private void Update()
          {
+             MoveSphere();
              var hits = Raycast();
              HideHitObjects(hits);
              RevealPreviouslyHitObjects(hits);
@@ -48,7 +52,6 @@
 
              return Physics.RaycastAll( playerPos, direction, _rayDistance, layerMask);
          }
-         
 
          private void HideHitObjects(RaycastHit[] hits)
          {
@@ -73,7 +76,6 @@
              baseColor.a = closestFrac.Remap(minFractionDistance, maxFractionDistance, minOpacity, maxOpacity);
              seeThroughMaterial.SetColor(colorProperty, baseColor);
          }
-         
 
          private void RevealPreviouslyHitObjects(RaycastHit[] hits)
          {
@@ -94,6 +96,14 @@
                  _hiddenObjects.RemoveAt(i);
                  i--;
              }
+         }
+
+         private void MoveSphere()
+         {
+             var camPos = _cameraTransform.position;
+             var camToPlayer = playerTransform.position - camPos;
+             var camToSphere = camToPlayer.normalized * sphereDistance;
+             stencilSphereTransform.position = camPos + camToSphere;
          }
      }
  }

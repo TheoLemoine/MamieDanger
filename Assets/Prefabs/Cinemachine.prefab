@@ -98,8 +98,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7967809023880644354}
-  m_LocalRotation: {x: 0.1984223, y: 0.16195248, z: -0.1561228, w: 0.95395267}
-  m_LocalPosition: {x: -9.482451, y: 12.897899, z: 20.777397}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7967809023859858471}
@@ -250,6 +250,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
+  stencilSphereTransform: {fileID: 7967809023910416569}
+  sphereDistance: 40
   wallLayer:
     layerIndex: 10
   targetLayer:
