@@ -1,22 +1,33 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.InputSystem;
 using Utils;
 using Utils.Attributes;
 
 public class TeleporterCoordinator : MonoBehaviour
 {
+    [SerializeField] private GameObject player;
     [SerializeField] private TeleporterEntry entry1;
     [SerializeField] private TeleporterEntry entry2;
-    [SerializeField][TagSelector] private string playerTag;
     [SerializeField] private bool startDisabled;
+    private NavMeshAgent _playerNavMesh;
+    private PlayerInput _playerInput;
     
     void Start()
     {
         entry1.RegisterCoordinator(this, startDisabled);
         entry2.RegisterCoordinator(this, startDisabled);
+        _playerNavMesh = player.GetComponent<NavMeshAgent>();
+        _playerInput = player.GetComponent<PlayerInput>();
     }
     
-    public string PlayerTag => playerTag;
+    public GameObject Player => player;
+    public int PlayerId => player.GetInstanceID();
+
+    public NavMeshAgent PlayerNavMesh => _playerNavMesh;
+
+    public PlayerInput PlayerInput => _playerInput;
 
     public TeleporterEntry GetExitFromEntry(TeleporterEntry from)
     {
