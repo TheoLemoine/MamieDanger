@@ -102,9 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  maxRaycastDistance: 100
+    layerIndex: 9
 --- !u!114 &9001363241267415930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,9 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clickableLayer:
-    serializedVersion: 2
-    m_Bits: 2048
-  maxRaycastDistance: 100
+    layerIndex: 11
 --- !u!114 &3745104397177386556
 MonoBehaviour:
   m_ObjectHideFlags: 0
