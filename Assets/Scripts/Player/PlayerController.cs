@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
+using Global;
 
 namespace Player
 {
@@ -13,19 +14,37 @@ namespace Player
         private Camera _cam;
 
         private Vector2 _pointer;
-        
+
         private void Start()
         {
             _agent = GetComponent<NavMeshAgent>();
             _cam = Camera.main;
         }
 
-        public void UpdatePointer(InputAction.CallbackContext value)
+        private void OnEnable()
+        {
+            if (InputManager.IsReady)
+            {
+                InputManager.ActionMaps.Player.Move.started += Move;
+                InputManager.ActionMaps.Player.UpdatePointer.performed += UpdatePointer;
+            }
+        }
+
+        private void OnDisable()
+        {
+            if (InputManager.IsReady)
+            {
+                InputManager.ActionMaps.Player.Move.started -= Move;
+                InputManager.ActionMaps.Player.UpdatePointer.performed -= UpdatePointer;
+            }
+        }
+
+        private void UpdatePointer(InputAction.CallbackContext value)
         {
             _pointer = value.ReadValue<Vector2>();
         }
         
-        public void Move()
+        private void Move(InputAction.CallbackContext value)
         {
             var ray = _cam.ScreenPointToRay(_pointer);
 
