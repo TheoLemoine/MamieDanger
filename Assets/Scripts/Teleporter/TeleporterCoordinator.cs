@@ -1,4 +1,5 @@
 ﻿using System;
+using Player;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
@@ -12,22 +13,25 @@ public class TeleporterCoordinator : MonoBehaviour
     [SerializeField] private TeleporterEntry entry2;
     [SerializeField] private bool startDisabled;
     private NavMeshAgent _playerNavMesh;
-    private PlayerInput _playerInput;
+    private PlayerInteractor _playerInteractor;
+    private PlayerController _playerController;
     
     void Start()
     {
         entry1.RegisterCoordinator(this, startDisabled);
         entry2.RegisterCoordinator(this, startDisabled);
         _playerNavMesh = player.GetComponent<NavMeshAgent>();
-        _playerInput = player.GetComponent<PlayerInput>();
+        _playerInteractor = player.GetComponent<PlayerInteractor>();
+        _playerController = player.GetComponent<PlayerController>();
     }
     
     public GameObject Player => player;
     public int PlayerId => player.GetInstanceID();
+    public PlayerController PlayerController => _playerController;
 
     public NavMeshAgent PlayerNavMesh => _playerNavMesh;
 
-    public PlayerInput PlayerInput => _playerInput;
+    public PlayerInteractor PlayerInteractor => _playerInteractor;
 
     public TeleporterEntry GetExitFromEntry(TeleporterEntry from)
     {

@@ -25,7 +25,19 @@ namespace Global.Input
         public void AddListener(int layer, RaycastCallback callback)
         {
             if (!_callbacksDict.ContainsKey(layer)) _callbacksDict[layer] = new List<RaycastCallback>();
-            _callbacksDict[layer].Add(callback);
+            if (_callbacksDict[layer].Contains(callback))
+                Debug.LogWarningFormat("{0} is already registered at index {1}", callback, layer);
+            else
+                _callbacksDict[layer].Add(callback);
+        }
+        
+        public void RemoveListener(int layer, RaycastCallback callback)
+        {
+            if (!_callbacksDict.ContainsKey(layer)) return;
+            var cbs = _callbacksDict[layer];
+            if (!cbs.Contains(callback)) return;
+            cbs.Remove(callback);
+            if (cbs.Count == 0) _callbacksDict.Remove(layer);
         }
 
         private void UpdatePointer(InputAction.CallbackContext context)

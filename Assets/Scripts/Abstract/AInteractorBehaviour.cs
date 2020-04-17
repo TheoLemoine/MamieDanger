@@ -9,8 +9,8 @@ namespace Abstract
     public abstract class AInteractorBehaviour : MonoBehaviour, IInteractor
     {
         protected Dictionary<int, IInteractable> _interactablesInRange = new Dictionary<int, IInteractable>();
-        protected IInteractable _currentInteracting = null;
-            
+        public IInteractable CurrentInteracting { get; protected set; }
+
         public void RegisterToRange(IInteractable interactable)
         {
             _interactablesInRange.Add(interactable.GetGameObjectId(), interactable);
@@ -23,13 +23,13 @@ namespace Abstract
 
         public void RegisterInteracting(IInteractable interactable)
         {
-            _currentInteracting?.StopInteraction();
-            _currentInteracting = interactable;
+            CurrentInteracting?.StopInteraction();
+            CurrentInteracting = interactable;
         }
 
         public void DeregisterInteracting(IInteractable interactable)
         {
-            _currentInteracting = null;
+            CurrentInteracting = null;
         }
 
         public GameObject GetGameObject()

@@ -5,6 +5,7 @@ using Abstract;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Assertions;
 using Utils;
 
 public class TeleporterEntry : MonoBehaviour
@@ -17,7 +18,6 @@ public class TeleporterEntry : MonoBehaviour
     
     private TeleporterEntry _exitTeleporter;
     private TeleporterCoordinator _coordinator;
-    private List<GameObject> _interacTogglesInTrigger = new List<GameObject>();
     
     private bool _disableTeleport;
     private bool _waitToEnter;
@@ -57,11 +57,6 @@ public class TeleporterEntry : MonoBehaviour
             else
                 MoveToEnd();
         }
-        
-        
-        var interacToggleComponent = other.GetComponent<AInteracToggleBehaviour>();
-        if (interacToggleComponent != null)
-            _interacTogglesInTrigger.Add(other.gameObject);
     }
 
     private void OnTriggerExit(Collider other)
@@ -69,36 +64,33 @@ public class TeleporterEntry : MonoBehaviour
         if (other.gameObject.GetInstanceID() == _coordinator.PlayerId && _waitToEnter)
         {
             _waitToEnter = false;
-            _coordinator.PlayerInput.enabled = true;
+            _coordinator.PlayerController.ListenInputs();
         }
-        
-        if (_interacTogglesInTrigger.Contains(other.gameObject))
-            _interacTogglesInTrigger.Remove(other.gameObject);
     }
 
     private void MoveToEnd()
     {
         _coordinator.PlayerNavMesh.destination = transform.position;
-        _coordinator.PlayerInput.enabled = false;
+        _coordinator.PlayerController.IgnoreInputs();
         _waitToEnter = true;
     }
 
     private void Teleport()
     {
         _waitToEnter = false;
-        _coordinator.PlayerInput.enabled = true;
+        _coordinator.PlayerController.ListenInputs();
         
         var exit = _coordinator.GetExitFromEntry(this);
         var exitPos = exit.transform.position;
-        
-        foreach (var interacToggle in _interacTogglesInTrigger)
+
+        var interacToggle = _coordinator.PlayerInteractor.CurrentInteracting;
+        if (interacToggle != null)
         {
-            Debug.Log(interacToggle.name);
-            var navAgent = interacToggle.GetComponent<NavMeshAgent>();
+            var navAgent = interacToggle.GetGameObject().GetComponent<NavMeshAgent>();
             if (navAgent != null)
                 navAgent.Warp(exitPos);
             else
-                interacToggle.transform.position = exitPos;
+                interacToggle.GetGameObject().transform.position = exitPos;
         }
 
         _coordinator.PlayerNavMesh.Warp(exitPos);
