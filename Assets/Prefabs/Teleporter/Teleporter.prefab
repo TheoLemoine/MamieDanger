@@ -48,6 +48,7 @@ MonoBehaviour:
   entry1: {fileID: 7044506801365264248}
   entry2: {fileID: 6662850460941744274}
   playerTag: Player
+  grannyTag: Granny
   startDisabled: 0
 --- !u!1001 &6890517691415512574
 PrefabInstance:

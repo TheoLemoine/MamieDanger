@@ -31,7 +31,6 @@ public class Openable : MonoBehaviour, IInteractable
 
     public void Interact(IInteractor interactor)
     {
-        openEvent.Invoke(_isOpen);
         if (!_isOpen)
         {
             if (blockingArea != null && blockingArea.IsAreaBlocked())
@@ -41,6 +40,7 @@ public class Openable : MonoBehaviour, IInteractable
                 transform.DORotateQuaternion(_baseHingeRotation * Quaternion.Euler(0, -90, 0), animationDuration);
                 _navMeshObstacle.enabled = false;
                 _isOpen = true;
+                openEvent.Invoke(_isOpen);
             }
         }
         else
@@ -52,6 +52,7 @@ public class Openable : MonoBehaviour, IInteractable
                 transform.DORotateQuaternion(_baseHingeRotation, animationDuration);
                 _navMeshObstacle.enabled = true;
                 _isOpen = false;
+                openEvent.Invoke(_isOpen);
             }
         }
     }
