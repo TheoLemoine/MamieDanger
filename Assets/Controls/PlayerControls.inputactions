@@ -90,11 +90,6 @@
                     "devicePath": "<Mouse>",
                     "isOptional": false,
                     "isOR": false
-                },
-                {
-                    "devicePath": "<VirtualMouse>",
-                    "isOptional": true,
-                    "isOR": false
                 }
             ]
         }
