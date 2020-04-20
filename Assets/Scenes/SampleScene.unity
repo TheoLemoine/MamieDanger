@@ -4454,6 +4454,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrabbableBox
       objectReference: {fileID: 0}
+    - target: {fileID: 7972154717785386718, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
+        type: 3}
+      propertyPath: desactivateOnInteract.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe8b517d9fb1b3f41a32a054d4155fd0, type: 3}
 --- !u!1001 &8551796797220745656
