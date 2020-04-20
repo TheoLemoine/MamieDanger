@@ -517,7 +517,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6055656406590105481}
-  - component: {fileID: 3091816621752252265}
   m_Layer: 0
   m_Name: TrashCan
   m_TagString: Untagged
@@ -541,22 +540,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!208 &3091816621752252265
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7084543409566373274}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.98, y: 1.95, z: 1.085}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0.5, y: 1.2, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &7467257022950558095
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,6 +551,7 @@ GameObject:
   - component: {fileID: 8779000908243634558}
   - component: {fileID: 9063064857489248236}
   - component: {fileID: 1622363879030096490}
+  - component: {fileID: 3025643362147344702}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -629,6 +613,22 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!208 &3025643362147344702
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7467257022950558095}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1, y: 1.9, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &8443061649322302585
 GameObject:
   m_ObjectHideFlags: 0
