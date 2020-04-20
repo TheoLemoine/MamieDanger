@@ -103,6 +103,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundLayer:
     layerIndex: 9
+  changeDestinationEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &9001363241267415930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,6 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb094f72a5d4136b74f1ee38ed4c863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  secondsToWait: 3
 --- !u!1 &6337107056189290072
 GameObject:
   m_ObjectHideFlags: 0

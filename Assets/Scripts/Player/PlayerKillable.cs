@@ -1,12 +1,16 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 using DG.Tweening;
 using Interfaces;
+using UnityEngine.SceneManagement;
 
 namespace Player
 {
     public class PlayerKillable : MonoBehaviour, IKillable
     {
+
+        [SerializeField] private float secondsToWait = 3f;
         
         private Transform _transform;
         private NavMeshAgent _agent;
@@ -25,6 +29,14 @@ namespace Player
             _agent.speed = 0f;
             _agent.angularSpeed = 0f;
             _collider.enabled = false;
+
+            StartCoroutine(RestartScene());
+        }
+
+        private IEnumerator RestartScene()
+        {
+            yield return new WaitForSeconds(secondsToWait);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

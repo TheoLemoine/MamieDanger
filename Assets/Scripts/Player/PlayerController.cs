@@ -27,7 +27,12 @@ namespace Player
             _agent = GetComponent<NavMeshAgent>();
             ListenInputs();
         }
-        
+
+        private void OnDestroy()
+        {
+            IgnoreInputs();
+        }
+
         private void Move(RaycastHit hit)
         {
             changeDestinationEvent.Invoke(hit.point, hit.normal);
@@ -36,13 +41,19 @@ namespace Player
 
         public void IgnoreInputs(bool interruptRoute = false)
         {
-            InputManager.PlayerRaycaster.RemoveListener(groundLayer.LayerIndex, Move);
+            if (InputManager.IsReady)
+            {
+                InputManager.PlayerRaycaster.RemoveListener(groundLayer.LayerIndex, Move);
+            }
             if (interruptRoute) _agent.SetDestination(_transform.position);
         }
 
         public void ListenInputs()
         {
-            InputManager.PlayerRaycaster.AddListener(groundLayer.LayerIndex, Move);
+            if (InputManager.IsReady)
+            {
+                InputManager.PlayerRaycaster.AddListener(groundLayer.LayerIndex, Move);
+            }
         }
     }
 }
