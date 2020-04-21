@@ -36,6 +36,7 @@ Transform:
   m_Children:
   - {fileID: 2315321879069099129}
   - {fileID: 3879421594565764296}
+  - {fileID: 7978499851207286145}
   m_Father: {fileID: 6055656406590105481}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -144,6 +145,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b904458d416649fdb467b08bb3a3e328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactStartEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  interactStopEvent:
+    m_PersistentCalls:
+      m_Calls: []
   joint: {fileID: 3542013794193696535}
   rigidbody: {fileID: 1264425578307937835}
 --- !u!145 &3542013794193696535
@@ -377,6 +384,50 @@ WheelCollider:
     m_AsymptoteValue: 0.75
     m_Stiffness: 1
   m_Enabled: 1
+--- !u!1 &5001844783932647834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7978499851207286145}
+  - component: {fileID: 523584143442277573}
+  m_Layer: 0
+  m_Name: Bottom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7978499851207286145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5001844783932647834}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.748, z: -0.362}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6057108092022623516}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &523584143442277573
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5001844783932647834}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.18259442, z: 0.7585727}
+  m_Center: {x: 5.701616e-16, y: -0.04503888, z: -0.026234806}
 --- !u!1 &5222057254892005373
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,6 +491,12 @@ MonoBehaviour:
   notClickableLayer:
     layerIndex: 0
   playerTag: Player
+  enterRangeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  exitRangeEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7084543409566373274
 GameObject:
   m_ObjectHideFlags: 0
