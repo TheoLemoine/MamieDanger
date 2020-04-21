@@ -1,9 +1,9 @@
-﻿using UnityEngine;
-using Abstract;
+﻿using Abstract;
 using Global.Input;
+using UnityEngine;
 using Utils;
 
-namespace Player
+namespace GameComponents.Player
 {
     public class PlayerInteractor : AInteractorBehaviour
     {
