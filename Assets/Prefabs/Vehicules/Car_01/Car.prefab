@@ -30,11 +30,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1843685214570301567}
   - {fileID: 1398028773236985644}
   - {fileID: 4986789545761214450}
   - {fileID: 7645179510877179998}
   - {fileID: 2926002580973441480}
+  - {fileID: 1843685214570301567}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: 0}
@@ -116,7 +116,7 @@ Transform:
   m_LocalScale: {x: 7.1900635, y: 7.1900635, z: 7.1900635}
   m_Children: []
   m_Father: {fileID: 5191499951122987044}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3936154305016987792
 MeshFilter:
@@ -224,7 +224,7 @@ PrefabInstance:
     - target: {fileID: 2032339025369379818, guid: 4baddf66b436306468b74fe4a0fdc769,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2032339025369379818, guid: 4baddf66b436306468b74fe4a0fdc769,
         type: 3}
@@ -305,7 +305,7 @@ PrefabInstance:
     - target: {fileID: 2032339025369379818, guid: 4baddf66b436306468b74fe4a0fdc769,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2032339025369379818, guid: 4baddf66b436306468b74fe4a0fdc769,
         type: 3}
@@ -386,7 +386,7 @@ PrefabInstance:
     - target: {fileID: 2032339025369379818, guid: 4baddf66b436306468b74fe4a0fdc769,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2032339025369379818, guid: 4baddf66b436306468b74fe4a0fdc769,
         type: 3}
@@ -467,7 +467,7 @@ PrefabInstance:
     - target: {fileID: 2032339025369379818, guid: 4baddf66b436306468b74fe4a0fdc769,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2032339025369379818, guid: 4baddf66b436306468b74fe4a0fdc769,
         type: 3}

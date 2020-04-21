@@ -10,7 +10,7 @@ namespace Car
         private float targetSpeed = 5f;
         
         [SerializeField]
-        private float motorTorque = 7f;
+        private float motorTorque = 1000f;
 
         [SerializeField] private WheelCollider wheelBackRight;
         [SerializeField] private WheelCollider wheelBackLeft;
