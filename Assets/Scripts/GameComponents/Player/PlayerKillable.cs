@@ -1,13 +1,16 @@
-using System;
+using System.Collections;
 using DG.Tweening;
-using UnityEngine;
 using Interfaces;
+using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
-namespace Granny
+namespace GameComponents.Player
 {
-    public class GrannyKillable : MonoBehaviour, IKillable
+    public class PlayerKillable : MonoBehaviour, IKillable
     {
+
+        [SerializeField] private float secondsToWait = 3f;
         
         private Transform _transform;
         private NavMeshAgent _agent;
@@ -26,6 +29,14 @@ namespace Granny
             _agent.speed = 0f;
             _agent.angularSpeed = 0f;
             _collider.enabled = false;
+
+            StartCoroutine(RestartScene());
+        }
+
+        private IEnumerator RestartScene()
+        {
+            yield return new WaitForSeconds(secondsToWait);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

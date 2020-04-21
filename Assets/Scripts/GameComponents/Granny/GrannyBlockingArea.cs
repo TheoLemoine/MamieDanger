@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Granny
+namespace GameComponents.Granny
 {
     public class GrannyBlockingArea : MonoBehaviour
     {

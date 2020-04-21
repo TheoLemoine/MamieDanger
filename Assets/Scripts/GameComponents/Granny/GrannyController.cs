@@ -1,9 +1,9 @@
-using UnityEngine;
-using UnityEngine.AI;
 using Abstract;
 using Interfaces;
+using UnityEngine;
+using UnityEngine.AI;
 
-namespace Granny
+namespace GameComponents.Granny
 {
     public class GrannyController : AInteracToggleBehaviour
     {

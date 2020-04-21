@@ -1,9 +1,8 @@
-using System;
 using Abstract;
 using Interfaces;
 using UnityEngine;
 
-namespace TrashCan
+namespace GameComponents.TrashCan
 {
     public class GrabbablePoint : AInteracToggleBehaviour
     {

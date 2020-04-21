@@ -1,11 +1,11 @@
 ﻿using System;
+using Global.Input;
 using UnityEngine;
 using UnityEngine.AI;
-using Global.Input;
 using UnityEngine.Events;
 using Utils;
 
-namespace Player
+namespace GameComponents.Player
 {
     [Serializable]
     class ChangeDestinationEvent : UnityEvent<Vector3, Vector3>
