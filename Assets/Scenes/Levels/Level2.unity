@@ -2384,6 +2384,31 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: 0.6160021
       objectReference: {fileID: 0}
+    - target: {fileID: 585354970744272205, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 640311504975890791, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155818581492614565, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988153695288005372, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2204986721056759160, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2400370014178739475, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -2399,6 +2424,26 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: -0.57546616
       objectReference: {fileID: 0}
+    - target: {fileID: 2525613897863861296, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915036039332930993, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3751873724154757456, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848133415872930221, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4973592799994385224, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -2408,6 +2453,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: 0.013165474
+      objectReference: {fileID: 0}
+    - target: {fileID: 5650394352586434340, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654548995666900285, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6697710712858360638, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
         type: 3}
@@ -2483,6 +2538,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cardboard Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 8229745010427245675, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173119761943389988, guid: fe8b517d9fb1b3f41a32a054d4155fd0,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe8b517d9fb1b3f41a32a054d4155fd0, type: 3}
