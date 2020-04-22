@@ -45,7 +45,13 @@ namespace GameComponents.Player
             {
                 InputManager.PlayerRaycaster.RemoveListener(groundLayer.LayerIndex, Move);
             }
-            if (interruptRoute) _agent.SetDestination(_transform.position);
+
+            if (interruptRoute) InterruptRoute();
+        }
+
+        public void InterruptRoute()
+        {
+            _agent.SetDestination(_transform.position);
         }
 
         public void ListenInputs()

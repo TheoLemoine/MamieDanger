@@ -14,6 +14,7 @@ public class FollowFromGround : MonoBehaviour
     [SerializeField] private bool keepObjectRotation = true;
     [SerializeField] private Vector3 objectRotationAdjustment;
     private Transform _transform;
+    private bool _objHasBeenDestroy;
     
     void Start()
     {
@@ -22,6 +23,8 @@ public class FollowFromGround : MonoBehaviour
 
     void Update()
     {
+        _objHasBeenDestroy = _objHasBeenDestroy || objectToFollow == null;
+        if (_objHasBeenDestroy) return;
         if (Physics.Raycast(objectToFollow.position + objectToFollow.TransformVector(raycastOriginAdjustment), Vector3.down, out var hit, maxRaycastDistance, groundLayer.Mask))
         {
             _transform.position = hit.point + hit.normal * normalOffset;
