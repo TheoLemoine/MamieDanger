@@ -1,4 +1,5 @@
-﻿using DG.Tweening;
+﻿using System;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -41,7 +42,6 @@ namespace GameComponents.Teleporter
                 var dist = (transform.position - playerPos).magnitude;
                 if (dist < 0.5f) Teleport();
             }
-            
         }
 
         private void OnTriggerEnter(Collider other)
@@ -77,20 +77,30 @@ namespace GameComponents.Teleporter
             _coordinator.PlayerController.ListenInputs();
         
             var exit = _coordinator.GetExitFromEntry(this);
-            var exitPos = exit.transform.position;
+            var exitTransform = exit.transform;
+            var exitPos = exitTransform.position;
+            var warpPos = exitPos;
 
             var interacToggle = _coordinator.PlayerInteractor.CurrentInteracting;
             if (interacToggle != null)
             {
                 var navAgent = interacToggle.GetGameObject().GetComponent<NavMeshAgent>();
+                var agentDir = Vector3.Dot(exitTransform.forward,
+                    interacToggle.GetGameObject().transform.position - _coordinator.Player.transform.position);
+                var agentExitPos = agentDir < 0
+                    ? exitPos + exitTransform.forward * 0.2f
+                    : exitPos;
+                warpPos += agentDir < 0 ? -exitTransform.forward * 0.2f : Vector3.zero;
+                
                 if (navAgent != null)
-                    navAgent.Warp(exitPos);
+                    navAgent.Warp(agentExitPos);
                 else
-                    interacToggle.GetGameObject().transform.position = exitPos;
+                    interacToggle.GetGameObject().transform.position = agentExitPos;
             }
-
-            _coordinator.PlayerNavMesh.Warp(exitPos);
-            _coordinator.PlayerNavMesh.destination = exitPos + exit.transform.forward * 2f;
+            
+            _coordinator.PlayerNavMesh.Warp(warpPos);
+            _coordinator.PlayerNavMesh.destination = exitPos + exitTransform.forward * 2f;
+            _coordinator.Player.transform.rotation = exitTransform.rotation;
             exit._disableNextTriggerEnter = true;
         }
     }

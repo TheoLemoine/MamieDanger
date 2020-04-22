@@ -38,8 +38,8 @@ namespace Box
             {
                 var targetPos = _grabber.TransformPoint(_relativeTargetPos);
 
-                _rb.MovePosition(Vector3.Lerp(_transform.position, targetPos, movementSmoothing));
-                _rb.MoveRotation(Quaternion.Lerp(_transform.rotation, _grabber.rotation, movementSmoothing));
+                _rb.MovePosition(targetPos);
+                _rb.MoveRotation(Quaternion.Lerp(_transform.rotation, _grabber.rotation, 0.2f));
             }
         }
 
