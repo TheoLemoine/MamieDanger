@@ -14,18 +14,21 @@ public class UIFade : MonoBehaviour
     {
         _canvasGroup = GetComponent<CanvasGroup>();
         _visible = _canvasGroup.alpha > 0f;
+        _canvasGroup.interactable = _visible;
     }
 
     public void FadeIn()
     {
         _visible = true;
         _canvasGroup.DOFade(1f, fadeDuration);
+        _canvasGroup.interactable = true;
     }
 
     public void FadeOut()
     {
         _visible = false;
         _canvasGroup.DOFade(0f, fadeDuration);
+        _canvasGroup.interactable = false;
     }
 
     public void ToggleFade()

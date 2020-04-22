@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 5321569416747407778}
   - component: {fileID: 5321569416747407777}
   m_Layer: 0
-  m_Name: Go
+  m_Name: Button text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
