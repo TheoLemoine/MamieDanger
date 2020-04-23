@@ -80,26 +80,30 @@ namespace GameComponents.Teleporter
             var exitTransform = exit.transform;
             var exitPos = exitTransform.position;
             var warpPos = exitPos;
+            var forward = exitTransform.forward;
 
             var interacToggle = _coordinator.PlayerInteractor.CurrentInteracting;
             if (interacToggle != null)
             {
                 var navAgent = interacToggle.GetGameObject().GetComponent<NavMeshAgent>();
-                var agentDir = Vector3.Dot(exitTransform.forward,
+                var agentDir = Vector3.Dot(forward,
                     interacToggle.GetGameObject().transform.position - _coordinator.Player.transform.position);
                 var agentExitPos = agentDir < 0
-                    ? exitPos + exitTransform.forward * 0.2f
+                    ? exitPos + forward * 0.2f
                     : exitPos;
-                warpPos += agentDir < 0 ? -exitTransform.forward * 0.2f : Vector3.zero;
-                
+                warpPos += agentDir < 0 ? -forward * 0.2f : Vector3.zero;
+
                 if (navAgent != null)
+                {
                     navAgent.Warp(agentExitPos);
+                    navAgent.Warp(agentExitPos + forward * 2f);
+                }
                 else
                     interacToggle.GetGameObject().transform.position = agentExitPos;
             }
             
             _coordinator.PlayerNavMesh.Warp(warpPos);
-            _coordinator.PlayerNavMesh.destination = exitPos + exitTransform.forward * 2f;
+            _coordinator.PlayerNavMesh.destination = exitPos + forward * 2f;
             _coordinator.Player.transform.rotation = exitTransform.rotation;
             exit._disableNextTriggerEnter = true;
         }
