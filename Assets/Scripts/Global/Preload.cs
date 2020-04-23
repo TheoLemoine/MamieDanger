@@ -12,6 +12,7 @@ namespace Global
         
         private void Start()
         {
+            Screen.fullScreenMode = FullScreenMode.Windowed;
             if (_goBackTo == -1)
             {
                 var sceneIndex = SceneManager.GetActiveScene().buildIndex;
