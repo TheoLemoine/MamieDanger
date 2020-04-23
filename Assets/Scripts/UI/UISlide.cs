@@ -13,9 +13,9 @@ public class UISlide : MonoBehaviour
     private RectTransform _rectTransform;
     private Vector3 _startPosition;
     
-    void Start()
+    private void Start()
     {
-        _isVisible = startVisible;
+        _isVisible = animateAtStart ? !startVisible : startVisible;
         _rectTransform = GetComponent<RectTransform>();
         _startPosition = _rectTransform.localPosition;
         
@@ -35,7 +35,7 @@ public class UISlide : MonoBehaviour
         }
     }
     
-    void SlideIn()
+    public void SlideIn()
     {
         if (_isVisible) return;
         _isVisible = true;
@@ -44,10 +44,10 @@ public class UISlide : MonoBehaviour
         _rectTransform.DOLocalMove(localEndPos, 1f);
     }
 
-    void SlideOut()
+    public void SlideOut()
     {
-        if (_isVisible) return;
-        _isVisible = true;
+        if (!_isVisible) return;
+        _isVisible = false;
         _rectTransform.localPosition = _startPosition + new Vector3(offsetWhenVisible.x, offsetWhenVisible.y, 0f);
         var localEndPos = _startPosition + new Vector3(offsetWhenNotVisible.x, offsetWhenNotVisible.y, 0f);
         _rectTransform.DOLocalMove(localEndPos, 1f);

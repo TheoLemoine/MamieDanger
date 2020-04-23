@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offsetWhenVisible: {x: 0, y: 0}
   offsetWhenNotVisible: {x: 0, y: 188.3}
-  startVisible: 0
+  startVisible: 1
   animateAtStart: 1
 --- !u!1 &2885419728203082579
 GameObject:
