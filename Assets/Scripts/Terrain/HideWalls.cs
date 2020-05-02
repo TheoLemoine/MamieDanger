@@ -10,7 +10,7 @@
          [SerializeField] private Transform playerTransform;
          [SerializeField] private Transform stencilSphereTransform;
          [SerializeField] private float sphereDistance = 40f;
-         [SerializeField] private SingleUnityLayer wallLayer;
+         [SerializeField] private SingleUnityLayer occlusionLayer;
          [SerializeField] private SingleUnityLayer targetLayer;
 
          [SerializeField] private Material seeThroughMaterial;
@@ -24,13 +24,13 @@
 
          
          private Transform _cameraTransform;
-         private List<Transform> _hiddenObjects;
+         private List<RendererGroup> _hiddenObjects;
          private float _rayDistance;
 
          private void Start()
          {
              _cameraTransform = transform;
-             _hiddenObjects = new List<Transform>();
+             _hiddenObjects = new List<RendererGroup>();
          }
      
          private void Update()
@@ -48,9 +48,9 @@
              var direction = _cameraTransform.position -  playerPos;
              _rayDistance = direction.magnitude;
 
-             var layerMask = 1 << wallLayer.LayerIndex | 1 << targetLayer.LayerIndex;
+             var layerMask = 1 << occlusionLayer.LayerIndex;
 
-             return Physics.RaycastAll( playerPos, direction, _rayDistance, layerMask);
+             return Physics.RaycastAll(playerPos, direction, _rayDistance, layerMask);
          }
 
          private void HideHitObjects(RaycastHit[] hits)
@@ -59,11 +59,10 @@
              foreach (var currentHit in hits)
              {
                  if (currentHit.distance < closestCollideDist) closestCollideDist = currentHit.distance;
-                 var currentTransform = currentHit.transform;
-                 if (!_hiddenObjects.Contains(currentTransform))
+                 if (currentHit.transform.TryGetComponent<RendererGroup>(out var currentGroup) && !_hiddenObjects.Contains(currentGroup))
                  {
-                     _hiddenObjects.Add(currentTransform);
-                    currentTransform.gameObject.layer = targetLayer.LayerIndex;
+                     _hiddenObjects.Add(currentGroup);
+                     currentGroup.SetLayers(targetLayer.LayerIndex);
                  }
              }
              SetOpacity(closestCollideDist);
@@ -79,20 +78,26 @@
 
          private void RevealPreviouslyHitObjects(RaycastHit[] hits)
          {
+             // Store renderer group to reduce getComponent calls
+             var hitGroups = new List<RendererGroup>();
+             foreach (var hit in hits)
+                 if (hit.transform.TryGetComponent<RendererGroup>(out var currentGroup))
+                     hitGroups.Add(currentGroup);
+             
              for (var i = 0; i < _hiddenObjects.Count; i++)
              {
                  var hiddenObject = _hiddenObjects[i];
 
                  var isHit = false;
-                 foreach (var hit in hits)
+                 foreach (var group in hitGroups)
                  {
-                     if (hit.transform != hiddenObject) continue;
+                     if (group != hiddenObject) continue;
                      isHit = true;
                      break;
                  }
                  
                  if (isHit) continue;
-                 hiddenObject.gameObject.layer = wallLayer.LayerIndex;
+                 hiddenObject.ResetLayers();
                  _hiddenObjects.RemoveAt(i);
                  i--;
              }

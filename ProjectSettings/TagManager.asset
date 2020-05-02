@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Blocking
+  - Granny
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Clickable
   - Mask
   - TransparentWalls
-  - 
+  - Occluder
   - 
   - 
   - 

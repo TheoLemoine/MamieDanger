@@ -327,6 +327,7 @@ Transform:
   - {fileID: 8644639278802744167}
   - {fileID: 7214090633853470704}
   - {fileID: 7149708873715731665}
+  - {fileID: 1077911306616538327}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
@@ -470,6 +471,66 @@ LightProbeGroup:
   - {x: 0.80501074, y: 14.403734, z: 6.077491}
   - {x: 0.80501217, y: 14.403734, z: -5.7953405}
   m_Dering: 1
+--- !u!1 &6220197831726597534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1077911306616538327}
+  - component: {fileID: 727967719682967749}
+  - component: {fileID: 3876761343188701137}
+  m_Layer: 14
+  m_Name: Occlusion Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1077911306616538327
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6220197831726597534}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1560516847185182619}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &727967719682967749
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6220197831726597534}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.702362, y: 14.903264, z: 11.123734}
+  m_Center: {x: 5.8511815, y: 7.401575, z: 5.511811}
+--- !u!114 &3876761343188701137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6220197831726597534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d180b94b7953a479281393ddb7acf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useParent: 1
+  parentObject: {fileID: 2590493466134498696}
+  rendererArray: []
 --- !u!1 &6658425464501638042
 GameObject:
   m_ObjectHideFlags: 0
