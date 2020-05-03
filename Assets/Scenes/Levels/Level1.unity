@@ -2337,6 +2337,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1404025215901641264, guid: 2d1f36643228dcb49a1584ba27a977b9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4082308760844780783, guid: 2d1f36643228dcb49a1584ba27a977b9,
         type: 3}
       propertyPath: m_Name
@@ -5984,10 +5989,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1102764694}
     m_Modifications:
+    - target: {fileID: 5079190272292625417, guid: 741b98e43e3478646ae428ec6a3ab9a5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5462027895555766649, guid: 741b98e43e3478646ae428ec6a3ab9a5,
         type: 3}
       propertyPath: m_Name
       value: Shop with threes
+      objectReference: {fileID: 0}
+    - target: {fileID: 5462027895555766649, guid: 741b98e43e3478646ae428ec6a3ab9a5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9049522440089553770, guid: 741b98e43e3478646ae428ec6a3ab9a5,
         type: 3}
