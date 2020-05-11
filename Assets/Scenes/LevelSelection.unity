@@ -303,7 +303,7 @@ PrefabInstance:
     - target: {fileID: 380653478538064565, guid: e2b512b9068297842bb9c7b527326d77,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 380653478538064565, guid: e2b512b9068297842bb9c7b527326d77,
         type: 3}
@@ -313,7 +313,7 @@ PrefabInstance:
     - target: {fileID: 380653478538064565, guid: e2b512b9068297842bb9c7b527326d77,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 380653478538064565, guid: e2b512b9068297842bb9c7b527326d77,
         type: 3}
@@ -328,7 +328,12 @@ PrefabInstance:
     - target: {fileID: 380653478538064565, guid: e2b512b9068297842bb9c7b527326d77,
         type: 3}
       propertyPath: m_text
-      value: Niveau 3
+      value: Niveau 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 590642071928542549, guid: e2b512b9068297842bb9c7b527326d77,
+        type: 3}
+      propertyPath: locked
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 816061989823887558, guid: e2b512b9068297842bb9c7b527326d77,
         type: 3}
@@ -390,31 +395,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2309850894573222107, guid: e2b512b9068297842bb9c7b527326d77,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 04fedf410ed9fc441886311b067df4b7, type: 2}
-    - target: {fileID: 6589504540094504752, guid: e2b512b9068297842bb9c7b527326d77,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 04fedf410ed9fc441886311b067df4b7, type: 2}
-    - target: {fileID: 8609663986902914254, guid: e2b512b9068297842bb9c7b527326d77,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 04fedf410ed9fc441886311b067df4b7, type: 2}
     - target: {fileID: 8995737957035917168, guid: e2b512b9068297842bb9c7b527326d77,
         type: 3}
       propertyPath: m_Name
       value: Level 4
       objectReference: {fileID: 0}
-    - target: {fileID: 9065367863327241859, guid: e2b512b9068297842bb9c7b527326d77,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 04fedf410ed9fc441886311b067df4b7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2b512b9068297842bb9c7b527326d77, type: 3}
 --- !u!1 &343660921 stripped
@@ -441,6 +426,22 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2050953274}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &650964707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650964705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb11ad5f2527124e8dc5e3f9f06c045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelSceneName: 
+  locked: 0
+  lockedMaterial: {fileID: 0}
+  renderersToOverride: []
 --- !u!1 &1019211645 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8995737957035917168, guid: e2b512b9068297842bb9c7b527326d77,
@@ -589,6 +590,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 590642071928542549, guid: e2b512b9068297842bb9c7b527326d77,
+        type: 3}
+      propertyPath: levelSceneName
+      value: Level1
+      objectReference: {fileID: 0}
     - target: {fileID: 816061989823887558, guid: e2b512b9068297842bb9c7b527326d77,
         type: 3}
       propertyPath: m_Mesh
@@ -708,6 +714,11 @@ PrefabInstance:
       propertyPath: m_text
       value: Niveau 3
       objectReference: {fileID: 0}
+    - target: {fileID: 590642071928542549, guid: e2b512b9068297842bb9c7b527326d77,
+        type: 3}
+      propertyPath: locked
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 816061989823887558, guid: e2b512b9068297842bb9c7b527326d77,
         type: 3}
       propertyPath: m_Mesh
@@ -768,31 +779,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2309850894573222107, guid: e2b512b9068297842bb9c7b527326d77,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 04fedf410ed9fc441886311b067df4b7, type: 2}
-    - target: {fileID: 6589504540094504752, guid: e2b512b9068297842bb9c7b527326d77,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 04fedf410ed9fc441886311b067df4b7, type: 2}
-    - target: {fileID: 8609663986902914254, guid: e2b512b9068297842bb9c7b527326d77,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 04fedf410ed9fc441886311b067df4b7, type: 2}
     - target: {fileID: 8995737957035917168, guid: e2b512b9068297842bb9c7b527326d77,
         type: 3}
       propertyPath: m_Name
       value: Level 3
       objectReference: {fileID: 0}
-    - target: {fileID: 9065367863327241859, guid: e2b512b9068297842bb9c7b527326d77,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 04fedf410ed9fc441886311b067df4b7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2b512b9068297842bb9c7b527326d77, type: 3}
 --- !u!1001 &1855096979426179261
@@ -816,6 +807,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.wordCount
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 590642071928542549, guid: e2b512b9068297842bb9c7b527326d77,
+        type: 3}
+      propertyPath: levelSceneName
+      value: Level2
       objectReference: {fileID: 0}
     - target: {fileID: 816061989823887558, guid: e2b512b9068297842bb9c7b527326d77,
         type: 3}

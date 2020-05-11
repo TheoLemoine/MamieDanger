@@ -25,14 +25,20 @@ public class Carousel : MonoBehaviour
 
     private void Click(RaycastHit hit)
     {
+        var go = hit.collider.transform.parent.gameObject;
+        var newIndex = Array.IndexOf(levels, go);
+        if (newIndex == currentIndex || (newIndex == currentIndex - _indexDiff && Mathf.Abs(_indexDiff - _animProgression) < 0.25f))
+        {
+            go.GetComponent<LevelButton>().Click();
+            return;
+        }
+
         // Complete animation if not already
         if (_tween != null && !_tween.IsComplete())
             _tween.Complete();
         
-        var go = hit.collider.transform.parent.gameObject;
-        var newIndex = Array.IndexOf(levels, go);
         _indexDiff = currentIndex - newIndex;
-        
+
         _tween = DOTween.To(value => _animProgression = value, 0f, _indexDiff, 0.6f);
         _tween.onUpdate = CalcPos;
         _tween.onComplete = () =>
