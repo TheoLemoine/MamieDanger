@@ -455,6 +455,7 @@ GameObject:
   - component: {fileID: 67257730069876688}
   - component: {fileID: 6592248131286171526}
   - component: {fileID: 8704197818690438974}
+  - component: {fileID: 1466362839648749697}
   m_Layer: 10
   m_Name: shop
   m_TagString: Untagged
@@ -523,6 +524,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1466362839648749697
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6522045545804193581}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.999999, y: 13.292382, z: 15.346809}
+  m_Center: {x: -0.00000047683716, y: 2.142964, z: 0}
 --- !u!1 &8466606529847974018
 GameObject:
   m_ObjectHideFlags: 0
