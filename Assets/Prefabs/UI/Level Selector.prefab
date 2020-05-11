@@ -30,7 +30,7 @@ Transform:
   m_LocalScale: {x: 1.0425344, y: 1.0008686, z: 1}
   m_Children: []
   m_Father: {fileID: 528154152880525534}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 151.91101}
 --- !u!33 &72779521733559440
 MeshFilter:
@@ -79,97 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &1296162025733267141
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1296162025733267138}
-  - component: {fileID: 1296162025733267139}
-  - component: {fileID: 2514706336279201697}
-  m_Layer: 0
-  m_Name: RangeBox
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1296162025733267138
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1296162025733267141}
-  m_LocalRotation: {x: 6.123234e-17, y: -1, z: 6.123234e-17, w: 1.8369703e-16}
-  m_LocalPosition: {x: -0.061784327, y: 0.6035642, z: 0.0009999871}
-  m_LocalScale: {x: 1, y: 1.0434783, z: 1}
-  m_Children: []
-  m_Father: {fileID: 528154152880525534}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1296162025733267139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1296162025733267141}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c259fb69b92945f4a6f8394829a6df90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 6169171637303398535}
-  clickableLayer:
-    layerIndex: 11
-  notClickableLayer:
-    layerIndex: 0
-  playerTag: Player
-  enterRangeEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  exitRangeEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!135 &2514706336279201697
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1296162025733267141}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 3
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1296162026639781493
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,7 +345,7 @@ Transform:
   m_LocalScale: {x: 1.0434737, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 528154152880525534}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -270, z: 153.634}
 --- !u!33 &1214004934821596933
 MeshFilter:
@@ -496,7 +405,7 @@ GameObject:
   - component: {fileID: 465985335830762898}
   - component: {fileID: 4495548474931834180}
   - component: {fileID: 1371137175276271766}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Raycast collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -569,7 +478,6 @@ Transform:
   m_LocalPosition: {x: 0, y: -0.502, z: 0}
   m_LocalScale: {x: 1, y: 0.9583333, z: 1}
   m_Children:
-  - {fileID: 1296162025733267138}
   - {fileID: 7507248097623746125}
   - {fileID: 5618835605502666407}
   - {fileID: 6387985042181678998}
@@ -670,7 +578,7 @@ Transform:
   m_LocalScale: {x: 1.0354903, y: 1.0074476, z: 1}
   m_Children: []
   m_Father: {fileID: 528154152880525534}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -180, y: 180, z: -20.75}
 --- !u!33 &6276456461099918111
 MeshFilter:
@@ -749,7 +657,7 @@ Transform:
   m_LocalScale: {x: 1.040272, y: 1.0029624, z: 1}
   m_Children: []
   m_Father: {fileID: 528154152880525534}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: 157.438}
 --- !u!33 &2094020457104319912
 MeshFilter:
