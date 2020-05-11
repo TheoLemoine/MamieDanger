@@ -2577,11 +2577,6 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 915484213}
-    - target: {fileID: 7967809023859858470, guid: 60ebdfd35dedc884989bb09dc644bd28,
-        type: 3}
-      propertyPath: m_Lens.OrthographicSize
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 7967809023859858471, guid: 60ebdfd35dedc884989bb09dc644bd28,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2691,11 +2686,6 @@ PrefabInstance:
         type: 3}
       propertyPath: orthographic size
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7967809024996777904, guid: 60ebdfd35dedc884989bb09dc644bd28,
-        type: 3}
-      propertyPath: m_CameraDistance
-      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 9208738019685314314, guid: 60ebdfd35dedc884989bb09dc644bd28,
         type: 3}
