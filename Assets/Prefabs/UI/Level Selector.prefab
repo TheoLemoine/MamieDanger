@@ -102,14 +102,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1296162026639781493}
-  m_LocalRotation: {x: -0.110338606, y: 0.4493506, z: -0.056039724, w: 0.8847423}
-  m_LocalPosition: {x: 0.039, y: 1.039, z: 0.436}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0.4}
   m_LocalScale: {x: 0.8000001, y: 0.8000001, z: 0.8}
   m_Children:
   - {fileID: 528154152880525534}
   m_Father: {fileID: 1591701453398103027}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -8.33, y: 54.696003, z: -11.563001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2311895139706068780
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,7 +474,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6169171637303398535}
-  m_LocalRotation: {x: -6.123234e-17, y: 1, z: -6.123234e-17, w: 1.8369703e-16}
+  m_LocalRotation: {x: -0.031603392, y: -0.91522807, z: 0.08017037, w: 0.3936135}
   m_LocalPosition: {x: 0, y: -0.502, z: 0}
   m_LocalScale: {x: 1, y: 0.9583333, z: 1}
   m_Children:
@@ -484,7 +484,7 @@ Transform:
   - {fileID: 8264676041357151115}
   m_Father: {fileID: 1296162026639781503}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 7, y: -133.029, z: 7}
 --- !u!33 &2564244259458596790
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -715,6 +715,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1591701453398103027}
+  - component: {fileID: 590642071928542549}
   m_Layer: 0
   m_Name: Level Selector
   m_TagString: Untagged
@@ -739,3 +740,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &590642071928542549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8995737957035917168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb11ad5f2527124e8dc5e3f9f06c045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelSceneName: 
+  locked: 0
+  lockedMaterial: {fileID: 2100000, guid: 04fedf410ed9fc441886311b067df4b7, type: 2}
+  renderersToOverride:
+  - {fileID: 8609663986902914254}
+  - {fileID: 8757871819453927671}
+  - {fileID: 2309850894573222107}
+  - {fileID: 6589504540094504752}
+  - {fileID: 9065367863327241859}
