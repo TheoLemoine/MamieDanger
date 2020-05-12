@@ -4765,7 +4765,7 @@ PrefabInstance:
     - target: {fileID: 7292940661425001224, guid: 64e6bc1877a03d845825d3e0d940d383,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64e6bc1877a03d845825d3e0d940d383, type: 3}
@@ -5986,7 +5986,7 @@ PrefabInstance:
     - target: {fileID: 7292940661425001224, guid: 64e6bc1877a03d845825d3e0d940d383,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64e6bc1877a03d845825d3e0d940d383, type: 3}
@@ -6152,11 +6152,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crossover (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7292940661425001224, guid: 64e6bc1877a03d845825d3e0d940d383,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64e6bc1877a03d845825d3e0d940d383, type: 3}
@@ -6680,11 +6675,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crossover
-      objectReference: {fileID: 0}
-    - target: {fileID: 7292940661425001224, guid: 64e6bc1877a03d845825d3e0d940d383,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64e6bc1877a03d845825d3e0d940d383, type: 3}
@@ -8721,8 +8711,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 217.60706, y: 69.05426, z: 200.98073}
-  m_Center: {x: -31.543549, y: 4.8933105, z: 23.611382}
+  m_Size: {x: 217.60706, y: 69.05426, z: 254.51134}
+  m_Center: {x: -31.543549, y: 4.8933105, z: 50.37664}
 --- !u!4 &1711703223
 Transform:
   m_ObjectHideFlags: 0
@@ -9219,7 +9209,7 @@ PrefabInstance:
     - target: {fileID: 7292940661425001224, guid: 64e6bc1877a03d845825d3e0d940d383,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64e6bc1877a03d845825d3e0d940d383, type: 3}
