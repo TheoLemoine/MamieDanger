@@ -8,7 +8,7 @@ using Utils;
 namespace GameComponents.Player
 {
     [Serializable]
-    class ChangeDestinationEvent : UnityEvent<Vector3, Vector3>
+    class ChangeDestinationEvent : UnityEvent<Vector3, RaycastHit>
     {}
     
     public class PlayerController : MonoBehaviour
@@ -35,8 +35,8 @@ namespace GameComponents.Player
 
         private void Move(RaycastHit hit)
         {
-            changeDestinationEvent.Invoke(hit.point, hit.normal);
             _agent.SetDestination(hit.point);
+            changeDestinationEvent.Invoke(_agent.destination, hit);
         }
 
         public void IgnoreInputs(bool interruptRoute = false)
