@@ -8,6 +8,12 @@ namespace Car
     {
         [SerializeField]
         private float targetSpeed = 5f;
+
+        public float TargetSpeed
+        {
+            get => targetSpeed;
+            set => targetSpeed = value;
+        }
         
         [SerializeField]
         private float motorTorque = 1000f;
