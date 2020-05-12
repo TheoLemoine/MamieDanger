@@ -57,7 +57,7 @@ LightmapSettings:
   m_LightmapEditorSettings:
     serializedVersion: 12
     m_Resolution: 2
-    m_BakeResolution: 2
+    m_BakeResolution: 10
     m_AtlasSize: 1024
     m_AO: 1
     m_AOMaxDistance: 1
@@ -1307,7 +1307,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1.7774e-41, z: 0, w: -14.5}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: -0.0000000050349627}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -7043,7 +7043,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2, z: 2.3509887e-38, w: -8.74086}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: -4.984031e-10}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
