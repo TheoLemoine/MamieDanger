@@ -4,14 +4,16 @@ using Global.Input;
 using UnityEngine;
 using Utils;
 
-
 public class Carousel : MonoBehaviour
 {
     [SerializeField] private SingleUnityLayer uiLayer;
     [SerializeField] private GameObject[] levels;
     [SerializeField] private int currentIndex;
-    [SerializeField] private float radius = 20f;
-    [SerializeField] private float angle = Mathf.PI / 16;
+    [SerializeField] private float radius = 15f;
+    [SerializeField] private float angle = Mathf.PI / 9.5f;
+    [SerializeField] private float transitionDuration = 0.6f;
+    [SerializeField] private float defaultScale = 1f;
+    [SerializeField] private float frontScale = 1.5f;
 
     private float _animProgression;
     private int _indexDiff;
@@ -39,7 +41,7 @@ public class Carousel : MonoBehaviour
         
         _indexDiff = currentIndex - newIndex;
 
-        _tween = DOTween.To(value => _animProgression = value, 0f, _indexDiff, 0.6f);
+        _tween = DOTween.To(value => _animProgression = value, 0f, _indexDiff, transitionDuration);
         _tween.onUpdate = CalcPos;
         _tween.onComplete = () =>
         {
@@ -64,19 +66,20 @@ public class Carousel : MonoBehaviour
             );
 
             // Init to default scale
-            var scale = 1f;
+            var scale = defaultScale;
+            var diffScale = frontScale - defaultScale;
 
             // Handle in animation
             if (_indexDiff != 0)
             {
                 if (currentIndex - _indexDiff == index)
-                    scale = 1f + _animProgression / _indexDiff * 0.5f;
+                    scale = defaultScale + _animProgression / _indexDiff * diffScale;
                 if (currentIndex == index)
-                    scale = 1.5f - _animProgression / _indexDiff * 0.5f;
+                    scale = frontScale - _animProgression / _indexDiff * diffScale;
             }
             // If not in animation : max scale
             else if (index == currentIndex)
-                scale = 1.5f;
+                scale = frontScale;
             
             
             level.transform.localScale = Vector3.one * scale;
