@@ -24,8 +24,6 @@ public class DestinationFeedback : MonoBehaviour
 
     public void OnSetDestination(Vector3 newDestination, RaycastHit hit)
     {
-        Debug.Log(Vector3.Dot(Vector3.up, hit.normal));
-        Debug.Log((1 - Vector3.Dot(Vector3.up, hit.normal)) > slopeThreshold);
         if (Vector3.Distance(newDestination, hit.point) > maxDistanceFromExpectation 
             || (1 - Vector3.Dot(Vector3.up, hit.normal)) > slopeThreshold)
         {
