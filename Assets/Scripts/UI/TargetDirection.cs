@@ -1,19 +1,23 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class TargetDirection : MonoBehaviour
 {
-    [SerializeField] private Transform targetTransform;
+    [SerializeField] private RectTransform canvasTransform;
     [SerializeField] [Range(0f, 200f)] private float margin = 30f;
+    [SerializeField] private Transform targetTransform;
+    [SerializeField] private UnityEvent enterScreenEvent;
+    [SerializeField] private UnityEvent exitScreenEvent;
     private Camera _camera;
     private RectTransform _indicatorTransform;
+    private bool _isInScreen;
 
     private void Start()
     {
         _camera = Camera.main;
         _indicatorTransform = GetComponent<RectTransform>();
+        if (enterScreenEvent == null) enterScreenEvent = new UnityEvent();
+        if (exitScreenEvent == null) exitScreenEvent = new UnityEvent();
     }
 
     private void Update()
@@ -27,10 +31,15 @@ public class TargetDirection : MonoBehaviour
         var cursorBox = screenSize - Vector2.one * (margin * 2f);
         var cursorBoxCenter = cursorBox / 2f;
 
-        if (targetScreenPoint.x > margin && targetScreenPoint.x < cursorBox.x + margin
-         && targetScreenPoint.y < cursorBox.y + margin && targetScreenPoint.y > margin)
-        {
-            _indicatorTransform.localPosition = cursorPoint;
+        var wasInScreen = _isInScreen;
+        _isInScreen = targetScreenPoint.x > margin && targetScreenPoint.x < cursorBox.x + margin && targetScreenPoint.y < cursorBox.y + margin && targetScreenPoint.y > margin;
+
+        if (wasInScreen != _isInScreen)
+            if (_isInScreen) enterScreenEvent.Invoke();
+            else exitScreenEvent.Invoke();
+            
+        if (_isInScreen) {
+            _indicatorTransform.localPosition = cursorPoint / canvasTransform.localScale;
             return;
         }
 
@@ -41,7 +50,7 @@ public class TargetDirection : MonoBehaviour
         
         var cornerAngle = Mathf.Atan2(cursorBoxCenter.x, cursorBoxCenter.y);
         
-        var newPos = Vector3.zero;
+        var newPos = Vector2.zero;
         // Right
         if (Mathf.Abs(angle) < Mathf.PI / 2f - cornerAngle)
             newPos = new Vector2(cursorBoxCenter.x, Mathf.Tan(angle) * cursorBoxCenter.x);
@@ -55,7 +64,7 @@ public class TargetDirection : MonoBehaviour
         else if (angle > -Mathf.PI / 2f - cornerAngle && angle < -Mathf.PI / 2f + cornerAngle)
             newPos = new Vector2(Mathf.Tan(angle - Mathf.PI / 2f) * cursorBoxCenter.y, -cursorBoxCenter.y);
         
-        _indicatorTransform.localPosition = newPos;
+        _indicatorTransform.localPosition = newPos / canvasTransform.localScale;
         _indicatorTransform.localRotation = Quaternion.Euler(0,0, angle * Mathf.Rad2Deg);
     }
 

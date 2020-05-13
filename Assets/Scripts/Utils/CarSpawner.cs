@@ -1,13 +1,16 @@
 using System;
 using System.Collections;
+using Car;
 using UnityEngine;
 
 namespace Utils
 {
-    public class IntervalSpawner : MonoBehaviour
+    public class CarSpawner : MonoBehaviour
     {
         [SerializeField] private GameObject prefab;
         [SerializeField] private float period = 1f;
+        [SerializeField] private bool overrideCarSpeed;
+        [SerializeField] private float carSpeed;
 
         private Transform _transform;
         private void Start()
@@ -21,7 +24,9 @@ namespace Utils
         {
             for (;;)
             {
-                Instantiate(prefab, _transform);
+                var instantiated = Instantiate(prefab, _transform);
+                if (overrideCarSpeed)
+                    instantiated.GetComponent<CarController>().TargetSpeed = carSpeed;
                 yield return new WaitForSeconds(period);
             }
         }

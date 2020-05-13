@@ -69,7 +69,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2710376486950027578}
   m_Layer: 10
-  m_Name: House with stairs 1
+  m_Name: House with stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -363,6 +363,7 @@ GameObject:
   - component: {fileID: 1772630521410781987}
   - component: {fileID: 6695640958786845406}
   - component: {fileID: 7248075009306788063}
+  - component: {fileID: 8296473507190568208}
   m_Layer: 10
   m_Name: house
   m_TagString: Untagged
@@ -470,6 +471,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.34873456, y: 6.2737894, z: 0.2862619}
   m_Center: {x: 5.5800977, y: -3.6448126, z: 4.44}
+--- !u!114 &8296473507190568208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2948821105372440080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &4084848959180627405
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,7 +504,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5648340301179479043
 Transform:
@@ -659,7 +676,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4534467299337067668
 Transform:
