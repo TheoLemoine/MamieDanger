@@ -96,7 +96,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8634345600319952576
 Transform:
@@ -189,7 +189,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2345415472074171029
 Transform:
@@ -382,6 +382,7 @@ GameObject:
   - component: {fileID: 3925851660780992607}
   - component: {fileID: 1903940796558002545}
   - component: {fileID: 5899631294581479019}
+  - component: {fileID: 2026079477609775581}
   m_Layer: 10
   m_Name: building
   m_TagString: Untagged
@@ -463,6 +464,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9.085269, y: 14.888414, z: 7.7732325}
   m_Center: {x: 0, y: 0, z: -1.0627929}
+--- !u!114 &2026079477609775581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6791777511545149407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &7133451167700993635
 GameObject:
   m_ObjectHideFlags: 0

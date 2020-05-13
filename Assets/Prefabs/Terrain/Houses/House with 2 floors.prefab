@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 8882868258946598320}
   - component: {fileID: 6291824199167538334}
   - component: {fileID: 7430833224460347897}
+  - component: {fileID: 8949605558190178139}
   m_Layer: 10
   m_Name: building
   m_TagString: Untagged
@@ -222,6 +223,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9.085269, y: 14.888414, z: 7.7732325}
   m_Center: {x: 0.00000047683716, y: 0.00000047683716, z: -1.0627924}
+--- !u!114 &8949605558190178139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404025215901641264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1518350841204378844
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,7 +335,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5154881464232421499
 Transform:
@@ -607,7 +624,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &634935657863493004
 Transform:
