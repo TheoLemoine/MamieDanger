@@ -174,7 +174,9 @@ GameObject:
   - component: {fileID: 1708362996700522204}
   - component: {fileID: 2210764544852493266}
   - component: {fileID: 875786338904614573}
-  m_Layer: 0
+  - component: {fileID: 6112435206417289740}
+  - component: {fileID: 4089254795337638971}
+  m_Layer: 9
   m_Name: plate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +271,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.01, z: 0.025}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -6.7560253, y: 3.2924588, z: 56.700798}
+  m_ConnectedAnchor: {x: 2.290781, y: -0.01341098, z: 0.20777678}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -306,6 +308,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9319976, y: 0.59999996, z: 0.02028885}
   m_Center: {x: 0.0069996836, y: 0.29999998, z: 0.006798172}
+--- !u!114 &6112435206417289740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2801389634241954231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_IgnoreFromBuild: 1
+  m_AffectedAgents: ffffffff
+--- !u!114 &4089254795337638971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2801389634241954231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70346cd3b88343358b575529df26fa97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounds:
+    m_Center: {x: 0, y: 0, z: 0.42}
+    m_Extent: {x: 3, y: 3.5, z: 3}
 --- !u!1 &7563117076287621341
 GameObject:
   m_ObjectHideFlags: 0
