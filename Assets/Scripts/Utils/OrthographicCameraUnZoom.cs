@@ -13,6 +13,7 @@ namespace Utils
         
         [SerializeField] private float orthographicSize;
         [SerializeField] private float transitionDuration;
+        [SerializeField] private Ease easeType = Ease.InOutSine;
 
         private CinemachineVirtualCamera _cam;
         private Tweener _currentTween;
@@ -56,6 +57,7 @@ namespace Utils
                     _cam.m_Lens.OrthographicSize, orthographicSize, 
                     transitionDuration
                 );
+                _currentTween.SetEase(easeType);
             }
         }
 
@@ -70,6 +72,7 @@ namespace Utils
                     _cam.m_Lens.OrthographicSize, _baseOrthographicSize, 
                     transitionDuration
                 );
+                _currentTween.SetEase(easeType);
             }
         }
     }
