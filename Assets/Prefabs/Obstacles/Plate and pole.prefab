@@ -336,9 +336,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70346cd3b88343358b575529df26fa97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounds:
-    m_Center: {x: 0, y: 0, z: 0.42}
-    m_Extent: {x: 3, y: 3.5, z: 3}
+  surfaceContainerObject: {fileID: 0}
+  playerTag: Player
 --- !u!1 &7563117076287621341
 GameObject:
   m_ObjectHideFlags: 0
