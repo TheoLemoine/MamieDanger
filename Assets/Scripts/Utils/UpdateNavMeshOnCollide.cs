@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Utils.Attributes;
 using NavMeshBuilder = UnityEngine.AI.NavMeshBuilder;
 
 namespace Utils
@@ -9,60 +11,35 @@ namespace Utils
     public class UpdateNavMeshOnCollide : MonoBehaviour
     {
 
-        [SerializeField] private Bounds bounds;
-        
-        private Transform _transform;
+        [SerializeField] private GameObject surfaceContainerObject;
+        [SerializeField] private float angleLimit = 60f;
 
-        private List<NavMeshBuildSource> _navMeshSourceList = new List<NavMeshBuildSource>();
-        private NavMeshData _navMeshData;
-        private NavMeshDataInstance _navMeshDataInstance;
+        private NavMeshModifier _navMeshModifier;
+        private NavMeshSurface[] _navMeshSurfaces;
         
         private void Start()
         {
-            _transform = GetComponent<Transform>();
-            
-            var source = new NavMeshBuildSource
-            {
-                shape = NavMeshBuildSourceShape.Mesh,
-                sourceObject = GetComponent<MeshFilter>().sharedMesh,
-                transform = _transform.localToWorldMatrix,
-                area = 0,
-            };
-            
-            _navMeshSourceList.Add(source);
+            _navMeshSurfaces = surfaceContainerObject.GetComponents<NavMeshSurface>();
+            _navMeshModifier = GetComponent<NavMeshModifier>();
         }
 
-        private void OnEnable()
+        private void Update()
         {
-            _navMeshData = new NavMeshData();
-            _navMeshDataInstance = NavMesh.AddNavMeshData(_navMeshData);
-        }
-
-        private void OnDisable()
-        {
-            _navMeshDataInstance.Remove();
+            var angle = transform.rotation.eulerAngles.x;
+            var angleIsPassed = angle > angleLimit || angle < -angleLimit;
+            _navMeshModifier.ignoreFromBuild = !angleIsPassed;
         }
 
         private void OnCollisionEnter(Collision other)
         {
-            StartCoroutine(UpdateNavMeshes());
-        }
-
-        private IEnumerator UpdateNavMeshes()
-        {
-            var centeredBounds = new Bounds(_transform.TransformPoint(bounds.center), bounds.size);
+            if(_navMeshModifier.ignoreFromBuild)
+                return;
             
-            for (int i = 0; i < NavMesh.GetSettingsCount(); i++)
+            foreach (var navMeshSurface in _navMeshSurfaces)
             {
-                var settings = NavMesh.GetSettingsByIndex(i);
-                yield return NavMeshBuilder.UpdateNavMeshDataAsync(_navMeshData, settings, _navMeshSourceList, centeredBounds);
+                navMeshSurface.UpdateNavMesh(navMeshSurface.navMeshData);
             }
-        } 
-
-        private void OnDrawGizmosSelected()
-        {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireCube(transform.TransformPoint(bounds.center), bounds.size);
         }
+
     }
 }
