@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: b442030d471dd1a4baf5c4536beeee13
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Panton Narrow
+  fontNames:
+  - Panton Narrow
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 1290845747b6c81448b03ff3d9139480, type: 3}
+  - {fileID: 12800000, guid: 72ffe90dc88f1434188dce866cb29224, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
