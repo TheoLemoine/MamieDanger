@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: cbe98cbeb59da134a8324e32f8aa04e9
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Overlock
+  fontNames:
+  - Overlock
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 48656430abcbbf84d85af667cafbe90c, type: 3}
+  - {fileID: 12800000, guid: bb0eef263d6210d4dab95a89ea6ff45e, type: 3}
+  - {fileID: 12800000, guid: b49f660cd7feb7741a7ef2c46a491d4d, type: 3}
+  - {fileID: 12800000, guid: 9263810d540041847b3d7751aba9707f, type: 3}
+  - {fileID: 12800000, guid: 956bc15f196b806458f24bb6cf314b60, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
