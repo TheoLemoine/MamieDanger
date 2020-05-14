@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4432519454847011656}
   - component: {fileID: 4432519454847011658}
   - component: {fileID: 4432519454847011657}
+  - component: {fileID: 3816360294595046235}
   m_Layer: 5
   m_Name: End UI
   m_TagString: Untagged
@@ -64,6 +65,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 0.5
+--- !u!114 &3816360294595046235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4432519454847011655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f48ca4eca2c4a4ab7a3adcbe4d6280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4432519455332808310
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,6 +137,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -280,6 +294,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -438,6 +453,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -572,11 +588,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3816360294595046235}
     - target: {fileID: 5321569416620343826, guid: ad406e9ac88dd3f46b75471d3e659573,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GoTo
+      objectReference: {fileID: 0}
+    - target: {fileID: 5321569416620343826, guid: ad406e9ac88dd3f46b75471d3e659573,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level1
       objectReference: {fileID: 0}
     - target: {fileID: 5321569416620343827, guid: ad406e9ac88dd3f46b75471d3e659573,
         type: 3}
