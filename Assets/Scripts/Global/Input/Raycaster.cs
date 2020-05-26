@@ -18,7 +18,6 @@ namespace Global.Input
             if (InputManager.IsReady)
             {
                 InputManager.ActionMaps.Player.UpdatePointer.performed += UpdatePointer;
-                InputManager.ActionMaps.Player.Move.started += Move;
             }
         }
             
@@ -45,7 +44,7 @@ namespace Global.Input
             _pointer = context.ReadValue<Vector2>();
         }
 
-        private void Move(InputAction.CallbackContext context)
+        public void Raycast()
         {
             var ray = GetCamera().ScreenPointToRay(_pointer);
             var layersMask = 0;
