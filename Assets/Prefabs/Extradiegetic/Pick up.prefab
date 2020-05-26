@@ -219,6 +219,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  playerTag: Player
   pickUpId: 
 --- !u!320 &7805230282669383832
 PlayableDirector:
@@ -399,6 +400,10 @@ PlayableDirector:
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
-  m_SceneBindings: []
+  m_SceneBindings:
+  - key: {fileID: 2379826668626953073, guid: f0615b0c4056fa64ca066ef5035a4115, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -1754078331455566172, guid: f0615b0c4056fa64ca066ef5035a4115, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
