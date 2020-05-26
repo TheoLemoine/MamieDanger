@@ -15,6 +15,7 @@ public class UIFade : MonoBehaviour
         _canvasGroup = GetComponent<CanvasGroup>();
         _visible = _canvasGroup.alpha > 0f;
         _canvasGroup.interactable = _visible;
+        _canvasGroup.blocksRaycasts = _visible;
     }
 
     public void FadeIn()
@@ -22,6 +23,7 @@ public class UIFade : MonoBehaviour
         _visible = true;
         _canvasGroup.DOFade(1f, fadeDuration);
         _canvasGroup.interactable = true;
+        _canvasGroup.blocksRaycasts = true;
     }
 
     public void FadeOut()
@@ -29,6 +31,7 @@ public class UIFade : MonoBehaviour
         _visible = false;
         _canvasGroup.DOFade(0f, fadeDuration);
         _canvasGroup.interactable = false;
+        _canvasGroup.blocksRaycasts = false;
     }
 
     public void ToggleFade()
