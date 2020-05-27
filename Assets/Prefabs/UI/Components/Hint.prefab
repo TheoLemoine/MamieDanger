@@ -170,7 +170,6 @@ GameObject:
   - component: {fileID: 3556470061838821054}
   - component: {fileID: 3556470061838821049}
   - component: {fileID: 3556470061838821053}
-  - component: {fileID: 3556470061838821052}
   m_Layer: 5
   m_Name: Hint
   m_TagString: Untagged
@@ -261,35 +260,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4459ba82be7003343bf9bf9a44f3b60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slideDuration: 1
+  easeType: 6
   offsetWhenVisible: {x: 0, y: 0}
   offsetWhenNotVisible: {x: 0, y: 188.3}
   startVisible: 1
   animateAtStart: 1
   stopAnimationWhenPaused: 1
---- !u!114 &3556470061838821052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3556470061838821051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc12ff8314ad3354390fa34d61191aa3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventAfterTime:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3556470061838821053}
-        m_MethodName: SlideOut
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  time: 10
