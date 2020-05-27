@@ -48,6 +48,8 @@ namespace Utils
 
         private void OnTriggerEnter(Collider other)
         {
+            if (_cam == null) return; 
+            
             if (other.gameObject.CompareTag(playerTag))
             {
                 _currentTween?.Kill();
@@ -63,6 +65,8 @@ namespace Utils
 
         private void OnTriggerExit(Collider other)
         {
+            if (_cam == null) return; 
+            
             if (other.gameObject.CompareTag(playerTag))
             {
                 _currentTween?.Kill();
