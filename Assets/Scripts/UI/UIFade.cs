@@ -4,6 +4,7 @@ using UnityEngine;
 public class UIFade : MonoBehaviour
 {
     [SerializeField] [Range(0.2f, 2f)] float fadeDuration = 1f;
+    [SerializeField] private Ease easeType = Ease.OutQuad;
     [SerializeField] private bool stopAnimationWhenPaused;
     private CanvasGroup _canvasGroup;
     private bool _visible;
@@ -19,7 +20,9 @@ public class UIFade : MonoBehaviour
     public void FadeIn()
     {
         _visible = true;
-        _canvasGroup.DOFade(1f, fadeDuration).SetUpdate(!stopAnimationWhenPaused);
+        _canvasGroup.DOFade(1f, fadeDuration)
+            .SetUpdate(!stopAnimationWhenPaused)
+            .SetEase(easeType);
         _canvasGroup.interactable = true;
         _canvasGroup.blocksRaycasts = true;
     }
@@ -27,7 +30,9 @@ public class UIFade : MonoBehaviour
     public void FadeOut()
     {
         _visible = false;
-        _canvasGroup.DOFade(0f, fadeDuration).SetUpdate(!stopAnimationWhenPaused);
+        _canvasGroup.DOFade(0f, fadeDuration)
+            .SetUpdate(!stopAnimationWhenPaused)
+            .SetEase(easeType);
         _canvasGroup.interactable = false;
         _canvasGroup.blocksRaycasts = false;
     }
