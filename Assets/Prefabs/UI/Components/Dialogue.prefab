@@ -631,6 +631,7 @@ MonoBehaviour:
   offsetWhenNotVisible: {x: 0, y: -250}
   startVisible: 0
   animateAtStart: 0
+  stopAnimationWhenPaused: 1
 --- !u!114 &6502556504722558890
 MonoBehaviour:
   m_ObjectHideFlags: 0

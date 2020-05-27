@@ -8,6 +8,7 @@ public class UISlide : MonoBehaviour
     [SerializeField] private Vector2 offsetWhenNotVisible;
     [SerializeField] private bool startVisible;
     [SerializeField] private bool animateAtStart;
+    [SerializeField] private bool stopAnimationWhenPaused;
 
     private bool _isVisible;
     private RectTransform _rectTransform;
@@ -41,7 +42,7 @@ public class UISlide : MonoBehaviour
         _isVisible = true;
         _rectTransform.localPosition = _startPosition + new Vector3(offsetWhenNotVisible.x, offsetWhenNotVisible.y, 0f);
         var localEndPos = _startPosition + new Vector3(offsetWhenVisible.x, offsetWhenVisible.y, 0f);
-        _rectTransform.DOLocalMove(localEndPos, 1f);
+        _rectTransform.DOLocalMove(localEndPos, 1f).SetUpdate(!stopAnimationWhenPaused);
     }
 
     public void SlideOut()
@@ -50,6 +51,6 @@ public class UISlide : MonoBehaviour
         _isVisible = false;
         _rectTransform.localPosition = _startPosition + new Vector3(offsetWhenVisible.x, offsetWhenVisible.y, 0f);
         var localEndPos = _startPosition + new Vector3(offsetWhenNotVisible.x, offsetWhenNotVisible.y, 0f);
-        _rectTransform.DOLocalMove(localEndPos, 1f);
+        _rectTransform.DOLocalMove(localEndPos, 1f).SetUpdate(!stopAnimationWhenPaused);
     }
 }
