@@ -608,7 +608,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5946443199406192950}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1591059012362527473}
+        m_MethodName: ResumeGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5946443199445515862
 GameObject:
   m_ObjectHideFlags: 0
@@ -2278,19 +2289,30 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 6405656106372790389}
+  m_TargetGraphic: {fileID: 2016845718618053192}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: GoTo
-        m_Mode: 5
+      - m_Target: {fileID: 7306543661194984976}
+        m_MethodName: FadeOut
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level2
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1591059012362527473}
+        m_MethodName: ResumeGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &6405656107265784174
@@ -2411,7 +2433,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6405656107265784173}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1591059012362527473}
+        m_MethodName: ResumeGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7306543661194984990
 GameObject:
   m_ObjectHideFlags: 0
@@ -2425,6 +2458,7 @@ GameObject:
   - component: {fileID: 7306543661194984976}
   - component: {fileID: 6405656106685022998}
   - component: {fileID: 6405656106685022993}
+  - component: {fileID: 1591059012362527473}
   m_Layer: 5
   m_Name: Pause Menu
   m_TagString: Untagged
@@ -2483,6 +2517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 0.5
+  stopAnimationWhenPaused: 0
 --- !u!222 &6405656106685022998
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2520,6 +2555,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1591059012362527473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7306543661194984990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cdcf4a674b45d044a6b8bd23e7d4003, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &192419016005408010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2527,6 +2574,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7306543661194984977}
     m_Modifications:
+    - target: {fileID: 1821913988359262164, guid: 445476711fa0ec4498cad10a289c4d5d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1821913988359262164, guid: 445476711fa0ec4498cad10a289c4d5d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2537,10 +2589,35 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: FadeOut
       objectReference: {fileID: 0}
+    - target: {fileID: 1821913988359262164, guid: 445476711fa0ec4498cad10a289c4d5d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821913988359262164, guid: 445476711fa0ec4498cad10a289c4d5d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821913988359262164, guid: 445476711fa0ec4498cad10a289c4d5d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1591059012362527473}
+    - target: {fileID: 1821913988359262164, guid: 445476711fa0ec4498cad10a289c4d5d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ResumeGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821913988359262164, guid: 445476711fa0ec4498cad10a289c4d5d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1825886862946291520, guid: 445476711fa0ec4498cad10a289c4d5d,
         type: 3}
       propertyPath: m_Name
-      value: Unpause Button
+      value: Resume Button
       objectReference: {fileID: 0}
     - target: {fileID: 1825886862946291523, guid: 445476711fa0ec4498cad10a289c4d5d,
         type: 3}
@@ -2660,3 +2737,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 192419016005408010}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2016845718618053192 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1825886862946291522, guid: 445476711fa0ec4498cad10a289c4d5d,
+    type: 3}
+  m_PrefabInstance: {fileID: 192419016005408010}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

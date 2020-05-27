@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using DG.Tweening;
+﻿using DG.Tweening;
 using UnityEngine;
 
 public class UIFade : MonoBehaviour
 {
     [SerializeField] [Range(0.2f, 2f)] float fadeDuration = 1f;
+    [SerializeField] private bool stopAnimationWhenPaused;
     private CanvasGroup _canvasGroup;
     private bool _visible;
 
@@ -21,7 +19,7 @@ public class UIFade : MonoBehaviour
     public void FadeIn()
     {
         _visible = true;
-        _canvasGroup.DOFade(1f, fadeDuration);
+        _canvasGroup.DOFade(1f, fadeDuration).SetUpdate(!stopAnimationWhenPaused);
         _canvasGroup.interactable = true;
         _canvasGroup.blocksRaycasts = true;
     }
@@ -29,7 +27,7 @@ public class UIFade : MonoBehaviour
     public void FadeOut()
     {
         _visible = false;
-        _canvasGroup.DOFade(0f, fadeDuration);
+        _canvasGroup.DOFade(0f, fadeDuration).SetUpdate(!stopAnimationWhenPaused);
         _canvasGroup.interactable = false;
         _canvasGroup.blocksRaycasts = false;
     }
