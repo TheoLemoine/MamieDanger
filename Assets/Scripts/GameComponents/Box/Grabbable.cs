@@ -37,8 +37,8 @@ namespace Box
             if (IsInteracting())
             {
                 var targetPos = _grabber.TransformPoint(_relativeTargetPos);
-
-                _rb.MovePosition(targetPos);
+                
+                _rb.MovePosition(Vector3.Lerp(_transform.position, targetPos, 0.2f));
                 _rb.MoveRotation(Quaternion.Lerp(_transform.rotation, _grabber.rotation, 0.2f));
             }
         }
