@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class UISlide : MonoBehaviour
 {
-
+    [SerializeField] [Range(0.2f, 2f)] float slideDuration = 1f;
+    [SerializeField] private Ease easeType = Ease.OutQuad;
     [SerializeField] private Vector2 offsetWhenVisible;
     [SerializeField] private Vector2 offsetWhenNotVisible;
     [SerializeField] private bool startVisible;
@@ -42,7 +43,9 @@ public class UISlide : MonoBehaviour
         _isVisible = true;
         _rectTransform.localPosition = _startPosition + new Vector3(offsetWhenNotVisible.x, offsetWhenNotVisible.y, 0f);
         var localEndPos = _startPosition + new Vector3(offsetWhenVisible.x, offsetWhenVisible.y, 0f);
-        _rectTransform.DOLocalMove(localEndPos, 1f).SetUpdate(!stopAnimationWhenPaused);
+        _rectTransform.DOLocalMove(localEndPos, slideDuration)
+            .SetUpdate(!stopAnimationWhenPaused)
+            .SetEase(easeType);
     }
 
     public void SlideOut()
@@ -51,6 +54,8 @@ public class UISlide : MonoBehaviour
         _isVisible = false;
         _rectTransform.localPosition = _startPosition + new Vector3(offsetWhenVisible.x, offsetWhenVisible.y, 0f);
         var localEndPos = _startPosition + new Vector3(offsetWhenNotVisible.x, offsetWhenNotVisible.y, 0f);
-        _rectTransform.DOLocalMove(localEndPos, 1f).SetUpdate(!stopAnimationWhenPaused);
+        _rectTransform.DOLocalMove(localEndPos, slideDuration)
+            .SetUpdate(!stopAnimationWhenPaused)
+            .SetEase(easeType);
     }
 }
