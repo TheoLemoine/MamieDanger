@@ -610,7 +610,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1591059012362527473}
-        m_MethodName: ResumeGame
+        m_MethodName: ResumeToAScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2293,19 +2293,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7306543661194984976}
-        m_MethodName: FadeOut
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1591059012362527473}
-        m_MethodName: ResumeGame
+        m_MethodName: ResumeToGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2435,7 +2424,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1591059012362527473}
-        m_MethodName: ResumeGame
+        m_MethodName: ResumeToAScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2517,6 +2506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 0.5
+  easeType: 6
   stopAnimationWhenPaused: 0
 --- !u!222 &6405656106685022998
 CanvasRenderer:
@@ -2567,6 +2557,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cdcf4a674b45d044a6b8bd23e7d4003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPauseEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7306543661194984976}
+        m_MethodName: FadeIn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onResumeToGameEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7306543661194984976}
+        m_MethodName: FadeOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onResumeToASceneEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &192419016005408010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2577,17 +2598,17 @@ PrefabInstance:
     - target: {fileID: 1821913988359262164, guid: 445476711fa0ec4498cad10a289c4d5d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1821913988359262164, guid: 445476711fa0ec4498cad10a289c4d5d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 7306543661194984976}
+      objectReference: {fileID: 1591059012362527473}
     - target: {fileID: 1821913988359262164, guid: 445476711fa0ec4498cad10a289c4d5d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: FadeOut
+      value: ResumeToGame
       objectReference: {fileID: 0}
     - target: {fileID: 1821913988359262164, guid: 445476711fa0ec4498cad10a289c4d5d,
         type: 3}
