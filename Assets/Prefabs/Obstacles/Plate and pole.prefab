@@ -30,9 +30,70 @@ Transform:
   - {fileID: 1444584627258014258}
   - {fileID: 3577337288152718019}
   - {fileID: 2711915998939521032}
+  - {fileID: 8998741043524312105}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1222547662608928789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8998741043524312105}
+  - component: {fileID: 7849440477032099033}
+  - component: {fileID: 4432812523361373451}
+  m_Layer: 0
+  m_Name: Plate pusher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8998741043524312105
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222547662608928789}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.485, y: 0.273, z: -0.272}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3882610697611371391}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7849440477032099033
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222547662608928789}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.87301654, y: 0.5762932, z: 0.32180125}
+  m_Center: {x: -0.01792555, y: 0.0015835762, z: 0.0812063}
+--- !u!114 &4432812523361373451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222547662608928789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8324a91c5c384de5aebf4f7e39511ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plateRigidbody: {fileID: 1708362996700522204}
+  pushForce: {x: 0, y: 0, z: 175}
+  playerTag: Player
 --- !u!1 &1799708724755759659
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,7 +398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   surfaceContainerObject: {fileID: 0}
-  playerTag: Player
+  angleLimit: 60
 --- !u!1 &7563117076287621341
 GameObject:
   m_ObjectHideFlags: 0

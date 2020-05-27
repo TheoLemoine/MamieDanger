@@ -2786,6 +2786,18 @@ ReflectionProbe:
   m_UseOcclusionCulling: 1
   m_Importance: 1
   m_CustomBakedTexture: {fileID: 0}
+--- !u!114 &729903470 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3935883163075788352, guid: 65d72a9cbeeba7943a28fd1129981f54,
+    type: 3}
+  m_PrefabInstance: {fileID: 464563958}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a629651e1f76b64b9bf63e7733455c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &735337079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6201,7 +6213,7 @@ PrefabInstance:
         type: 3}
       propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 729903470}
     - target: {fileID: 4667812864306173827, guid: 69e55bb2a801fc84a83eac2f4ad44751,
         type: 3}
       propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
