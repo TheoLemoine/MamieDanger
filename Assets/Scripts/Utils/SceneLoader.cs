@@ -7,4 +7,9 @@ public class SceneLoader : MonoBehaviour
     {
         UnitySceneManager.LoadScene(sceneName);
     }
+
+    public void ReloadScene()
+    {
+        UnitySceneManager.LoadScene(UnitySceneManager.GetActiveScene().name);
+    }
 }
