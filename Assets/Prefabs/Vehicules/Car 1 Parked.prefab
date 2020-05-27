@@ -63,6 +63,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 3994428061855567885, guid: 863fa4604f5aa7b41b672b5862faa439,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4906982644656326008, guid: 863fa4604f5aa7b41b672b5862faa439,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -73,10 +78,15 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 5397665923390171826, guid: 863fa4604f5aa7b41b672b5862faa439,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5628679095430896775, guid: 863fa4604f5aa7b41b672b5862faa439,
         type: 3}
       propertyPath: m_Name
-      value: Parked Car 1
+      value: Car 1 Parked
       objectReference: {fileID: 0}
     - target: {fileID: 5628679095430896775, guid: 863fa4604f5aa7b41b672b5862faa439,
         type: 3}
@@ -112,6 +122,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8034353532220678270, guid: 863fa4604f5aa7b41b672b5862faa439,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8580269009785807883, guid: 863fa4604f5aa7b41b672b5862faa439,
         type: 3}
@@ -192,6 +207,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Lightmapping
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117356325796458705, guid: 863fa4604f5aa7b41b672b5862faa439,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9153432882393525995, guid: 863fa4604f5aa7b41b672b5862faa439,
         type: 3}
