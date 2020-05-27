@@ -39,7 +39,6 @@ public class UIScale : MonoBehaviour
     
     public void ScaleIn()
     {
-        if (_isFullScaled) return;
         _isFullScaled = true;
         _rectTransform.localScale = _shrunkSize;
         _rectTransform.DOScale(_fullSize, scaleDuration)

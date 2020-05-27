@@ -66,6 +66,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 0.5
+  easeType: 6
+  stopAnimationWhenPaused: 0
 --- !u!1001 &514176874489005125
 PrefabInstance:
   m_ObjectHideFlags: 0
