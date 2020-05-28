@@ -460,6 +460,7 @@ GameObject:
   - component: {fileID: 6672470187200167366}
   - component: {fileID: 6672470187200167367}
   - component: {fileID: 8018084776537023198}
+  - component: {fileID: 3747650159193312003}
   m_Layer: 0
   m_Name: Pick up
   m_TagString: Untagged
@@ -551,6 +552,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3747650159193312003}
+        m_MethodName: NotifyPlayerCounter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   playerTag: Player
   pickUpId: 
 --- !u!320 &8018084776537023198
@@ -576,6 +588,18 @@ PlayableDirector:
     value: {fileID: 2799796524231444207}
   m_ExposedReferences:
     m_References: []
+--- !u!114 &3747650159193312003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6672470187200167419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a5630d81700b294eb6ef2541dba99e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8812661659566209322
 GameObject:
   m_ObjectHideFlags: 0
