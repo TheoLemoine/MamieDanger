@@ -10,12 +10,13 @@ namespace GameComponents.PlateAndPole
         [SerializeField] private Rigidbody plateRigidbody;
         [SerializeField] private Vector3 pushForce;
         [SerializeField] [TagSelector] private string playerTag;
-        
+
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag(playerTag))
             {
-                plateRigidbody.AddForce(pushForce, ForceMode.VelocityChange);
+                var correctedForce = plateRigidbody.gameObject.transform.TransformDirection(pushForce);
+                plateRigidbody.AddForce(correctedForce, ForceMode.VelocityChange);
             }
         }
     }

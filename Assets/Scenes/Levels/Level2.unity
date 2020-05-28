@@ -4630,7 +4630,7 @@ PrefabInstance:
     - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: carSpeed
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235002, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
@@ -4906,11 +4906,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Camera unzoom
-      objectReference: {fileID: 0}
-    - target: {fileID: 2782751488041701130, guid: fc909b52902108849a35e0fcf61e90e5,
-        type: 3}
-      propertyPath: orthographicSize
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2782751488041701131, guid: fc909b52902108849a35e0fcf61e90e5,
         type: 3}
@@ -5708,12 +5703,12 @@ PrefabInstance:
     - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: period
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: carSpeed
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
