@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plateRigidbody: {fileID: 1708362996700522204}
-  pushForce: {x: 0, y: 0, z: 175}
+  pushForce: {x: 0, y: 0, z: 10}
   playerTag: Player
 --- !u!1 &1799708724755759659
 GameObject:
