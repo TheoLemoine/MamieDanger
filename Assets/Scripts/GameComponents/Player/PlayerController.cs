@@ -54,9 +54,9 @@ namespace GameComponents.Player
             animator.ResetTrigger(ScratchHeadHash);
             animator.ResetTrigger(LookAroundHash);
             
-            if (0.8 <= _randomThisSecond && _randomThisSecond <= 0.9)
+            if (0.6 <= _randomThisSecond && _randomThisSecond <= 0.8)
                 animator.SetTrigger(ScratchHeadHash);
-            else if (0.9 <= _randomThisSecond && _randomThisSecond <= 1)
+            else if (0.8 <= _randomThisSecond && _randomThisSecond <= 1)
                 animator.SetTrigger(LookAroundHash);
             
             animator.SetFloat(SpeedHash, _agent.velocity.magnitude);
