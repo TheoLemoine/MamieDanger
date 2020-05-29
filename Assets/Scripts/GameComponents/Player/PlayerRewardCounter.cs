@@ -11,7 +11,7 @@ public class PlayerRewardCounter : MonoBehaviour
     [SerializeField] private int inMapResetNumber;
     [SerializeField] private int pickedResetNumber;
 
-    private void Start()
+    private void Awake()
     {
         _numberPicked = inMapResetNumber;
         _numberInMap = pickedResetNumber;
