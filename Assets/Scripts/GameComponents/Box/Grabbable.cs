@@ -66,10 +66,10 @@ namespace Box
 
             if (_interactor is PlayerInteractor playerInteractor)
             {
-                var ikOverride = playerInteractor.GetIkOverride();
+                var ik = playerInteractor.GetIkOverride();
                 
-                ikOverride.SetGoal(AvatarIKGoal.RightHand, handleRight);
-                ikOverride.SetGoal(AvatarIKGoal.LeftHand, handleLeft);
+                ik.SetGoal(AvatarIKGoal.RightHand, handleRight);
+                ik.SetGoal(AvatarIKGoal.LeftHand, handleLeft);
             }
         }
 
@@ -85,11 +85,13 @@ namespace Box
             
             if (_interactor is PlayerInteractor playerInteractor)
             {
-                var ikOverride = playerInteractor.GetIkOverride();
+                var ik = playerInteractor.GetIkOverride();
                 
-                ikOverride.UnsetGoal(AvatarIKGoal.RightHand);
-                ikOverride.UnsetGoal(AvatarIKGoal.LeftHand);
+                ik.UnsetGoal(AvatarIKGoal.RightHand);
+                ik.UnsetGoal(AvatarIKGoal.LeftHand);
             }
+            
+            _interactor = null;
         }
     }
 }
