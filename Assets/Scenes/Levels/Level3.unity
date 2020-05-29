@@ -2342,18 +2342,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 800629284140873738}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &593805069 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3935883163075788352, guid: 65d72a9cbeeba7943a28fd1129981f54,
-    type: 3}
-  m_PrefabInstance: {fileID: 800629284140873738}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 593805067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a629651e1f76b64b9bf63e7733455c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &593805072 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2089742305688969523, guid: 65d72a9cbeeba7943a28fd1129981f54,
@@ -6150,11 +6138,11 @@ PrefabInstance:
         type: 3}
       propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 593805069}
+      objectReference: {fileID: 593805072}
     - target: {fileID: 4667812864306173827, guid: 69e55bb2a801fc84a83eac2f4ad44751,
         type: 3}
       propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: FadeIn
+      value: TriggerEnd
       objectReference: {fileID: 0}
     - target: {fileID: 4667812864306173827, guid: 69e55bb2a801fc84a83eac2f4ad44751,
         type: 3}
