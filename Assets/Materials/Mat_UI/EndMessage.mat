@@ -31,5 +31,6 @@ Material:
     m_Floats:
     - Vector1_DAFE5EF0: 0.03
     - _duration: 0.8
-    - _startTime: 2.0200005
+    - _smoothing: 0.03
+    - _startTime: 2.0504503
     m_Colors: []
