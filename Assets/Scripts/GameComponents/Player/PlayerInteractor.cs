@@ -7,6 +7,7 @@ namespace GameComponents.Player
 {
     public class PlayerInteractor : AInteractorBehaviour
     {
+        [SerializeField] private HumanoidIKOverride ikOverride; 
         [SerializeField] private SingleUnityLayer clickableLayer;
         private Vector2 _pointer;
         private PlayerController _playerController;
@@ -26,7 +27,11 @@ namespace GameComponents.Player
                 interactable.Interact(this);
                 _playerController.InterruptRoute();
             }
+        }
 
+        public HumanoidIKOverride GetIkOverride()
+        {
+            return ikOverride;
         }
     }
 }

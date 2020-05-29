@@ -40,7 +40,7 @@ namespace GameComponents.Teleporter
             {
                 var playerPos = _coordinator.Player.transform.position;
                 var dist = (transform.position - playerPos).magnitude;
-                if (dist < 0.5f) Teleport();
+                if (dist < 1f) Teleport();
             }
         }
 

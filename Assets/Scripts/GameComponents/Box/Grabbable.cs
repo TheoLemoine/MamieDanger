@@ -2,6 +2,7 @@
 using Interfaces;
 using UnityEngine;
 using Abstract;
+using GameComponents.Player;
 using UnityEngine.AI;
 
 namespace Box
@@ -12,6 +13,9 @@ namespace Box
         [SerializeField] private float liftHeight = 0f;
         [SerializeField] private float distanceFromGrabber = 2f;
         [SerializeField] private float movementSmoothing = .15f;
+
+        [SerializeField] private Transform handleRight;
+        [SerializeField] private Transform handleLeft;
         
         private Rigidbody _rb;
         private Transform _transform;
@@ -20,6 +24,7 @@ namespace Box
         private NavMeshObstacle _navObstacle;
 
         private Transform _grabber;
+        private IInteractor _interactor;
         private Vector3 _relativeTargetPos;
 
         private void Start()
@@ -38,13 +43,14 @@ namespace Box
             {
                 var targetPos = _grabber.TransformPoint(_relativeTargetPos);
                 
-                _rb.MovePosition(Vector3.Lerp(_transform.position, targetPos, 0.2f));
-                _rb.MoveRotation(Quaternion.Lerp(_transform.rotation, _grabber.rotation, 0.2f));
+                _rb.MovePosition(Vector3.Lerp(_transform.position, targetPos, movementSmoothing));
+                _rb.MoveRotation(Quaternion.Lerp(_transform.rotation, _grabber.rotation, movementSmoothing));
             }
         }
 
         protected override void InteractStart(IInteractor interactor)
         {
+            _interactor = interactor;
             _grabber = interactor.GetGameObject().GetComponent<Transform>();
             
             // stop
@@ -57,6 +63,14 @@ namespace Box
 
             // dont prevent player from walking
             _navObstacle.enabled = false;
+
+            if (_interactor is PlayerInteractor playerInteractor)
+            {
+                var ikOverride = playerInteractor.GetIkOverride();
+                
+                ikOverride.SetGoal(AvatarIKGoal.RightHand, handleRight);
+                ikOverride.SetGoal(AvatarIKGoal.LeftHand, handleLeft);
+            }
         }
 
         protected override void InteractStop()
@@ -68,6 +82,14 @@ namespace Box
             _rb.useGravity = true;
             
             _navObstacle.enabled = true;
+            
+            if (_interactor is PlayerInteractor playerInteractor)
+            {
+                var ikOverride = playerInteractor.GetIkOverride();
+                
+                ikOverride.UnsetGoal(AvatarIKGoal.RightHand);
+                ikOverride.UnsetGoal(AvatarIKGoal.LeftHand);
+            }
         }
     }
 }
