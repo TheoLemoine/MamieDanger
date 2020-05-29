@@ -2,24 +2,18 @@
 
 public class DestinationFeedback : MonoBehaviour
 {
-    [SerializeField] private string durationPropCode;
-    [SerializeField] private string startTimePropCode;
     [SerializeField][Range(1f, 2f)] private float newRaycastLength = 1.5f;
     [SerializeField][Range(0f, 1f)] private float maxDistanceFromExpectation = 0.1f;
     [SerializeField][Range(0f, 1f)] private float slopeThreshold = 0.2f;
     [SerializeField][Range(0.01f, 0.1f)] private float slopeOffset = 0.02f;
     private MeshRenderer _meshRenderer;
     private Transform _transform;
-    private float _duration;
-    private int _startTimePropId;
+    private TimeMaterial _timeMaterial;
     
     void Start()
     {
-        _meshRenderer = GetComponent<MeshRenderer>();
-        _meshRenderer.enabled = false;
+        _timeMaterial = GetComponent<TimeMaterial>();
         _transform = transform;
-        _startTimePropId = Shader.PropertyToID(startTimePropCode);
-        _duration = _meshRenderer.material.GetFloat(Shader.PropertyToID(durationPropCode));
     }
 
     public void OnSetDestination(Vector3 newDestination, RaycastHit hit)
@@ -33,9 +27,8 @@ public class DestinationFeedback : MonoBehaviour
         var normal = hit.normal;
         var pos = hit.point;
         
-        _meshRenderer.enabled = true;
         _transform.position = pos + normal * 0.01f;
         _transform.rotation = Quaternion.LookRotation(-normal, Vector3.up);
-        _meshRenderer.material.SetFloat(_startTimePropId, Time.time);
+        _timeMaterial.TriggerTime();
     }
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 861828176521409818}
   - component: {fileID: 861828176521409819}
   - component: {fileID: 861828176521409812}
+  - component: {fileID: 1804045587957714152}
   m_Layer: 0
   m_Name: End Message
   m_TagString: Untagged
@@ -59,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: b25a82f574d4b1148a6ea935ea1ce6f2, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
@@ -90,6 +91,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 1
   m_AspectRatio: 1.701
+--- !u!114 &1804045587957714152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861828176521409814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fa867f7fc5a614391a66ac0869f35b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  durationPropCode: _duration
+  startTimePropCode: _startTime
 --- !u!1 &861828176675291807
 GameObject:
   m_ObjectHideFlags: 0
