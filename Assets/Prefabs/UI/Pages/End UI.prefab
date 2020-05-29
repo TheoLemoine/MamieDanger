@@ -1009,6 +1009,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1804045587957714152}
+          m_MethodName: TriggerTime
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - time: 0.5
     unityEvent:
       m_PersistentCalls:
@@ -1091,21 +1102,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &6981409614992017815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5319320409390123229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a629651e1f76b64b9bf63e7733455c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeDuration: 1.5
-  easeType: 6
-  stopAnimationWhenPaused: 0
 --- !u!1001 &861828178307856528
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1245,12 +1241,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07ecd64cbbfc19d4ebf20d43035918de, type: 3}
---- !u!1 &5319320409390123229 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4767009163129204813, guid: 07ecd64cbbfc19d4ebf20d43035918de,
-    type: 3}
-  m_PrefabInstance: {fileID: 861828178307856528}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5319320409390123228 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4767009163129204812, guid: 07ecd64cbbfc19d4ebf20d43035918de,
