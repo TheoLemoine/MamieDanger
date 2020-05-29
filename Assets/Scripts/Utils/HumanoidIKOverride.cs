@@ -25,11 +25,15 @@ namespace Utils
                 if (target != null)
                 {
                     _animator.SetIKPositionWeight(goal, weight);
+                    _animator.SetIKRotationWeight(goal, weight);
+                    
                     _animator.SetIKPosition(goal, target.position);
+                    _animator.SetIKRotation(goal, target.rotation);
                 }
                 else
                 {
                     _animator.SetIKPositionWeight(goal, 0);
+                    _animator.SetIKRotationWeight(goal, 0);
                 }
             }
         }
