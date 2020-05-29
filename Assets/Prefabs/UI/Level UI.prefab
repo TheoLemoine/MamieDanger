@@ -159,6 +159,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 861828176931537798, guid: c06d7c1aaa2966c4d86e1c852346dd0b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 861828176931537799, guid: c06d7c1aaa2966c4d86e1c852346dd0b,
         type: 3}
       propertyPath: m_Layer
@@ -252,7 +257,7 @@ PrefabInstance:
     - target: {fileID: 2155532833169759114, guid: c06d7c1aaa2966c4d86e1c852346dd0b,
         type: 3}
       propertyPath: OnEndEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2155532833169759114, guid: c06d7c1aaa2966c4d86e1c852346dd0b,
         type: 3}
@@ -327,6 +332,31 @@ PrefabInstance:
     - target: {fileID: 2155532833169759114, guid: c06d7c1aaa2966c4d86e1c852346dd0b,
         type: 3}
       propertyPath: OnEndEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2155532833169759114, guid: c06d7c1aaa2966c4d86e1c852346dd0b,
+        type: 3}
+      propertyPath: OnEndEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 812709652989846573}
+    - target: {fileID: 2155532833169759114, guid: c06d7c1aaa2966c4d86e1c852346dd0b,
+        type: 3}
+      propertyPath: OnEndEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: FadeOut
+      objectReference: {fileID: 0}
+    - target: {fileID: 2155532833169759114, guid: c06d7c1aaa2966c4d86e1c852346dd0b,
+        type: 3}
+      propertyPath: OnEndEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2155532833169759114, guid: c06d7c1aaa2966c4d86e1c852346dd0b,
+        type: 3}
+      propertyPath: OnEndEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2155532833169759114, guid: c06d7c1aaa2966c4d86e1c852346dd0b,
+        type: 3}
+      propertyPath: OnEndEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2754340635821251928, guid: c06d7c1aaa2966c4d86e1c852346dd0b,
@@ -1510,6 +1540,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306543661194984979, guid: e146ed07121079042a5f07946b1b7922,
+        type: 3}
+      propertyPath: m_Alpha
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7306543661194984990, guid: e146ed07121079042a5f07946b1b7922,
         type: 3}

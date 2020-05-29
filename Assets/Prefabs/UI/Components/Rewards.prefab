@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 0.2
-  notFoundAdditionalOffset: 0.3
+  notFoundAdditionalOffset: 0.2
   rewardFoundPrefab: {fileID: 2768414764210494987, guid: abdcdb0d102c557498a68de3784b9cef,
     type: 3}
   rewardNotFoundPrefab: {fileID: 8409990280505934147, guid: 006466a834d7fb5478fbaa52ff3f0ec5,

@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b29663946f2c91d47ab173deeef32342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleDuration: 2
+  scaleDuration: 1.7
   easeType: 24
   shrunkSize: 0
   startShrunk: 1

@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 861828176675291779}
   - component: {fileID: 861828176675291804}
   - component: {fileID: 861828176675291805}
+  - component: {fileID: 2589715824709186106}
   m_Layer: 5
   m_Name: Next level
   m_TagString: Untagged
@@ -224,6 +225,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2589715824709186106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861828176675291807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4459ba82be7003343bf9bf9a44f3b60f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slideDuration: 1
+  easeType: 6
+  offsetWhenVisible: {x: 0, y: 0}
+  offsetWhenNotVisible: {x: 0, y: -300}
+  startVisible: 0
+  animateAtStart: 0
+  stopAnimationWhenPaused: 0
 --- !u!1 &861828176931537799
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,6 +256,7 @@ GameObject:
   - component: {fileID: 861828176931537803}
   - component: {fileID: 861828176931537796}
   - component: {fileID: 861828176931537797}
+  - component: {fileID: 2192027716368197483}
   m_Layer: 5
   m_Name: Replay
   m_TagString: Untagged
@@ -343,6 +364,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2192027716368197483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861828176931537799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4459ba82be7003343bf9bf9a44f3b60f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slideDuration: 1
+  easeType: 6
+  offsetWhenVisible: {x: 0, y: 0}
+  offsetWhenNotVisible: {x: 0, y: -300}
+  startVisible: 0
+  animateAtStart: 0
+  stopAnimationWhenPaused: 0
 --- !u!1 &861828177715381952
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,8 +394,10 @@ GameObject:
   - component: {fileID: 861828177715381959}
   - component: {fileID: 861828177715381956}
   - component: {fileID: 861828177715381957}
+  - component: {fileID: 3579862681872737427}
+  - component: {fileID: 6233775897969040891}
   m_Layer: 0
-  m_Name: Button text
+  m_Name: End message text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -500,6 +542,78 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!225 &3579862681872737427
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861828177715381952}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &6233775897969040891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861828177715381952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a629651e1f76b64b9bf63e7733455c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeDuration: 0.5
+  easeType: 6
+  stopAnimationWhenPaused: 0
+--- !u!225 &1843906739115503742
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861828177981097039}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &129988824964082596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861828177981097039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a629651e1f76b64b9bf63e7733455c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeDuration: 0.4
+  easeType: 6
+  stopAnimationWhenPaused: 0
+--- !u!114 &7363975560588444497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861828177981097039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29663946f2c91d47ab173deeef32342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleDuration: 0.7
+  easeType: 24
+  shrunkSize: 0.7
+  startShrunk: 1
+  animateAtStart: 0
+  stopAnimationWhenPaused: 0
 --- !u!1 &861828178153713041
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,10 +855,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3924514189831734520}
   - component: {fileID: 3924514189831734522}
-  - component: {fileID: 3924514189831734521}
   - component: {fileID: 861828176367319551}
-  - component: {fileID: 861828176367319544}
+  - component: {fileID: 5850125648336971901}
+  - component: {fileID: 9164864105306768710}
   - component: {fileID: 2155532833169759114}
+  - component: {fileID: 5022582975274071944}
   m_Layer: 5
   m_Name: End UI
   m_TagString: Untagged
@@ -788,21 +903,6 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
---- !u!114 &3924514189831734521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3924514189831734519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a629651e1f76b64b9bf63e7733455c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeDuration: 0.5
-  easeType: 6
-  stopAnimationWhenPaused: 0
 --- !u!222 &861828176367319551
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -811,7 +911,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3924514189831734519}
   m_CullTransparentMesh: 0
---- !u!114 &861828176367319544
+--- !u!114 &5850125648336971901
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -840,6 +940,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &9164864105306768710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3924514189831734519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a629651e1f76b64b9bf63e7733455c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeDuration: 0.5
+  easeType: 6
+  stopAnimationWhenPaused: 0
 --- !u!114 &2155532833169759114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -855,8 +970,8 @@ MonoBehaviour:
   OnEndEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3924514189831734521}
-        m_MethodName: FadeIn
+      - m_Target: {fileID: 5022582975274071944}
+        m_MethodName: StartSequence
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -866,17 +981,127 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6552052502012199442}
-        m_MethodName: AnimateRewards
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+--- !u!114 &5022582975274071944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3924514189831734519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae3c6737b833ad747b79599179e56dc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  events:
+  - time: 0
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 9164864105306768710}
+          m_MethodName: FadeIn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1804045587957714152}
+          m_MethodName: TriggerTime
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - time: 0.5
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 129988824964082596}
+          m_MethodName: FadeIn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 7363975560588444497}
+          m_MethodName: ScaleIn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 6552052502012199442}
+          m_MethodName: AnimateRewards
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - time: 0.3
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6233775897969040891}
+          m_MethodName: FadeIn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - time: 2
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2589715824709186106}
+          m_MethodName: SlideIn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - time: 2.1
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2192027716368197483}
+          m_MethodName: SlideIn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &861828178307856528
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1207,7 +1432,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 5268129682354775375}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 861828177981097039}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8bc341b0ae19324e8c76ea63a414177, type: 3}
@@ -1216,6 +1441,12 @@ MonoBehaviour:
 --- !u!224 &861828177981097038 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4821662097669546241, guid: 3e25b486d2d7ef74e851bb4af4430842,
+    type: 3}
+  m_PrefabInstance: {fileID: 5268129682354775375}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &861828177981097039 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4821662097669546240, guid: 3e25b486d2d7ef74e851bb4af4430842,
     type: 3}
   m_PrefabInstance: {fileID: 5268129682354775375}
   m_PrefabAsset: {fileID: 0}
