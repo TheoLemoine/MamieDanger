@@ -261,9 +261,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slideDuration: 1
-  easeType: 6
+  easeType: 30
   offsetWhenVisible: {x: 0, y: 0}
   offsetWhenNotVisible: {x: 0, y: 188.3}
   startVisible: 1
-  animateAtStart: 1
+  animateAtStart: 0
   stopAnimationWhenPaused: 1

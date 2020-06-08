@@ -6,13 +6,15 @@ public class UIFade : MonoBehaviour
     [SerializeField] [Range(0.2f, 2f)] float fadeDuration = 1f;
     [SerializeField] private Ease easeType = Ease.OutQuad;
     [SerializeField] private bool stopAnimationWhenPaused;
+    [SerializeField] private bool startVisible;
     private CanvasGroup _canvasGroup;
     private bool _visible;
 
     private void Start()
     {
         _canvasGroup = GetComponent<CanvasGroup>();
-        _visible = _canvasGroup.alpha > 0f;
+        _visible = startVisible;
+        _canvasGroup.alpha = _visible ? 1f : 0f;
         _canvasGroup.interactable = _visible;
         _canvasGroup.blocksRaycasts = _visible;
     }

@@ -550,7 +550,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861828177715381952}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -569,6 +569,7 @@ MonoBehaviour:
   fadeDuration: 0.5
   easeType: 6
   stopAnimationWhenPaused: 0
+  startVisible: 0
 --- !u!225 &1843906739115503742
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -596,6 +597,7 @@ MonoBehaviour:
   fadeDuration: 0.4
   easeType: 6
   stopAnimationWhenPaused: 0
+  startVisible: 0
 --- !u!114 &7363975560588444497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -955,6 +957,7 @@ MonoBehaviour:
   fadeDuration: 0.5
   easeType: 6
   stopAnimationWhenPaused: 0
+  startVisible: 0
 --- !u!114 &2155532833169759114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1102,6 +1105,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  useSecondsRealtime: 1
 --- !u!1001 &861828178307856528
 PrefabInstance:
   m_ObjectHideFlags: 0

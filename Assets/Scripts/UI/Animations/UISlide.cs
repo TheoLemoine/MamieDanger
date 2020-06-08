@@ -39,7 +39,6 @@ public class UISlide : MonoBehaviour
     
     public void SlideIn()
     {
-        if (_isVisible) return;
         _isVisible = true;
         _rectTransform.localPosition = _startPosition + new Vector3(offsetWhenNotVisible.x, offsetWhenNotVisible.y, 0f);
         var localEndPos = _startPosition + new Vector3(offsetWhenVisible.x, offsetWhenVisible.y, 0f);
@@ -50,7 +49,6 @@ public class UISlide : MonoBehaviour
 
     public void SlideOut()
     {
-        if (!_isVisible) return;
         _isVisible = false;
         _rectTransform.localPosition = _startPosition + new Vector3(offsetWhenVisible.x, offsetWhenVisible.y, 0f);
         var localEndPos = _startPosition + new Vector3(offsetWhenNotVisible.x, offsetWhenNotVisible.y, 0f);

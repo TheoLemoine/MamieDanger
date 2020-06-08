@@ -67,6 +67,7 @@ MonoBehaviour:
   fadeDuration: 0.5
   easeType: 6
   stopAnimationWhenPaused: 0
+  startVisible: 0
 --- !u!1001 &514176874489005125
 PrefabInstance:
   m_ObjectHideFlags: 0
