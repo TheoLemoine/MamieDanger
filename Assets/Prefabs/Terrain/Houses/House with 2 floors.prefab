@@ -235,14 +235,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0d180b94b7953a479281393ddb7acf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useParent: 0
-  parentObject: {fileID: 4082308760844780783}
-  rendererArray:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  useParent: 1
+  parentObject: {fileID: 8438141622690787059}
+  rendererArray: []
 --- !u!64 &4106527253935759179
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -480,6 +475,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81610124a2a8f81489f28c43c5ecc734, type: 3}
+--- !u!1 &8438141622690787059 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 81610124a2a8f81489f28c43c5ecc734,
+    type: 3}
+  m_PrefabInstance: {fileID: 449128574925109242}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4846177496132672736 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 81610124a2a8f81489f28c43c5ecc734,
