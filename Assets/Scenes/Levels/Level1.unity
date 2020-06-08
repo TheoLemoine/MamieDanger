@@ -4565,6 +4565,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1102764694}
     m_Modifications:
+    - target: {fileID: 4667812864306173827, guid: 69e55bb2a801fc84a83eac2f4ad44751,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TriggerEnd
+      objectReference: {fileID: 0}
     - target: {fileID: 5781574831763766395, guid: dfaaa085d24324d44bd90ec16e945604,
         type: 3}
       propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.size
@@ -4630,11 +4635,6 @@ PrefabInstance:
       propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 593805072}
-    - target: {fileID: 4667812864306173827, guid: 69e55bb2a801fc84a83eac2f4ad44751,
-        type: 3}
-      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TriggerEnd
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfaaa085d24324d44bd90ec16e945604, type: 3}
 --- !u!4 &1109260845 stripped
@@ -6270,8 +6270,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 138.90605, y: 69.05426, z: 127.009964}
-  m_Center: {x: 49.11563, y: 4.8933105, z: 40.017982}
+  m_Size: {x: 180.22067, y: 73.45834, z: 189.68726}
+  m_Center: {x: 61.48784, y: 7.095352, z: 39.787857}
 --- !u!4 &1711703223
 Transform:
   m_ObjectHideFlags: 0
@@ -6280,7 +6280,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711703220}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.879997, y: -0.33000004, z: 14.339996}
+  m_LocalPosition: {x: -17.879997, y: -0.33000004, z: -34.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1289189311}
