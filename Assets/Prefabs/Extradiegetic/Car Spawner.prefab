@@ -43,7 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4bef644a1b44a1ca29f8de07157274c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5628679095430896775, guid: 863fa4604f5aa7b41b672b5862faa439, type: 3}
+  prefabList:
+  - {fileID: 5628679095430896775, guid: 863fa4604f5aa7b41b672b5862faa439, type: 3}
+  - {fileID: 7279488848023357453, guid: 57597247a7af45240acf46e53580a70c, type: 3}
+  - {fileID: 2243003770382507445, guid: d84b0ee6881ca344fb11d22e946ce15f, type: 3}
   period: 7
   overrideCarSpeed: 0
   carSpeed: 2
