@@ -2,9 +2,9 @@
 using UnityEngine.Events;
 using Utils.Attributes;
 
-public class EndZoneTrigger : MonoBehaviour
+public class ZoneTrigger : MonoBehaviour
 {
-    [SerializeField] [TagSelector] private string grannyTag;
+    [SerializeField] [TagSelector] private string tag;
     [SerializeField] private UnityEvent triggerEvent;
 
     private void Start()
@@ -12,9 +12,9 @@ public class EndZoneTrigger : MonoBehaviour
         if (triggerEvent == null) triggerEvent = new UnityEvent();
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(grannyTag))
+        if (other.CompareTag(tag))
             triggerEvent.Invoke();
             
     }

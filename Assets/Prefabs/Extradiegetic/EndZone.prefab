@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec427ace7217354eaf1cc6021f57508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grannyTag: Granny
+  tag: Granny
   triggerEvent:
     m_PersistentCalls:
       m_Calls:
