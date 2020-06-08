@@ -4,17 +4,17 @@ using Utils.Attributes;
 
 public class ZoneTrigger : MonoBehaviour
 {
-    [SerializeField] [TagSelector] private string tag;
-    [SerializeField] private UnityEvent triggerEvent;
+    [SerializeField] [TagSelector] protected string targetTag;
+    [SerializeField] protected UnityEvent triggerEvent;
 
     private void Start()
     {
         if (triggerEvent == null) triggerEvent = new UnityEvent();
     }
 
-    protected void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(tag))
+        if (other.CompareTag(targetTag))
             triggerEvent.Invoke();
             
     }

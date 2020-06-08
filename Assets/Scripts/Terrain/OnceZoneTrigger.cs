@@ -2,14 +2,14 @@
 
 public class OnceZoneTrigger : ZoneTrigger
 {
-    private bool _hasTrigger;
+    private bool _hasBeenTriggered;
 
-    protected new void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (!_hasTrigger)
+        if (!_hasBeenTriggered && other.CompareTag(targetTag))
         {
-            base.OnTriggerEnter(other);
-            _hasTrigger = true;
+            triggerEvent.Invoke();
+            _hasBeenTriggered = true;
         }
     }
 }

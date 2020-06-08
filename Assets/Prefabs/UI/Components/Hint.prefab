@@ -264,6 +264,6 @@ MonoBehaviour:
   easeType: 30
   offsetWhenVisible: {x: 0, y: 0}
   offsetWhenNotVisible: {x: 0, y: 188.3}
-  startVisible: 1
+  startVisible: 0
   animateAtStart: 0
   stopAnimationWhenPaused: 1
