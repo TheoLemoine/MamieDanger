@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetSpeed: 5
-  motorTorque: 1000
+  motorTorque: 3500
   wheelBackRight: {fileID: 2772708234883204226}
   wheelBackLeft: {fileID: 8644585107034153230}
   wheelFrontRight: {fileID: 6767156808733977277}
