@@ -2,25 +2,28 @@
 using UnityEngine;
 using Utils.Attributes;
 
-public class BlockingTrigger : MonoBehaviour
+namespace GameComponents.Door
 {
-    private List<int> _blockerIds = new List<int>();
-    [SerializeField] [TagSelector] private string blockerTag;
-
-    private void OnTriggerEnter(Collider other)
+    public class BlockingTrigger : MonoBehaviour
     {
-        if (other.CompareTag(blockerTag))
-            _blockerIds.Add(other.GetInstanceID());
-    }
+        private List<int> _blockerIds = new List<int>();
+        [SerializeField] [TagSelector] private string blockerTag;
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag(blockerTag))
-            _blockerIds.Remove(other.GetInstanceID());
-    }
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag(blockerTag))
+                _blockerIds.Add(other.GetInstanceID());
+        }
 
-    public bool IsAreaBlocked()
-    {
-        return _blockerIds.Count != 0;
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.CompareTag(blockerTag))
+                _blockerIds.Remove(other.GetInstanceID());
+        }
+
+        public bool IsAreaBlocked()
+        {
+            return _blockerIds.Count != 0;
+        }
     }
 }

@@ -1,11 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using Abstract;
+using GameComponents.Player;
 using Interfaces;
 using UnityEngine;
-using Abstract;
-using GameComponents.Player;
 using UnityEngine.AI;
 
-namespace Box
+namespace GameComponents.Box
 {
     public class Grabbable : AInteracToggleBehaviour
     {

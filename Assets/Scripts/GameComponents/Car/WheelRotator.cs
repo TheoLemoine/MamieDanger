@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace Car
+namespace GameComponents.Car
 {
     [RequireComponent(typeof(WheelCollider))]
     public class WheelRotator : MonoBehaviour

@@ -1,19 +1,14 @@
-using System;
 using Interfaces;
 using UnityEngine;
 
-namespace Car
+namespace GameComponents.Car
 {
     public class CarController : MonoBehaviour
     {
         [SerializeField]
         private float targetSpeed = 5f;
 
-        public float TargetSpeed
-        {
-            get => targetSpeed;
-            set => targetSpeed = value;
-        }
+        public float TargetSpeed { get; set; }
         
         [SerializeField]
         private float motorTorque = 1000f;
