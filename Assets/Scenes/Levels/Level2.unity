@@ -3794,7 +3794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &683150370
 Transform:
   m_ObjectHideFlags: 0
@@ -3824,8 +3824,8 @@ ReflectionProbe:
   m_TimeSlicingMode: 0
   m_Resolution: 128
   m_UpdateFrequency: 0
-  m_BoxSize: {x: 75.766174, y: 21.739918, z: 102.51757}
-  m_BoxOffset: {x: 26.926643, y: 4.736971, z: 28.20058}
+  m_BoxSize: {x: 80.05836, y: 21.739918, z: 74.41024}
+  m_BoxOffset: {x: 29.072735, y: 4.736971, z: 37.20512}
   m_NearClip: 0.3
   m_FarClip: 1000
   m_ShadowDistance: 100
@@ -4736,7 +4736,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &938677296
 Transform:
   m_ObjectHideFlags: 0
@@ -4745,7 +4745,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 938677295}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.87, y: 1.5, z: -37.4}
+  m_LocalPosition: {x: 7.3, y: 1.5, z: -16.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1928210980}
@@ -4766,8 +4766,8 @@ ReflectionProbe:
   m_TimeSlicingMode: 0
   m_Resolution: 128
   m_UpdateFrequency: 0
-  m_BoxSize: {x: 76.175, y: 18.98985, z: 95.50676}
-  m_BoxOffset: {x: 5.558716, y: 5.6162777, z: 7.405571}
+  m_BoxSize: {x: 76.175, y: 18.98985, z: 89.80545}
+  m_BoxOffset: {x: 5.558716, y: 5.6162777, z: -13.8115835}
   m_NearClip: 0.3
   m_FarClip: 1000
   m_ShadowDistance: 100
