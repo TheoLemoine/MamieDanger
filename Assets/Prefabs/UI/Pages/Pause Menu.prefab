@@ -799,7 +799,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 17.744, y: -26.976}
-  m_SizeDelta: {x: 22.330002, y: 24.544518}
+  m_SizeDelta: {x: 16, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5946443200086386523
 CanvasRenderer:
@@ -873,7 +873,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 17.404007, y: -26.976}
-  m_SizeDelta: {x: 23.009476, y: 24.544518}
+  m_SizeDelta: {x: 16, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5946443200242834840
 CanvasRenderer:
@@ -2500,6 +2500,7 @@ MonoBehaviour:
   fadeDuration: 0.5
   easeType: 6
   stopAnimationWhenPaused: 0
+  startVisible: 0
 --- !u!222 &6405656106685022998
 CanvasRenderer:
   m_ObjectHideFlags: 0

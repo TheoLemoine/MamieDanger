@@ -4761,11 +4761,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1102764694}
     m_Modifications:
-    - target: {fileID: 4667812864306173827, guid: 69e55bb2a801fc84a83eac2f4ad44751,
-        type: 3}
-      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TriggerEnd
-      objectReference: {fileID: 0}
     - target: {fileID: 5781574831763766395, guid: dfaaa085d24324d44bd90ec16e945604,
         type: 3}
       propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.size
@@ -4831,6 +4826,11 @@ PrefabInstance:
       propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 593805072}
+    - target: {fileID: 4667812864306173827, guid: 69e55bb2a801fc84a83eac2f4ad44751,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TriggerEnd
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfaaa085d24324d44bd90ec16e945604, type: 3}
 --- !u!4 &1109260845 stripped
@@ -8843,7 +8843,7 @@ PrefabInstance:
     - target: {fileID: 800629285507443905, guid: 65d72a9cbeeba7943a28fd1129981f54,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -85.380005
+      value: 27.645004
       objectReference: {fileID: 0}
     - target: {fileID: 800629285559668652, guid: 65d72a9cbeeba7943a28fd1129981f54,
         type: 3}
