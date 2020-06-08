@@ -548,8 +548,6 @@ GameObject:
   - component: {fileID: 7180583233308114459}
   - component: {fileID: 7180583233308114458}
   - component: {fileID: 7180583233308114456}
-  - component: {fileID: 6502556504722558890}
-  - component: {fileID: 6502556504722558889}
   m_Layer: 5
   m_Name: Dialogue
   m_TagString: Untagged
@@ -627,65 +625,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4459ba82be7003343bf9bf9a44f3b60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slideDuration: 1
+  easeType: 6
   offsetWhenVisible: {x: 0, y: 0}
   offsetWhenNotVisible: {x: 0, y: -250}
   startVisible: 0
   animateAtStart: 0
   stopAnimationWhenPaused: 1
---- !u!114 &6502556504722558890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7180583233308114452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc12ff8314ad3354390fa34d61191aa3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventAfterTime:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7180583233308114456}
-        m_MethodName: SlideIn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  time: 15
---- !u!114 &6502556504722558889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7180583233308114452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc12ff8314ad3354390fa34d61191aa3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventAfterTime:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7180583233308114456}
-        m_MethodName: SlideOut
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  time: 30
 --- !u!1 &7180583233335988526
 GameObject:
   m_ObjectHideFlags: 0

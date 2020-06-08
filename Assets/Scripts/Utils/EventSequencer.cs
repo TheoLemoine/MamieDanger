@@ -11,6 +11,7 @@ public class EventSequencer : MonoBehaviour
         public UnityEvent unityEvent;
     }
     [SerializeField] private Event[] events;
+    [SerializeField] private bool useSecondsRealtime = true;
     private Event[] _processedEvents;
     void Start()
     {
@@ -37,7 +38,11 @@ public class EventSequencer : MonoBehaviour
     {
         foreach (var processedEvent in _processedEvents)
         {
-            yield return new WaitForSeconds(processedEvent.time);
+            if (useSecondsRealtime)
+                yield return new WaitForSecondsRealtime(processedEvent.time);
+            else
+                yield return new WaitForSeconds(processedEvent.time);
+
             processedEvent.unityEvent.Invoke();
         }
     }

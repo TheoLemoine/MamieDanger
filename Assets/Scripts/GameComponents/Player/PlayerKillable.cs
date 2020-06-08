@@ -3,15 +3,14 @@ using DG.Tweening;
 using Interfaces;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 namespace GameComponents.Player
 {
     public class PlayerKillable : MonoBehaviour, IKillable
     {
-
-        [SerializeField] private float secondsToWait = 3f;
-        
+        [SerializeField] private UnityEvent onDeathEvent; 
         private Transform _transform;
         private NavMeshAgent _agent;
         private Collider _collider;
@@ -30,13 +29,7 @@ namespace GameComponents.Player
             _agent.angularSpeed = 0f;
             _collider.enabled = false;
 
-            StartCoroutine(RestartScene());
-        }
-
-        private IEnumerator RestartScene()
-        {
-            yield return new WaitForSeconds(secondsToWait);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            onDeathEvent.Invoke();
         }
     }
 }
