@@ -7,31 +7,37 @@ using Utils;
 public class Carousel : MonoBehaviour
 {
     [SerializeField] private SingleUnityLayer uiLayer;
-    [SerializeField] private GameObject[] levels;
+    [SerializeField] private LevelSelectorTransition[] levels;
     [SerializeField] private int currentIndex;
     [SerializeField] private float radius = 15f;
     [SerializeField] private float angle = Mathf.PI / 9.5f;
     [SerializeField] private float transitionDuration = 0.6f;
-    [SerializeField] private float defaultScale = 1f;
-    [SerializeField] private float frontScale = 1.5f;
 
     private float _animProgression;
+    private int[] _goIds;
     private int _indexDiff;
     private Tween _tween;
     
     void Start()
     {
         InputManager.PlayerRaycaster.AddListener(uiLayer.LayerIndex, Click);
+        _goIds = new int[levels.Length];
+        var index = 0;
+        foreach (var level in levels)
+        {
+            _goIds[index] = level.gameObject.GetInstanceID();
+            index++;
+        }
         CalcPos();
     }
-
+    
     private void Click(RaycastHit hit)
     {
-        var go = hit.collider.transform.parent.gameObject;
-        var newIndex = Array.IndexOf(levels, go);
+        var goId = hit.collider.transform.parent.gameObject.GetInstanceID();
+        var newIndex = Array.IndexOf(_goIds, goId);
         if (newIndex == currentIndex || (newIndex == currentIndex - _indexDiff && Mathf.Abs(_indexDiff - _animProgression) < 0.25f))
         {
-            go.GetComponent<LevelButton>().Click();
+            levels[newIndex].GetComponent<LevelButton>().Click();
             return;
         }
 
@@ -64,26 +70,19 @@ public class Carousel : MonoBehaviour
                 Mathf.Cos(levelAngle) * radius,
                 Mathf.Sin(levelAngle) * radius
             );
-
-            // Init to default scale
-            var scale = defaultScale;
-            var diffScale = frontScale - defaultScale;
-
-            // Handle in animation
+            
+            var progFactor = 0f;
             if (_indexDiff != 0)
             {
                 if (currentIndex - _indexDiff == index)
-                    scale = defaultScale + _animProgression / _indexDiff * diffScale;
+                    progFactor = _animProgression / _indexDiff;
                 if (currentIndex == index)
-                    scale = frontScale - _animProgression / _indexDiff * diffScale;
+                    progFactor = 1f - _animProgression / _indexDiff;
             }
-            // If not in animation : max scale
             else if (index == currentIndex)
-                scale = frontScale;
+                progFactor = 1f;
             
-            
-            level.transform.localScale = Vector3.one * scale;
-            
+            level.UpdateTransition(progFactor);
             index++;
         }
     }
