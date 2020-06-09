@@ -30,7 +30,7 @@ public class PauseButton : MonoBehaviour
     }
 
 
-    void TransitionToCross()
+    public void TransitionToCross()
     {
         pauseBarTransform1.DOLocalRotate(new Vector3(0, 0, -45), duration).SetUpdate(true);
         pauseBarTransform1.DOLocalMove(new Vector3(-2.95f, 5.8f, 0), duration).SetUpdate(true);
@@ -40,7 +40,7 @@ public class PauseButton : MonoBehaviour
         pauseBarTransform2.DOScaleY(1.213f, duration).SetUpdate(true);
     }
 
-    void TransitionToPauseSymbol()
+    public void TransitionToPauseSymbol()
     {
         pauseBarTransform1.DOLocalRotate(new Vector3(0, 0, 0), duration).SetUpdate(true);
         pauseBarTransform1.DOLocalMove(new Vector3(-4.8487f, 5.6177f, 0), duration).SetUpdate(true);
