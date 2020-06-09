@@ -1,26 +1,26 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelButton : MonoBehaviour
+namespace UI
 {
-    [SerializeField] private string levelSceneName;
-    [SerializeField] private bool locked;
-    [SerializeField] private Material lockedMaterial;
-    [SerializeField] private Renderer[] renderersToOverride;
-
-    public void Start()
+    public class LevelButton : MonoBehaviour
     {
-        if (!locked) return;
-        foreach (var renderer1 in renderersToOverride)
-            renderer1.material = lockedMaterial;
-    }
+        [SerializeField] private string levelSceneName;
+        [SerializeField] private bool locked;
+        [SerializeField] private Material lockedMaterial;
+        [SerializeField] private Renderer[] renderersToOverride;
 
-    public void Click()
-    {
-        if (!locked)
-            SceneManager.LoadScene(levelSceneName);
+        public void Start()
+        {
+            if (!locked) return;
+            foreach (var renderer1 in renderersToOverride)
+                renderer1.material = lockedMaterial;
+        }
+
+        public void Click()
+        {
+            if (!locked)
+                SceneManager.LoadScene(levelSceneName);
+        }
     }
 }

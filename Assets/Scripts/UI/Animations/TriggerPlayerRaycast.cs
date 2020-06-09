@@ -1,13 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Global.Input;
+﻿using Global.Input;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class TriggerPlayerRaycast : MonoBehaviour, IPointerClickHandler
+namespace UI.Animations
 {
-    public void OnPointerClick(PointerEventData eventData)
+    public class TriggerPlayerRaycast : MonoBehaviour, IPointerClickHandler
     {
-        InputManager.PlayerRaycaster.Raycast();
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            InputManager.PlayerRaycaster.Raycast();
+        }
     }
 }

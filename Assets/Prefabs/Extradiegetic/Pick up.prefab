@@ -458,9 +458,9 @@ GameObject:
   - component: {fileID: 6672470187200167416}
   - component: {fileID: 6672470187200167417}
   - component: {fileID: 6672470187200167366}
-  - component: {fileID: 6672470187200167367}
+  - component: {fileID: 5917107060161369285}
   - component: {fileID: 8018084776537023198}
-  - component: {fileID: 3747650159193312003}
+  - component: {fileID: 2982036983019843309}
   m_Layer: 0
   m_Name: Pick up
   m_TagString: Untagged
@@ -515,7 +515,7 @@ MonoBehaviour:
   oscillationAmplitude: {x: 0, y: 0.4, z: 0}
   targetRigidbody: {fileID: 7696828991974623322}
   paused: 0
---- !u!114 &6672470187200167367
+--- !u!114 &5917107060161369285
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -524,46 +524,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6672470187200167419}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c455e7b29614efdb617d0055a23f950, type: 3}
+  m_Script: {fileID: 11500000, guid: 47465d8a4e184285a4d40f2b376898e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickedUp:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8018084776537023198}
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6672470187200167366}
-        m_MethodName: Pause
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 3747650159193312003}
-        m_MethodName: NotifyPlayerCounter
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  playerTag: Player
   pickUpId: 
 --- !u!320 &8018084776537023198
 PlayableDirector:
@@ -588,7 +551,7 @@ PlayableDirector:
     value: {fileID: 2799796524231444207}
   m_ExposedReferences:
     m_References: []
---- !u!114 &3747650159193312003
+--- !u!114 &2982036983019843309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -597,9 +560,46 @@ MonoBehaviour:
   m_GameObject: {fileID: 6672470187200167419}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a5630d81700b294eb6ef2541dba99e9, type: 3}
+  m_Script: {fileID: 11500000, guid: f7dca589b5a94cc478efc4c481f99757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetTag: Player
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8018084776537023198}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6672470187200167366}
+        m_MethodName: Pause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5917107060161369285}
+        m_MethodName: Pick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8812661659566209322
 GameObject:
   m_ObjectHideFlags: 0
