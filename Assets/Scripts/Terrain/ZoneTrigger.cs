@@ -2,20 +2,23 @@
 using UnityEngine.Events;
 using Utils.Attributes;
 
-public class ZoneTrigger : MonoBehaviour
+namespace Terrain
 {
-    [SerializeField] [TagSelector] protected string targetTag;
-    [SerializeField] protected UnityEvent triggerEvent;
-
-    private void Start()
+    public class ZoneTrigger : MonoBehaviour
     {
-        if (triggerEvent == null) triggerEvent = new UnityEvent();
-    }
+        [SerializeField] [TagSelector] protected string targetTag;
+        [SerializeField] protected UnityEvent triggerEvent;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag(targetTag))
-            triggerEvent.Invoke();
+        private void Start()
+        {
+            if (triggerEvent == null) triggerEvent = new UnityEvent();
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag(targetTag))
+                triggerEvent.Invoke();
             
+        }
     }
 }

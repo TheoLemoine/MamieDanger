@@ -12,6 +12,8 @@ namespace Global.Save
         private string saveFileName = "player_save.bin";
         
         public static SaveManager Instance { get; private set; }
+        public static bool IsReady { get; private set; }
+        
         public SaveData Data { get; private set; }
 
         private string SaveFilePath => $"{Application.persistentDataPath}/{saveFileName}";
@@ -28,6 +30,7 @@ namespace Global.Save
             
             Instance = this;
             Data = Retrieve();
+            IsReady = true;
         }
 
         private SaveData Retrieve()
