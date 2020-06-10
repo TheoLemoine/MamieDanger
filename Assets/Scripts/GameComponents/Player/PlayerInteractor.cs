@@ -1,4 +1,5 @@
-﻿using Abstract;
+﻿using System;
+using Abstract;
 using Global.Input;
 using UnityEngine;
 using Utils;
@@ -16,6 +17,12 @@ namespace GameComponents.Player
         {
             _playerController = GetComponent<PlayerController>();
             InputManager.PlayerRaycaster.AddListener(clickableLayer.LayerIndex, Interact);
+        }
+
+        private void OnDestroy()
+        {
+            if (InputManager.IsReady)
+                InputManager.PlayerRaycaster.RemoveListener(clickableLayer.LayerIndex, Interact);
         }
 
         public void Interact(RaycastHit hit)

@@ -29,25 +29,32 @@ namespace UI
             InputManager.PlayerRaycaster.AddListener(uiLayer.LayerIndex, Click);
             _goIds = new int[levels.Length];
             yield return new WaitForFixedUpdate();
-            var levelsData = SaveManager.Instance.Data.Levels;
+            var levelsData = SaveManager.Instance.Data.levels;
             var index = 0;
             var locked = false;
             foreach (var level in levels)
             {
                 var levelName = level.LevelButton.levelSceneName;
-                var coinPickedNumber = levelsData.ContainsKey(levelName) ? levelsData[levelName].CoinsPicked.Count : 0;
+                var coinPickedNumber = levelsData.ContainsKey(levelName) ? levelsData[levelName].coinsPicked.Count : 0;
                 level.LayoutLevelSelector(locked, coinPickedNumber);
-                if (!levelsData.ContainsKey(levelName) || !levelsData[levelName].Finished) locked = true;
+                if (!levelsData.ContainsKey(levelName) || !levelsData[levelName].finished) locked = true;
                 _goIds[index] = level.gameObject.GetInstanceID();
                 index++;
             }
             CalcPos();
         }
 
+        private void OnDestroy()
+        {
+            if (InputManager.IsReady)
+                InputManager.PlayerRaycaster.RemoveListener(uiLayer.LayerIndex, Click);
+        }
+
         private void Click(RaycastHit hit)
         {
             var goId = hit.collider.transform.parent.gameObject.GetInstanceID();
             var newIndex = Array.IndexOf(_goIds, goId);
+            Debug.Log(newIndex);
             if (newIndex == currentIndex || (newIndex == currentIndex - _indexDiff && Mathf.Abs(_indexDiff - _animProgression) < 0.25f))
             {
                 levels[newIndex].LevelButton.Click();

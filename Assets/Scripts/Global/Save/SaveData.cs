@@ -1,21 +1,24 @@
+using System;
 using System.Collections.Generic;
 
 namespace Global.Save
 {
+    [Serializable]
     public class SaveData
     {
         public SaveData()
         {
-            Levels = new Dictionary<string, LevelResults>();
+            levels = new Dictionary<string, LevelResults>();
         }
 
+        [Serializable]
         public struct LevelResults
         {
-            public bool Finished;
-            public List<string> CoinsPicked; 
+            public bool finished;
+            public List<string> coinsPicked; 
         }
 
-        public Dictionary<string, LevelResults> Levels;
+        public Dictionary<string, LevelResults> levels;
         
     }
 }

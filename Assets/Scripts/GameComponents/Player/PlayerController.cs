@@ -76,9 +76,7 @@ namespace GameComponents.Player
         public void IgnoreInputs(bool interruptRoute = false)
         {
             if (InputManager.IsReady)
-            {
                 InputManager.PlayerRaycaster.RemoveListener(groundLayer.LayerIndex, Move);
-            }
 
             if (interruptRoute) InterruptRoute();
         }
@@ -91,9 +89,7 @@ namespace GameComponents.Player
         public void ListenInputs()
         {
             if (InputManager.IsReady)
-            {
                 InputManager.PlayerRaycaster.AddListener(groundLayer.LayerIndex, Move);
-            }
         }
     }
 }

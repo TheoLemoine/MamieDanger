@@ -24,9 +24,9 @@ namespace GameComponents.Player
             
             var sceneName = SceneManager.GetActiveScene().name;
             
-            if (SaveManager.Instance.Data.Levels.TryGetValue(sceneName, out var levelResults))
+            if (SaveManager.Instance.Data.levels.TryGetValue(sceneName, out var levelResults))
             {
-                Rewards = levelResults.CoinsPicked.ToDictionary(id => id, id => true);
+                Rewards = levelResults.coinsPicked.ToDictionary(id => id, id => true);
             }
         }
         
@@ -40,13 +40,13 @@ namespace GameComponents.Player
             Rewards[rewardId] = true;
         }
 
-        public static void SaveRewards()
+        public void SaveRewards()
         {
             var sceneName = SceneManager.GetActiveScene().name;
-            SaveManager.Instance.Data.Levels[sceneName] = new SaveData.LevelResults()
+            SaveManager.Instance.Data.levels[sceneName] = new SaveData.LevelResults()
             {
-                Finished = true,
-                CoinsPicked = Rewards.Where(pair => pair.Value).Select(pair => pair.Key).ToList()
+                finished = true,
+                coinsPicked = Rewards.Where(pair => pair.Value).Select(pair => pair.Key).ToList()
             };
             SaveManager.Instance.Persist();
         }
