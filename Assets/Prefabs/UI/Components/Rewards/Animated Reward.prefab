@@ -1,33 +1,30 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5970976051528851272
+--- !u!114 &5584863093169435407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5814710986977173265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29663946f2c91d47ab173deeef32342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleDuration: 1.7
+  easeType: 24
+  shrunkSize: 0
+  startShrunk: 1
+  animateAtStart: 0
+  stopAnimationWhenPaused: 0
+--- !u!1001 &8563984308092748058
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2768414764210494985, guid: abdcdb0d102c557498a68de3784b9cef,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e73f8021973d42e43b64f7284cc77cae,
-        type: 3}
-    - target: {fileID: 2768414764210494985, guid: abdcdb0d102c557498a68de3784b9cef,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.34901962
-      objectReference: {fileID: 0}
-    - target: {fileID: 2768414764210494985, guid: abdcdb0d102c557498a68de3784b9cef,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.34901962
-      objectReference: {fileID: 0}
-    - target: {fileID: 2768414764210494985, guid: abdcdb0d102c557498a68de3784b9cef,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.7882353
-      objectReference: {fileID: 0}
     - target: {fileID: 2768414764210494986, guid: abdcdb0d102c557498a68de3784b9cef,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -136,17 +133,13 @@ PrefabInstance:
     - target: {fileID: 2768414764210494987, guid: abdcdb0d102c557498a68de3784b9cef,
         type: 3}
       propertyPath: m_Name
-      value: Empty Reward
-      objectReference: {fileID: 0}
-    - target: {fileID: 8716530059880879745, guid: abdcdb0d102c557498a68de3784b9cef,
-        type: 3}
-      propertyPath: scaleDuration
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8716530059880879745, guid: abdcdb0d102c557498a68de3784b9cef,
-        type: 3}
-      propertyPath: easeType
-      value: 12
+      value: Animated Reward
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abdcdb0d102c557498a68de3784b9cef, type: 3}
+--- !u!1 &5814710986977173265 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2768414764210494987, guid: abdcdb0d102c557498a68de3784b9cef,
+    type: 3}
+  m_PrefabInstance: {fileID: 8563984308092748058}
+  m_PrefabAsset: {fileID: 0}

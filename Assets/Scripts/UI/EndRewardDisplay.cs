@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace UI
 {
-    public class RewardDisplay : MonoBehaviour
+    public class EndRewardDisplay : MonoBehaviour
     {
         [SerializeField][Range(0.01f, 1f)] private float offset = 0.2f;
         [SerializeField] [Range(0.01f, 1f)] private float notFoundAdditionalOffset = 0.1f;
