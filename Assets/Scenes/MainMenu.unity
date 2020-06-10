@@ -1753,6 +1753,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   durationPropCode: _duration
   startTimePropCode: _startTime
+  doesResetTime: 1
+  resetTime: 1000
 --- !u!1 &722530701
 GameObject:
   m_ObjectHideFlags: 0
