@@ -113,7 +113,6 @@ GameObject:
   - component: {fileID: 1936600908935562987}
   - component: {fileID: 5675807995604152467}
   - component: {fileID: 321610845781992695}
-  - component: {fileID: 774757823355992751}
   m_Layer: 14
   m_Name: Occlusion Trigger
   m_TagString: Untagged
@@ -167,21 +166,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.006337, y: 11.47162, z: 10.987654}
-  m_Center: {x: 5.252336, y: 8.1451435, z: 5.5487666}
---- !u!65 &774757823355992751
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6999640041310423789}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4.0051003, y: 5.0982313, z: 4.859768}
-  m_Center: {x: 3.7503476, y: 14.953833, z: 5.408548}
+  m_Size: {x: 10.006337, y: 21.440777, z: 10.987654}
+  m_Center: {x: 5.252336, y: 13.129721, z: 5.5487666}
 --- !u!1 &7379671487378803676
 GameObject:
   m_ObjectHideFlags: 0
