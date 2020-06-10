@@ -789,7 +789,7 @@ PrefabInstance:
     - target: {fileID: 5514074800066038815, guid: 6e8aa7931cdd0a646a1a9e61b5d59181,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5514074800066038815, guid: 6e8aa7931cdd0a646a1a9e61b5d59181,
         type: 3}
@@ -839,6 +839,7 @@ Transform:
   - {fileID: 756233435}
   - {fileID: 1851248108}
   - {fileID: 900786082}
+  - {fileID: 1300429683}
   m_Father: {fileID: 896096220}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1498,7 +1499,7 @@ Transform:
   - {fileID: 1102764694}
   - {fileID: 1817513869}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &477788614
 MonoBehaviour:
@@ -2187,7 +2188,7 @@ PrefabInstance:
     - target: {fileID: 7967809023859858471, guid: 60ebdfd35dedc884989bb09dc644bd28,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7967809023859858471, guid: 60ebdfd35dedc884989bb09dc644bd28,
         type: 3}
@@ -3266,7 +3267,7 @@ Transform:
   - {fileID: 1672697881}
   - {fileID: 1621545516}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &896311273
 PrefabInstance:
@@ -3428,31 +3429,31 @@ PrefabInstance:
     - target: {fileID: 3745104397177386556, guid: d83d9be3e38cc2844bb7535f0779ed17,
         type: 3}
       propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745104397177386556, guid: d83d9be3e38cc2844bb7535f0779ed17,
+        type: 3}
+      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3745104397177386556, guid: d83d9be3e38cc2844bb7535f0779ed17,
         type: 3}
-      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3745104397177386556, guid: d83d9be3e38cc2844bb7535f0779ed17,
-        type: 3}
-      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745104397177386556, guid: d83d9be3e38cc2844bb7535f0779ed17,
         type: 3}
-      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 800629284140873739}
     - target: {fileID: 3745104397177386556, guid: d83d9be3e38cc2844bb7535f0779ed17,
         type: 3}
-      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: TriggerEnd
       objectReference: {fileID: 0}
     - target: {fileID: 3745104397177386556, guid: d83d9be3e38cc2844bb7535f0779ed17,
         type: 3}
-      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6337107055873667080, guid: d83d9be3e38cc2844bb7535f0779ed17,
@@ -4842,7 +4843,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1249379691
 PrefabInstance:
@@ -5119,7 +5120,7 @@ Transform:
   - {fileID: 265297077}
   - {fileID: 1579266824}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 56.222004, z: 0}
 --- !u!1 &1271593384
 GameObject:
@@ -5395,14 +5396,14 @@ Transform:
   - {fileID: 1249379692}
   - {fileID: 1022353226}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1300429682
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 247437813}
     m_Modifications:
     - target: {fileID: 1093032293677542274, guid: 80e69c7dd129843469fa1a6a13fcfece,
         type: 3}
@@ -5507,7 +5508,7 @@ PrefabInstance:
     - target: {fileID: 6055656406590105481, guid: 80e69c7dd129843469fa1a6a13fcfece,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6055656406590105481, guid: 80e69c7dd129843469fa1a6a13fcfece,
         type: 3}
@@ -5536,6 +5537,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80e69c7dd129843469fa1a6a13fcfece, type: 3}
+--- !u!4 &1300429683 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6055656406590105481, guid: 80e69c7dd129843469fa1a6a13fcfece,
+    type: 3}
+  m_PrefabInstance: {fileID: 1300429682}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1314392283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5786,31 +5793,31 @@ PrefabInstance:
     - target: {fileID: 132396505395922708, guid: fb8b23f45059b7747958f416606bbfdd,
         type: 3}
       propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 132396505395922708, guid: fb8b23f45059b7747958f416606bbfdd,
+        type: 3}
+      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 132396505395922708, guid: fb8b23f45059b7747958f416606bbfdd,
         type: 3}
-      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 132396505395922708, guid: fb8b23f45059b7747958f416606bbfdd,
-        type: 3}
-      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 132396505395922708, guid: fb8b23f45059b7747958f416606bbfdd,
         type: 3}
-      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 800629284140873739}
     - target: {fileID: 132396505395922708, guid: fb8b23f45059b7747958f416606bbfdd,
         type: 3}
-      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: TriggerEnd
       objectReference: {fileID: 0}
     - target: {fileID: 132396505395922708, guid: fb8b23f45059b7747958f416606bbfdd,
         type: 3}
-      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2617184589953645754, guid: fb8b23f45059b7747958f416606bbfdd,
@@ -6055,7 +6062,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1460668103
 PrefabInstance:
@@ -7584,7 +7591,7 @@ Transform:
   - {fileID: 1379096325}
   - {fileID: 915484213}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1711703220
 GameObject:
@@ -7940,7 +7947,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1846744573
 PrefabInstance:
@@ -9165,7 +9172,7 @@ PrefabInstance:
     - target: {fileID: 800629285202466100, guid: 65d72a9cbeeba7943a28fd1129981f54,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 800629285202466100, guid: 65d72a9cbeeba7943a28fd1129981f54,
         type: 3}
