@@ -38,7 +38,7 @@ namespace Global.Sound
             }
         }
 
-        private SoundEffect GetSound(string slug)
+        private static SoundEffect GetSound(string slug)
         {
             try
             {
@@ -53,5 +53,9 @@ namespace Global.Sound
         public void Play(string slug) => GetSound(slug)?.Play();
         public void Pause(string slug) => GetSound(slug)?.Play();
         public void Stop(string slug) => GetSound(slug)?.Stop();
+        
+        public static void PlayStatic(string slug) => GetSound(slug)?.Play();
+        public static void PauseStatic(string slug) => GetSound(slug)?.Play();
+        public static void StopStatic(string slug) => GetSound(slug)?.Stop();
     }
 }
