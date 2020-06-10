@@ -45,5 +45,13 @@ namespace UI
                 rendererArray[i].gameObject.layer = _origLayers[i];
             }
         }
+
+        public void ChangeMaterial(Material material)
+        {
+            for (var i = 0; i < rendererArray.Length; i++)
+            {
+                rendererArray[i].material = material;
+            }
+        }
     }
 }

@@ -1597,7 +1597,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Amener mamie au supermarch\xE9 Avant la fermeture"
+  m_text: "Amener mamie au supermarch\xE9 avant la fermeture"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 52e5bd14ab1d22346aa6c97f62a95ed6, type: 2}
   m_sharedMaterial: {fileID: -985582551016170068, guid: 52e5bd14ab1d22346aa6c97f62a95ed6,

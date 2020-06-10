@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace UI
@@ -8,13 +9,19 @@ namespace UI
         [SerializeField] private string levelSceneName;
         [SerializeField] private bool locked;
         [SerializeField] private Material lockedMaterial;
-        [SerializeField] private Renderer[] renderersToOverride;
+        private RendererGroup _rendererGroup;
 
         public void Start()
         {
-            if (!locked) return;
-            foreach (var renderer1 in renderersToOverride)
-                renderer1.material = lockedMaterial;
+            _rendererGroup = GetComponent<RendererGroup>();
+            StartCoroutine(LateStart());
+        }
+
+        private IEnumerator LateStart()
+        {
+            yield return new WaitForFixedUpdate();
+            if (locked)
+                _rendererGroup.ChangeMaterial(lockedMaterial);
         }
 
         public void Click()
