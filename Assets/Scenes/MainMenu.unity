@@ -1370,7 +1370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 0
-  m_AspectRatio: 1.0308716
+  m_AspectRatio: 1.0308727
 --- !u!114 &386111890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4199,7 +4199,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1577282456}
   - component: {fileID: 1577282455}
-  - component: {fileID: 1577282454}
   - component: {fileID: 1577282453}
   m_Layer: 0
   m_Name: Camera
@@ -4239,14 +4238,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!81 &1577282454
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1577282452}
-  m_Enabled: 1
 --- !u!20 &1577282455
 Camera:
   m_ObjectHideFlags: 0

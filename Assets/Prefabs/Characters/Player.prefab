@@ -22,6 +22,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6337107055873667080}
+  - component: {fileID: 7416125152646896117}
   - component: {fileID: 6337107055873667091}
   - component: {fileID: 6337107055873667092}
   - component: {fileID: 6337107055873667094}
@@ -51,6 +52,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &7416125152646896117
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6337107055873667081}
+  m_Enabled: 1
 --- !u!54 &6337107055873667091
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -148,7 +157,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb094f72a5d4136b74f1ee38ed4c863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondsToWait: 3
+  onDeathEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &6600496216836740929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,8 +172,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93545456349b8154e9bc644e764a9db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inMapResetNumber: 1
-  pickedResetNumber: 1
 --- !u!1001 &6038139392397574768
 PrefabInstance:
   m_ObjectHideFlags: 0
