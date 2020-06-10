@@ -204,16 +204,6 @@ PrefabInstance:
       propertyPath: m_textInfo.wordCount
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 7180583233335988527, guid: b003ffe11e0ca2a4f818b5deda8f3b25,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -248.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7180583233335988527, guid: b003ffe11e0ca2a4f818b5deda8f3b25,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 403.79193
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6502556504722558889, guid: b003ffe11e0ca2a4f818b5deda8f3b25, type: 3}
     - {fileID: 6502556504722558890, guid: b003ffe11e0ca2a4f818b5deda8f3b25, type: 3}
