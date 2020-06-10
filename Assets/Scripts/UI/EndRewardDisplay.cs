@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using GameComponents.Player;
+using Global.Sound;
 using UI.Animations;
 using UnityEngine;
 
@@ -24,13 +25,14 @@ namespace UI
                 time += offset;
                 if (i == PlayerRewards.RewardObtainedCount) time += notFoundAdditionalOffset;
             
-                StartCoroutine(WaitForAnimate(time, reward.GetComponent<UIScale>()));
+                StartCoroutine(WaitForAnimate(time, reward.GetComponent<UIScale>(), isPicked));
             }
         }
 
-        private IEnumerator WaitForAnimate(float seconds, UIScale rewardUiScale)
+        private IEnumerator WaitForAnimate(float seconds, UIScale rewardUiScale, bool isPicked)
         {
             yield return new WaitForSeconds(seconds);
+            if(isPicked) SoundManager.PlayStatic("UI Coin");
             rewardUiScale.ScaleIn();
         }
     }

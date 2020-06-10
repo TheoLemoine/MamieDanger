@@ -160,3 +160,8 @@ MonoBehaviour:
     volume: 0.6
     loop: 0
     autoPlayOnScenes: []
+  - slug: UI Coin
+    clip: {fileID: 8300000, guid: cc11c6f8e14ab734f88ee84b4b78cc0e, type: 3}
+    volume: 0.35
+    loop: 0
+    autoPlayOnScenes: []
