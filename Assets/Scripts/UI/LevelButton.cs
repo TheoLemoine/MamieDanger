@@ -6,20 +6,18 @@ namespace UI
 {
     public class LevelButton : MonoBehaviour
     {
-        [SerializeField] private string levelSceneName;
-        [SerializeField] private bool locked;
+        [SerializeField] public string levelSceneName;
+        [SerializeField] public bool locked;
         [SerializeField] private Material lockedMaterial;
         private RendererGroup _rendererGroup;
 
         public void Start()
         {
             _rendererGroup = GetComponent<RendererGroup>();
-            StartCoroutine(LateStart());
         }
 
-        private IEnumerator LateStart()
+        public void UpdateMaterials()
         {
-            yield return new WaitForFixedUpdate();
             if (locked)
                 _rendererGroup.ChangeMaterial(lockedMaterial);
         }

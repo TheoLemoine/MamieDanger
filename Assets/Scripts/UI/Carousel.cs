@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using Global.Input;
+using Global.Save;
 using UnityEngine;
 using Utils;
 
@@ -9,7 +13,7 @@ namespace UI
     public class Carousel : MonoBehaviour
     {
         [SerializeField] private SingleUnityLayer uiLayer;
-        [SerializeField] private LevelSelectorTransition[] levels;
+        [SerializeField] private LevelSelectorOrchestrator[] levels;
         [SerializeField] private int currentIndex;
         [SerializeField] private float radius = 15f;
         [SerializeField] private float angle = Mathf.PI / 9.5f;
@@ -20,26 +24,33 @@ namespace UI
         private int _indexDiff;
         private Tween _tween;
         
-        void Start()
+        IEnumerator Start()
         {
             InputManager.PlayerRaycaster.AddListener(uiLayer.LayerIndex, Click);
             _goIds = new int[levels.Length];
+            yield return new WaitForFixedUpdate();
+            var levelsData = SaveManager.Instance.Data.Levels;
             var index = 0;
+            var locked = false;
             foreach (var level in levels)
             {
+                var levelName = level.LevelButton.levelSceneName;
+                var coinPickedNumber = levelsData.ContainsKey(levelName) ? levelsData[levelName].CoinsPicked.Count : 0;
+                level.LayoutLevelSelector(locked, coinPickedNumber);
+                if (!levelsData.ContainsKey(levelName) || !levelsData[levelName].Finished) locked = true;
                 _goIds[index] = level.gameObject.GetInstanceID();
                 index++;
             }
             CalcPos();
         }
-        
+
         private void Click(RaycastHit hit)
         {
             var goId = hit.collider.transform.parent.gameObject.GetInstanceID();
             var newIndex = Array.IndexOf(_goIds, goId);
             if (newIndex == currentIndex || (newIndex == currentIndex - _indexDiff && Mathf.Abs(_indexDiff - _animProgression) < 0.25f))
             {
-                levels[newIndex].GetComponent<LevelButton>().Click();
+                levels[newIndex].LevelButton.Click();
                 return;
 
             }
@@ -85,7 +96,7 @@ namespace UI
                 else if (index == currentIndex)
                     progFactor = 1f;
                 
-                level.UpdateTransition(progFactor);
+                level.LevelSelectorTransition.UpdateTransition(progFactor);
                 index++;
             }
         }

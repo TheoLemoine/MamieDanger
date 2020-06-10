@@ -268,10 +268,10 @@ MonoBehaviour:
   uiLayer:
     layerIndex: 5
   levels:
-  - {fileID: 8995737957740621643}
-  - {fileID: 1331361799}
-  - {fileID: 1315174634}
-  - {fileID: 921217682}
+  - {fileID: 8995737957740621645}
+  - {fileID: 1331361803}
+  - {fileID: 1315174638}
+  - {fileID: 921217686}
   currentIndex: 0
   radius: 15
   angle: 0.34
@@ -292,8 +292,20 @@ Transform:
   - {fileID: 1315174636}
   - {fileID: 921217684}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &161303326 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7941784928558798551, guid: 072459cd560d22f46b02b9e575618b76,
+    type: 3}
+  m_PrefabInstance: {fileID: 1887509508}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e47c59b0ad0b0fa43a40829f70cdb4f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &197663130
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,7 +507,7 @@ RectTransform:
   - {fileID: 2073625030}
   - {fileID: 197663131}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -742,6 +754,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 769132066}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &911766813 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7941784928558798551, guid: 072459cd560d22f46b02b9e575618b76,
+    type: 3}
+  m_PrefabInstance: {fileID: 1560450540}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e47c59b0ad0b0fa43a40829f70cdb4f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &921217681
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,6 +778,7 @@ GameObject:
   - component: {fileID: 921217683}
   - component: {fileID: 921217682}
   - component: {fileID: 921217685}
+  - component: {fileID: 921217686}
   m_Layer: 0
   m_Name: Level 4
   m_TagString: Untagged
@@ -775,6 +800,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: {fileID: 1680428795}
   background: {fileID: 1025817242}
+  levelRewardDisplay: {fileID: 1868385081}
   defaultScale: 1
   frontScale: 1.5
   beigeColor: {r: 0.9960785, g: 0.9333334, b: 0.8117648, a: 1}
@@ -792,7 +818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelSceneName: Level4
-  locked: 1
+  locked: 0
   lockedMaterial: {fileID: 2100000, guid: 04fedf410ed9fc441886311b067df4b7, type: 2}
 --- !u!4 &921217684
 Transform:
@@ -826,6 +852,21 @@ MonoBehaviour:
   useParent: 1
   parentObject: {fileID: 224869525}
   rendererArray: []
+--- !u!114 &921217686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921217681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45114e6ae789c864c8a80d6a010a596f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelButton: {fileID: 921217683}
+  levelSelectorTransition: {fileID: 921217682}
+  levelRewardDisplay: {fileID: 1868385081}
 --- !u!1 &971627580 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: a7cc571a60035e249a7dfc42498e15eb,
@@ -962,7 +1003,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1289734904 stripped
 MonoBehaviour:
@@ -988,6 +1029,7 @@ GameObject:
   - component: {fileID: 1315174635}
   - component: {fileID: 1315174634}
   - component: {fileID: 1315174637}
+  - component: {fileID: 1315174638}
   m_Layer: 0
   m_Name: Level 3
   m_TagString: Untagged
@@ -1009,6 +1051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: {fileID: 210744510}
   background: {fileID: 1814996686}
+  levelRewardDisplay: {fileID: 911766813}
   defaultScale: 1
   frontScale: 1.5
   beigeColor: {r: 0.9960785, g: 0.9333334, b: 0.8117648, a: 1}
@@ -1026,7 +1069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelSceneName: Level3
-  locked: 1
+  locked: 0
   lockedMaterial: {fileID: 2100000, guid: 04fedf410ed9fc441886311b067df4b7, type: 2}
 --- !u!4 &1315174636
 Transform:
@@ -1060,6 +1103,21 @@ MonoBehaviour:
   useParent: 1
   parentObject: {fileID: 971627580}
   rendererArray: []
+--- !u!114 &1315174638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315174633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45114e6ae789c864c8a80d6a010a596f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelButton: {fileID: 1315174635}
+  levelSelectorTransition: {fileID: 1315174634}
+  levelRewardDisplay: {fileID: 911766813}
 --- !u!1 &1331361798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,6 +1130,7 @@ GameObject:
   - component: {fileID: 1331361800}
   - component: {fileID: 1331361799}
   - component: {fileID: 1331361802}
+  - component: {fileID: 1331361803}
   m_Layer: 0
   m_Name: Level 2
   m_TagString: Untagged
@@ -1093,6 +1152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: {fileID: 1711644605}
   background: {fileID: 1289734904}
+  levelRewardDisplay: {fileID: 161303326}
   defaultScale: 1
   frontScale: 1.5
   beigeColor: {r: 0.9960785, g: 0.9333334, b: 0.8117648, a: 1}
@@ -1110,7 +1170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelSceneName: Level2
-  locked: 1
+  locked: 0
   lockedMaterial: {fileID: 2100000, guid: 04fedf410ed9fc441886311b067df4b7, type: 2}
 --- !u!4 &1331361801
 Transform:
@@ -1144,6 +1204,21 @@ MonoBehaviour:
   useParent: 1
   parentObject: {fileID: 641215622}
   rendererArray: []
+--- !u!114 &1331361803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331361798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45114e6ae789c864c8a80d6a010a596f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelButton: {fileID: 1331361800}
+  levelSelectorTransition: {fileID: 1331361799}
+  levelRewardDisplay: {fileID: 161303326}
 --- !u!1001 &1426356987
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1239,7 +1314,7 @@ PrefabInstance:
     - target: {fileID: 3172983704669071958, guid: 072459cd560d22f46b02b9e575618b76,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3172983704669071958, guid: 072459cd560d22f46b02b9e575618b76,
         type: 3}
@@ -1690,6 +1765,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1697736826 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7941784928558798551, guid: 072459cd560d22f46b02b9e575618b76,
+    type: 3}
+  m_PrefabInstance: {fileID: 3172983704440393340}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e47c59b0ad0b0fa43a40829f70cdb4f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1711644605 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3172983704985593148, guid: 072459cd560d22f46b02b9e575618b76,
@@ -1798,6 +1885,98 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2080584861}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1751316327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1751316329}
+  - component: {fileID: 1751316328}
+  m_Layer: 0
+  m_Name: Directional Light (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1751316328
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751316327}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 1
+  m_Shape: 0
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 0.3
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &1751316329
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751316327}
+  m_LocalRotation: {x: 0.5676105, y: 0.1533936, z: 0.7053192, w: 0.39599708}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 166.517, y: -108.50101, z: -48.895996}
 --- !u!114 &1777447156 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3172983705101958792, guid: 072459cd560d22f46b02b9e575618b76,
@@ -1979,6 +2158,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1868385081 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7941784928558798551, guid: 072459cd560d22f46b02b9e575618b76,
+    type: 3}
+  m_PrefabInstance: {fileID: 1426356987}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e47c59b0ad0b0fa43a40829f70cdb4f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1887509508
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2074,7 +2265,7 @@ PrefabInstance:
     - target: {fileID: 3172983704669071958, guid: 072459cd560d22f46b02b9e575618b76,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3172983704669071958, guid: 072459cd560d22f46b02b9e575618b76,
         type: 3}
@@ -2756,6 +2947,7 @@ GameObject:
   - component: {fileID: 590642071758210415}
   - component: {fileID: 8995737957740621643}
   - component: {fileID: 8995737957740621644}
+  - component: {fileID: 8995737957740621645}
   m_Layer: 0
   m_Name: Level 1
   m_TagString: Untagged
@@ -2777,6 +2969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: {fileID: 1619077952}
   background: {fileID: 1777447156}
+  levelRewardDisplay: {fileID: 1697736826}
   defaultScale: 1
   frontScale: 1.5
   beigeColor: {r: 0.9960785, g: 0.9333334, b: 0.8117648, a: 1}
@@ -2796,3 +2989,18 @@ MonoBehaviour:
   useParent: 1
   parentObject: {fileID: 1939094680}
   rendererArray: []
+--- !u!114 &8995737957740621645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8995737957740621642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45114e6ae789c864c8a80d6a010a596f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelButton: {fileID: 590642071758210415}
+  levelSelectorTransition: {fileID: 8995737957740621643}
+  levelRewardDisplay: {fileID: 1697736826}
