@@ -98,7 +98,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7967809023880644354}
   m_LocalRotation: {x: -0.012083948, y: 0.10787923, z: -0.06605389, w: 0.9918937}
-  m_LocalPosition: {x: 3.4263713, y: 4.1073904, z: -18.134724}
+  m_LocalPosition: {x: -23.281353, y: -4.5531874, z: -32.437782}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7967809023859858471}
@@ -249,8 +249,8 @@ MonoBehaviour:
     layerIndex: 13
   seeThroughMaterial: {fileID: 2100000, guid: 225299e9a98da6f4fb8ea2066c708376, type: 2}
   colorProperty: _BaseColor
-  minOpacity: 0.3
-  maxOpacity: 0.05
+  minOpacity: 0.2
+  maxOpacity: 0
   minFractionDistance: 0.5
   maxFractionDistance: 1
 --- !u!1 &7967809023910416568
