@@ -24,6 +24,13 @@ namespace UI
                 _origLayers[i] = rendererArray[i].gameObject.layer;
             }
         }
+
+        public void UseParent(GameObject parent)
+        {
+            parentObject = parent;
+            useParent = true;
+            rendererArray = parentObject.GetComponentsInChildren<Renderer>();
+        }
     
         public Renderer[] GetRenderers()
         {

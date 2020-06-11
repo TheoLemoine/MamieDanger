@@ -9,17 +9,12 @@ namespace UI
         [SerializeField] public string levelSceneName;
         [SerializeField] public bool locked;
         [SerializeField] private Material lockedMaterial;
-        private RendererGroup _rendererGroup;
-
-        public void Start()
-        {
-            _rendererGroup = GetComponent<RendererGroup>();
-        }
+        [SerializeField] private RendererGroup rendererGroup;
 
         public void UpdateMaterials()
         {
             if (locked)
-                _rendererGroup.ChangeMaterial(lockedMaterial);
+                rendererGroup.ChangeMaterial(lockedMaterial);
         }
 
         public void Click()
