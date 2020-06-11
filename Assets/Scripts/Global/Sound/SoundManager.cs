@@ -33,7 +33,7 @@ namespace Global.Sound
         {
             foreach (var sound in _instance.sounds) 
             {
-                if (sound.PlaysOnScene(newScene)) sound.Play();
+                if (sound.PlaysOnScene(newScene)) sound.Play(false);
                 else sound.Stop();
             }
         }
