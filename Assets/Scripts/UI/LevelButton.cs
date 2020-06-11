@@ -56,7 +56,7 @@ namespace UI
         {
             var asyncLoad = SceneManager.LoadSceneAsync(levelSceneName);
             
-            while (!true || !_bounceIsFinished)
+            while (!asyncLoad.isDone || !_bounceIsFinished)
             {
                 yield return null;
             }
