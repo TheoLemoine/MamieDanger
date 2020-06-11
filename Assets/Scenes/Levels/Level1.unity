@@ -2324,6 +2324,21 @@ PrefabInstance:
       propertyPath: prefabList.Array.data[2]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: overrideCarSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: carSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: carMotorTorque
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235002, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: m_Name
@@ -8760,6 +8775,21 @@ PrefabInstance:
       propertyPath: prefabList.Array.data[2]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: overrideCarSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: carSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: carMotorTorque
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235002, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: m_Name
@@ -9191,6 +9221,21 @@ PrefabInstance:
         type: 3}
       propertyPath: prefabList.Array.data[2]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: overrideCarSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: carSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: carMotorTorque
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235002, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}

@@ -6,12 +6,10 @@ namespace GameComponents.Car
     public class CarController : MonoBehaviour
     {
         [SerializeField]
-        private float targetSpeed = 5f;
+        public float targetSpeed = 5f;
 
-        public float TargetSpeed { get; set; }
-        
         [SerializeField]
-        private float motorTorque = 1000f;
+        public float motorTorque = 1000f;
 
         [SerializeField] private WheelCollider wheelBackRight;
         [SerializeField] private WheelCollider wheelBackLeft;
@@ -21,7 +19,7 @@ namespace GameComponents.Car
         private Rigidbody _rb;
         private Transform _transform;
         
-        private void Start()
+        protected virtual void Start()
         {
             _rb = GetComponent<Rigidbody>();
             _transform = GetComponent<Transform>();

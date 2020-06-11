@@ -2951,12 +2951,17 @@ PrefabInstance:
     - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: carSpeed
-      value: 7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: prefabList.Array.data[2]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: carMotorTorque
+      value: 1100
       objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235002, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
@@ -3006,7 +3011,7 @@ PrefabInstance:
     - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
@@ -3405,12 +3410,22 @@ PrefabInstance:
     - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: carSpeed
-      value: 18
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: prefabList.Array.data[2]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: carMotorTorque
+      value: 2500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: delay
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235002, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
@@ -3460,7 +3475,7 @@ PrefabInstance:
     - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
@@ -3944,6 +3959,16 @@ PrefabInstance:
       propertyPath: prefabList.Array.data[2]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: carMotorTorque
+      value: 900
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: carSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235002, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: m_Name
@@ -3992,7 +4017,7 @@ PrefabInstance:
     - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
@@ -6978,7 +7003,7 @@ PrefabInstance:
     - target: {fileID: 4667812864306173825, guid: 69e55bb2a801fc84a83eac2f4ad44751,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.22
+      value: -0.36
       objectReference: {fileID: 0}
     - target: {fileID: 4667812864306173825, guid: 69e55bb2a801fc84a83eac2f4ad44751,
         type: 3}
@@ -7253,8 +7278,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 164.81918, y: 69.05426, z: 85.28795}
-  m_Center: {x: 40.70143, y: 4.8933105, z: 10.49247}
+  m_Size: {x: 199.51501, y: 69.05426, z: 104.081314}
+  m_Center: {x: 48.221786, y: 4.8933105, z: 19.889153}
 --- !u!4 &1711703223
 Transform:
   m_ObjectHideFlags: 0
@@ -9193,7 +9218,7 @@ PrefabInstance:
     - target: {fileID: 1201566432899748609, guid: 65d72a9cbeeba7943a28fd1129981f54,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 24.600815
+      value: 24.60083
       objectReference: {fileID: 0}
     - target: {fileID: 1201566432899748609, guid: 65d72a9cbeeba7943a28fd1129981f54,
         type: 3}

@@ -471,7 +471,22 @@ PrefabInstance:
     - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: period
-      value: 10
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: carMotorTorque
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: carSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: delay
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235002, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
@@ -4007,7 +4022,7 @@ PrefabInstance:
     - target: {fileID: 7180583233335988527, guid: b003ffe11e0ca2a4f818b5deda8f3b25,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 63.599995
+      value: 63.59999
       objectReference: {fileID: 0}
     - target: {fileID: 7180583233335988527, guid: b003ffe11e0ca2a4f818b5deda8f3b25,
         type: 3}
@@ -5911,7 +5926,7 @@ PrefabInstance:
     - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: period
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
@@ -5920,8 +5935,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
+      propertyPath: carMotorTorque
+      value: 1200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
       propertyPath: carSpeed
-      value: 7
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: delay
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235002, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
@@ -7307,17 +7332,27 @@ PrefabInstance:
     - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: period
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
-        type: 3}
-      propertyPath: carSpeed
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: overrideCarSpeed
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: carMotorTorque
+      value: 1300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: carSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: delay
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235002, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
@@ -8864,8 +8899,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 84.52922, y: 30.580536, z: 159.77516}
-  m_Center: {x: 11.737648, y: 5.5998383, z: -3.6729202}
+  m_Size: {x: 60.9401, y: 30.580536, z: 148.14055}
+  m_Center: {x: 17.732357, y: 5.5998383, z: 2.1443863}
 --- !u!4 &1711703223
 Transform:
   m_ObjectHideFlags: 0
@@ -9724,7 +9759,7 @@ PrefabInstance:
     - target: {fileID: 7180583233335988527, guid: b003ffe11e0ca2a4f818b5deda8f3b25,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 63.599995
+      value: 63.59999
       objectReference: {fileID: 0}
     - target: {fileID: 7180583233335988527, guid: b003ffe11e0ca2a4f818b5deda8f3b25,
         type: 3}
@@ -10274,6 +10309,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872282971}
     m_Modifications:
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: carMotorTorque
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: carSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: period
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235002, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: m_Name

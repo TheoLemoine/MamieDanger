@@ -13,8 +13,9 @@ namespace Utils
     {
         [SerializeField] private List<GameObject> prefabList;
         [SerializeField] private float period = 1f;
-        [SerializeField] private bool overrideCarSpeed;
-        [SerializeField] private float carSpeed;
+        [SerializeField] private float delay = 0f;
+        [SerializeField] private float carSpeed = 2;
+        [SerializeField] private float carMotorTorque = 1000;
 
         private Transform _transform;
         private void Start()
@@ -26,14 +27,17 @@ namespace Utils
 
         private IEnumerator InstantiatePrefabs()
         {
+            yield return new WaitForSeconds(delay);
+            
             for (;;)
             {
                 var prefab = prefabList[Random.Range(0, prefabList.Count)];
                 
                 var instantiated = Instantiate(prefab, _transform);
+                var controller = instantiated.GetComponent<CarController>();
                 
-                if (overrideCarSpeed)
-                    instantiated.GetComponent<CarController>().TargetSpeed = carSpeed;
+                controller.targetSpeed = carSpeed;
+                controller.motorTorque = carMotorTorque;
                 
                 yield return new WaitForSeconds(period);
             }

@@ -463,8 +463,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 897cd0f2a42949a39716385095399f79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetSpeed: 5
-  motorTorque: 1000
+  targetSpeed: 3
+  motorTorque: 1500
   wheelBackRight: {fileID: 288453340281106223}
   wheelBackLeft: {fileID: 8649772213135236748}
   wheelFrontRight: {fileID: 5505270643410897720}

@@ -3182,6 +3182,8 @@ Transform:
   - {fileID: 1185003174}
   - {fileID: 3967895828531980646}
   - {fileID: 1319561905}
+  - {fileID: 1044732509}
+  - {fileID: 1602760781}
   - {fileID: 1822379242}
   - {fileID: 1929830677}
   m_Father: {fileID: 896096220}
@@ -4245,6 +4247,106 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8085736770636728868, guid: 4ab486138b0292545a8e61342475d8a3,
     type: 3}
   m_PrefabInstance: {fileID: 1038264938}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1044732508
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 872282971}
+    m_Modifications:
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: period
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: overrideCarSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: carSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: carMotorTorque
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: delay
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235002, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: m_Name
+      value: Car Spawner Fast 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -46.843384
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.00000046193594
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 29460fc9ac57571408e41b1ffadced37, type: 3}
+--- !u!4 &1044732509 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
+    type: 3}
+  m_PrefabInstance: {fileID: 1044732508}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1097000988
 PrefabInstance:
@@ -5892,7 +5994,7 @@ PrefabInstance:
     - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: period
-      value: 11
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
@@ -5902,12 +6004,22 @@ PrefabInstance:
     - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: carSpeed
-      value: 6
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: carMotorTorque
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: delay
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235002, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: m_Name
-      value: Car Spawner
+      value: Car Spawner Fast
       objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
@@ -7895,6 +8007,116 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1602758614}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1602760780
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 872282971}
+    m_Modifications:
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: prefabList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: period
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: overrideCarSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: carSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: carMotorTorque
+      value: 1100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: delay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: prefabList.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235002, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: m_Name
+      value: Car Spawner Slow
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -46.843384
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.00000046193594
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 29460fc9ac57571408e41b1ffadced37, type: 3}
+--- !u!4 &1602760781 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
+    type: 3}
+  m_PrefabInstance: {fileID: 1602760780}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1607188850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8676,8 +8898,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 127.00094, y: 69.05426, z: 141.44624}
-  m_Center: {x: -6.5136375, y: 4.8933105, z: 14.433281}
+  m_Size: {x: 127.00094, y: 69.05426, z: 120.879715}
+  m_Center: {x: -6.5136375, y: 4.8933105, z: 25.990715}
 --- !u!4 &1711703223
 Transform:
   m_ObjectHideFlags: 0
@@ -8963,7 +9185,7 @@ PrefabInstance:
     - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: period
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
@@ -8973,7 +9195,12 @@ PrefabInstance:
     - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: carSpeed
-      value: 6
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: carMotorTorque
+      value: 1200
       objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235002, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
@@ -9018,7 +9245,7 @@ PrefabInstance:
     - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235003, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
@@ -9464,7 +9691,7 @@ PrefabInstance:
     - target: {fileID: 9173564312551523577, guid: 1aa2e1b344435d4479abe946aec8d1b5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9173564312551523577, guid: 1aa2e1b344435d4479abe946aec8d1b5,
         type: 3}
@@ -10710,7 +10937,7 @@ PrefabInstance:
     - target: {fileID: 3640983070355960290, guid: 65d72a9cbeeba7943a28fd1129981f54,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 67.25001
+      value: 67.25
       objectReference: {fileID: 0}
     - target: {fileID: 3640983070355960290, guid: 65d72a9cbeeba7943a28fd1129981f54,
         type: 3}
