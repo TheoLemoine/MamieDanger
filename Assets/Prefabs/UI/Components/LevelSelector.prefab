@@ -52,6 +52,8 @@ MonoBehaviour:
   locked: 0
   lockedMaterial: {fileID: 2100000, guid: 04fedf410ed9fc441886311b067df4b7, type: 2}
   rendererGroup: {fileID: 7635382046676719231}
+  bounceFactor: 1.15
+  lockedBounceFactor: 1.05
 --- !u!114 &3694703616117120650
 MonoBehaviour:
   m_ObjectHideFlags: 0
