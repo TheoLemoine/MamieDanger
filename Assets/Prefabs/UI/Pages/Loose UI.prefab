@@ -184,7 +184,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -213,7 +213,7 @@ MonoBehaviour:
     spaceCount: 0
     wordCount: 1
     linkCount: 0
-    lineCount: 1
+    lineCount: 11
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -530,7 +530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   events:
-  - time: 0
+  - time: 1.5
     unityEvent:
       m_PersistentCalls:
         m_Calls:
@@ -545,7 +545,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - time: 0.8
+  - time: 2.3
     unityEvent:
       m_PersistentCalls:
         m_Calls:
@@ -701,7 +701,7 @@ PrefabInstance:
     - target: {fileID: 4767009163160297333, guid: 07ecd64cbbfc19d4ebf20d43035918de,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 43
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4767009163160297333, guid: 07ecd64cbbfc19d4ebf20d43035918de,
         type: 3}
@@ -718,7 +718,7 @@ PrefabInstance:
     - target: {fileID: 4767009163160297333, guid: 07ecd64cbbfc19d4ebf20d43035918de,
         type: 3}
       propertyPath: m_firstOverflowCharacterIndex
-      value: 3
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 4767009163732574968, guid: 07ecd64cbbfc19d4ebf20d43035918de,
         type: 3}
