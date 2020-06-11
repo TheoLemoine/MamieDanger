@@ -16,7 +16,11 @@ namespace Global.Sound
         
         private AudioSource _source;
 
-        public void Play() => _source.Play();
+        public void Play(bool restartIfPlaying = true)
+        {
+            if(restartIfPlaying || !_source.isPlaying) 
+                _source.Play();
+        }
         public void Pause() => _source.Pause();
         public void Stop() => _source.Stop();
 
