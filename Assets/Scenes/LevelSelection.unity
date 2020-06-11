@@ -331,7 +331,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -85}
+  m_AnchoredPosition: {x: 0, y: -181.8182}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &197663132
@@ -433,10 +433,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 800, y: 480}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -485,6 +485,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &556534684 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 285176479742664523, guid: 5fd8c7149200f41438927d79d9a69af9,
+    type: 3}
+  m_PrefabInstance: {fileID: 3370076539702239252}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &556534687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556534684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0215ffeade9fd35489b5573bf4bf6278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &789007988 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8180652939303219941, guid: 5fd8c7149200f41438927d79d9a69af9,
@@ -497,7 +515,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 3370076539702239252}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 556534684}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45114e6ae789c864c8a80d6a010a596f, type: 3}
@@ -1221,8 +1239,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 32.52}
-  m_SizeDelta: {x: 200, y: 43.82837}
+  m_AnchoredPosition: {x: 0, y: 66}
+  m_SizeDelta: {x: 380.98, y: 88.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1780990197
 MonoBehaviour:
@@ -1272,8 +1290,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

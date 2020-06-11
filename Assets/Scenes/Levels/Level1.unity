@@ -7163,6 +7163,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4459ba82be7003343bf9bf9a44f3b60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1556435536 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6502556503206604334, guid: b003ffe11e0ca2a4f818b5deda8f3b25,
+    type: 3}
+  m_PrefabInstance: {fileID: 1556435534}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1556435537 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6502556503837655868, guid: b003ffe11e0ca2a4f818b5deda8f3b25,
+    type: 3}
+  m_PrefabInstance: {fileID: 1556435534}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1556435538 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7180583233776676001, guid: b003ffe11e0ca2a4f818b5deda8f3b25,
+    type: 3}
+  m_PrefabInstance: {fileID: 1556435534}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1559570156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10699,7 +10735,7 @@ PrefabInstance:
     - target: {fileID: 3640983070355960289, guid: 65d72a9cbeeba7943a28fd1129981f54,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3640983070355960289, guid: 65d72a9cbeeba7943a28fd1129981f54,
         type: 3}
@@ -10709,13 +10745,30 @@ PrefabInstance:
     - target: {fileID: 3640983070355960289, guid: 65d72a9cbeeba7943a28fd1129981f54,
         type: 3}
       propertyPath: m_text
-      value: "Mais fais attention,\r tu vas nous tuer !"
+      value: 'Mais fais attention,
+
+        tu vas nous tuer !'
       objectReference: {fileID: 0}
     - target: {fileID: 3640983070355960289, guid: 65d72a9cbeeba7943a28fd1129981f54,
         type: 3}
       propertyPath: m_firstOverflowCharacterIndex
-      value: 34
+      value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 3640983070355960289, guid: 65d72a9cbeeba7943a28fd1129981f54,
+        type: 3}
+      propertyPath: m_subTextObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 1556435538}
+    - target: {fileID: 3640983070355960289, guid: 65d72a9cbeeba7943a28fd1129981f54,
+        type: 3}
+      propertyPath: m_subTextObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 1556435537}
+    - target: {fileID: 3640983070355960289, guid: 65d72a9cbeeba7943a28fd1129981f54,
+        type: 3}
+      propertyPath: m_subTextObjects.Array.data[3]
+      value: 
+      objectReference: {fileID: 1556435536}
     - target: {fileID: 3640983070355960290, guid: 65d72a9cbeeba7943a28fd1129981f54,
         type: 3}
       propertyPath: m_LocalPosition.x
