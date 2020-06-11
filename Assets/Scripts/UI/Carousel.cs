@@ -54,7 +54,6 @@ namespace UI
         {
             var goId = hit.collider.transform.parent.gameObject.GetInstanceID();
             var newIndex = Array.IndexOf(_goIds, goId);
-            Debug.Log(newIndex);
             if (newIndex == currentIndex || (newIndex == currentIndex - _indexDiff && Mathf.Abs(_indexDiff - _animProgression) < 0.25f))
             {
                 levels[newIndex].LevelButton.Click();
