@@ -43,11 +43,16 @@ namespace GameComponents.Player
         public void SaveRewards()
         {
             var sceneName = SceneManager.GetActiveScene().name;
-            SaveManager.Instance.Data.levels[sceneName] = new SaveData.LevelResults()
+            var levelResult = new SaveData.LevelResults()
             {
                 finished = true,
                 coinsPicked = Rewards.Where(pair => pair.Value).Select(pair => pair.Key).ToList()
             };
+            
+            if (SaveManager.Instance.Data.levels.TryGetValue(sceneName, out var lastLevelResult))
+                levelResult.coinsPicked = levelResult.coinsPicked.Union(lastLevelResult.coinsPicked).ToList();
+
+            SaveManager.Instance.Data.levels[sceneName] = levelResult;
             SaveManager.Instance.Persist();
         }
     }
