@@ -283,10 +283,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: main_character_male_female
       objectReference: {fileID: 0}
-    - target: {fileID: 5855377469554172569, guid: d25adba44db0e654e981440a4005ccfe,
+    - target: {fileID: 260480595113960810, guid: d25adba44db0e654e981440a4005ccfe,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4e5fd6f0a9a99f24bba2d0d3848b2649, type: 2}
+    - target: {fileID: 5854947577147920281, guid: d25adba44db0e654e981440a4005ccfe,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5855377469554172569, guid: d25adba44db0e654e981440a4005ccfe,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7263892875262760764, guid: d25adba44db0e654e981440a4005ccfe,
         type: 3}
