@@ -2332,12 +2332,17 @@ PrefabInstance:
     - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: carSpeed
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
       propertyPath: carMotorTorque
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694657842070235000, guid: 29460fc9ac57571408e41b1ffadced37,
+        type: 3}
+      propertyPath: delay
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6694657842070235002, guid: 29460fc9ac57571408e41b1ffadced37,
         type: 3}
