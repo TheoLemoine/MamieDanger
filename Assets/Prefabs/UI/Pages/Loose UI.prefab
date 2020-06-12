@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 6053992437771999780}
   - component: {fileID: 6053992437771999803}
   - component: {fileID: 6053992437771999802}
-  - component: {fileID: 8935505533395659421}
+  - component: {fileID: 6224236221214456036}
   m_Layer: 5
   m_Name: Replay
   m_TagString: Untagged
@@ -364,7 +364,7 @@ MonoBehaviour:
           m_StringArgument: UI Valid
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8935505533395659421
+--- !u!114 &6224236221214456036
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -373,14 +373,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6053992437771999800}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4459ba82be7003343bf9bf9a44f3b60f, type: 3}
+  m_Script: {fileID: 11500000, guid: b29663946f2c91d47ab173deeef32342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slideDuration: 1
+  scaleDuration: 0.5
   easeType: 6
-  offsetWhenVisible: {x: 0, y: 0}
-  offsetWhenNotVisible: {x: 0, y: -400}
-  startVisible: 0
+  shrunkSize: 0
+  startShrunk: 1
   animateAtStart: 0
   stopAnimationWhenPaused: 0
 --- !u!1 &7604155339814788176
@@ -549,8 +548,8 @@ MonoBehaviour:
     unityEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 8935505533395659421}
-          m_MethodName: SlideIn
+        - m_Target: {fileID: 6224236221214456036}
+          m_MethodName: ScaleIn
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -701,7 +700,7 @@ PrefabInstance:
     - target: {fileID: 4767009163160297333, guid: 07ecd64cbbfc19d4ebf20d43035918de,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 10
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 4767009163160297333, guid: 07ecd64cbbfc19d4ebf20d43035918de,
         type: 3}
@@ -718,7 +717,7 @@ PrefabInstance:
     - target: {fileID: 4767009163160297333, guid: 07ecd64cbbfc19d4ebf20d43035918de,
         type: 3}
       propertyPath: m_firstOverflowCharacterIndex
-      value: 19
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4767009163732574968, guid: 07ecd64cbbfc19d4ebf20d43035918de,
         type: 3}
