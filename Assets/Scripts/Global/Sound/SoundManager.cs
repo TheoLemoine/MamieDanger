@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 namespace Global.Sound
 {
+    public enum VolumeLevels
+    {
+        Mute,
+        Low,
+        Loud
+    }
+    
     /**
      * Weird flex : All class use the first instantiated class data...
      * this allow for event calls via prefab binding.
@@ -13,7 +20,7 @@ namespace Global.Sound
     {
         [SerializeField] private List<SoundEffect> sounds;
         private static SoundManager _instance;
-
+        
         private void Awake()
         {
             if (_instance == null)
@@ -57,5 +64,18 @@ namespace Global.Sound
         public static void PlayStatic(string slug) => GetSound(slug)?.Play();
         public static void PauseStatic(string slug) => GetSound(slug)?.Play();
         public static void StopStatic(string slug) => GetSound(slug)?.Stop();
+        
+        public static void UpdateVolumeStatic(VolumeLevels level)
+        {
+            foreach (var sound in _instance.sounds)
+            {
+                sound.Volume = level;
+            }
+        }
+        public void UpdateVolume(VolumeLevels level)
+        {
+            UpdateVolumeStatic(level);
+        }
+        
     }
 }

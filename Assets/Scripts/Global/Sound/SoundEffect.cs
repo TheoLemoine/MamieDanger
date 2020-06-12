@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 namespace Global.Sound
 {
@@ -10,7 +11,7 @@ namespace Global.Sound
     {
         [SerializeField] public string slug;
         [SerializeField] private AudioClip clip;
-        [SerializeField] [Range(0f, 1f)] private float volume;
+        [FormerlySerializedAs("volume")] [SerializeField] [Range(0f, 1f)] private float baseVolume;
         [SerializeField] private bool loop;
         [SerializeField] private List<string> autoPlayOnScenes;
         
@@ -29,7 +30,7 @@ namespace Global.Sound
             _source = manager.AddComponent<AudioSource>();
 
             _source.clip = clip;
-            _source.volume = volume;
+            _source.volume = baseVolume;
             _source.loop = loop;
             _source.playOnAwake = false;
         }
@@ -39,11 +40,31 @@ namespace Global.Sound
             return autoPlayOnScenes.Contains(scene.name);
         }
 
-        public float Volume
+        private VolumeLevels _volume;
+        public VolumeLevels Volume
         {
-            get => _source.volume;
-            set => _source.volume = value;
-        }
+            get => _volume;
+            set
+            {
+                float multiplier;
 
+                switch (value)
+                {
+                    case VolumeLevels.Mute:
+                        multiplier = 0f;
+                        break;
+                    case VolumeLevels.Low:
+                        multiplier = 0.5f;
+                        break;
+                    case VolumeLevels.Loud:
+                    default:
+                        multiplier = 1f;
+                        break;
+                }
+                
+                _source.volume = baseVolume * multiplier;
+                _volume = value;
+            }
+        }
     }
 }

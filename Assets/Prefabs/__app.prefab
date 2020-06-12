@@ -86,7 +86,7 @@ MonoBehaviour:
   sounds:
   - slug: Ambiant Sounds
     clip: {fileID: 8300000, guid: 0586f9d5293cd4e4c89bb82ed21ba76e, type: 3}
-    volume: 0.4
+    volume: 0.65
     loop: 1
     autoPlayOnScenes:
     - Level1
@@ -96,14 +96,14 @@ MonoBehaviour:
     - MainMenu
   - slug: Menu Music
     clip: {fileID: 8300000, guid: 7636e23ccecac1a41a08b223c770f9f0, type: 3}
-    volume: 0.4
+    volume: 0.65
     loop: 1
     autoPlayOnScenes:
     - MainMenu
     - LevelSelection
   - slug: Level Music
     clip: {fileID: 8300000, guid: 3195512a6ae2c4f42afb0b63f80e2650, type: 3}
-    volume: 0.4
+    volume: 0.65
     loop: 1
     autoPlayOnScenes:
     - Level1
@@ -112,17 +112,17 @@ MonoBehaviour:
     - Level4
   - slug: Win Music
     clip: {fileID: 8300000, guid: c771939b65337054192b39a56642f3b1, type: 3}
-    volume: 0.4
+    volume: 0.65
     loop: 0
     autoPlayOnScenes: []
   - slug: Lose Music
     clip: {fileID: 8300000, guid: c8640c50f04e89c43abbf773b60052b3, type: 3}
-    volume: 0.4
+    volume: 0.65
     loop: 0
     autoPlayOnScenes: []
   - slug: Coin Picked
     clip: {fileID: 8300000, guid: d05c2fffc32719c4698439a0cf69bf1a, type: 3}
-    volume: 0.6
+    volume: 0.35
     loop: 0
     autoPlayOnScenes: []
   - slug: Granny Link
