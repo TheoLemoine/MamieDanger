@@ -465,6 +465,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 2754340635821251934, guid: c06d7c1aaa2966c4d86e1c852346dd0b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 25ced8470e16c614abac58015efad337,
+        type: 3}
+    - target: {fileID: 2754340635821251935, guid: c06d7c1aaa2966c4d86e1c852346dd0b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754340635821251935, guid: c06d7c1aaa2966c4d86e1c852346dd0b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -15.999878
+      objectReference: {fileID: 0}
     - target: {fileID: 3924514189831734519, guid: c06d7c1aaa2966c4d86e1c852346dd0b,
         type: 3}
       propertyPath: m_Name
@@ -600,6 +616,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 5319320409390123228, guid: c06d7c1aaa2966c4d86e1c852346dd0b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5319320409390123229, guid: c06d7c1aaa2966c4d86e1c852346dd0b,
         type: 3}
       propertyPath: m_Layer
@@ -608,7 +629,7 @@ PrefabInstance:
     - target: {fileID: 5319320409425160165, guid: c06d7c1aaa2966c4d86e1c852346dd0b,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5319320409425160165, guid: c06d7c1aaa2966c4d86e1c852346dd0b,
         type: 3}
@@ -693,7 +714,7 @@ PrefabInstance:
     - target: {fileID: 8091054705717050367, guid: c06d7c1aaa2966c4d86e1c852346dd0b,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 16.599976
+      value: 1.2000122
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c06d7c1aaa2966c4d86e1c852346dd0b, type: 3}
@@ -848,12 +869,12 @@ PrefabInstance:
     - target: {fileID: 818273557795041983, guid: c7b40404addadb4439c1b123372c940a,
         type: 3}
       propertyPath: m_firstOverflowCharacterIndex
-      value: 29
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 818273557795041983, guid: c7b40404addadb4439c1b123372c940a,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1107587096245825114, guid: c7b40404addadb4439c1b123372c940a,
         type: 3}
