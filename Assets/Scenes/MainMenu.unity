@@ -1012,7 +1012,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2472714756353200327, guid: b07d4acd850732e49b5b47e0c4e98ef2,
           type: 3}
-        m_MethodName: UpdateVolume
+        m_MethodName: UpdateGlobalVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
