@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Global.Save;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,9 +8,9 @@ namespace Global.Sound
 {
     public enum VolumeLevels
     {
+        Loud,
         Mute,
-        Low,
-        Loud
+        Low
     }
     
     /**
@@ -20,13 +21,14 @@ namespace Global.Sound
     {
         [SerializeField] private List<SoundEffect> sounds;
         private static SoundManager _instance;
+        public static VolumeLevels GlobalVolume => SaveManager.Instance.Data.settings.volume;
         
         private void Awake()
         {
             if (_instance == null)
                 _instance = this;
             else return;
-            
+
             DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += OnSceneLoad;
 
@@ -76,6 +78,12 @@ namespace Global.Sound
         {
             UpdateVolumeStatic(level);
         }
-        
+
+        public void UpdateGlobalVolume(VolumeLevels level)
+        {
+            SaveManager.Instance.Data.settings.volume = level;
+            SaveManager.Instance.Persist();
+            UpdateVolumeStatic(level);
+        }
     }
 }
