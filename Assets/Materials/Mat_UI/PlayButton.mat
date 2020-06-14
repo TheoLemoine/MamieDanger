@@ -76,7 +76,7 @@ Material:
     - _ZWrite: 1
     - _duration: 1.5
     - _smoothing: 0.03
-    - _startTime: 407.72653
+    - _startTime: 0.6571895
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
