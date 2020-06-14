@@ -86,7 +86,7 @@ MonoBehaviour:
   sounds:
   - slug: Ambiant Sounds
     clip: {fileID: 8300000, guid: 0586f9d5293cd4e4c89bb82ed21ba76e, type: 3}
-    volume: 0.65
+    baseVolume: 0.65
     loop: 1
     autoPlayOnScenes:
     - Level1
@@ -96,14 +96,14 @@ MonoBehaviour:
     - MainMenu
   - slug: Menu Music
     clip: {fileID: 8300000, guid: 7636e23ccecac1a41a08b223c770f9f0, type: 3}
-    volume: 0.65
+    baseVolume: 0.65
     loop: 1
     autoPlayOnScenes:
     - MainMenu
     - LevelSelection
   - slug: Level Music
     clip: {fileID: 8300000, guid: 3195512a6ae2c4f42afb0b63f80e2650, type: 3}
-    volume: 0.65
+    baseVolume: 0.65
     loop: 1
     autoPlayOnScenes:
     - Level1
@@ -112,56 +112,66 @@ MonoBehaviour:
     - Level4
   - slug: Win Music
     clip: {fileID: 8300000, guid: c771939b65337054192b39a56642f3b1, type: 3}
-    volume: 0.65
+    baseVolume: 0.65
     loop: 0
     autoPlayOnScenes: []
   - slug: Lose Music
     clip: {fileID: 8300000, guid: c8640c50f04e89c43abbf773b60052b3, type: 3}
-    volume: 0.65
+    baseVolume: 0.65
     loop: 0
     autoPlayOnScenes: []
   - slug: Coin Picked
     clip: {fileID: 8300000, guid: d05c2fffc32719c4698439a0cf69bf1a, type: 3}
-    volume: 0.35
+    baseVolume: 0.35
     loop: 0
     autoPlayOnScenes: []
   - slug: Granny Link
     clip: {fileID: 8300000, guid: 123d4d3f0a96d2d479766d0ac8a75be7, type: 3}
-    volume: 0.6
+    baseVolume: 0.6
     loop: 0
     autoPlayOnScenes: []
   - slug: Granny Unlink
     clip: {fileID: 8300000, guid: d16b9f99cce98b548ad9411dcad61ba5, type: 3}
-    volume: 0.6
+    baseVolume: 0.6
     loop: 0
     autoPlayOnScenes: []
   - slug: UI Play
     clip: {fileID: 8300000, guid: c6a5b26d4ede8004b9ea918340af957d, type: 3}
-    volume: 0.6
+    baseVolume: 0.6
     loop: 0
     autoPlayOnScenes: []
   - slug: UI Valid
     clip: {fileID: 8300000, guid: d41794b95bda73244880b62f9e7f88bb, type: 3}
-    volume: 0.6
+    baseVolume: 0.6
     loop: 0
     autoPlayOnScenes: []
   - slug: UI Pause
     clip: {fileID: 8300000, guid: 6709b3eed5f11824c862b2a5b4c86367, type: 3}
-    volume: 0.6
+    baseVolume: 0.6
     loop: 0
     autoPlayOnScenes: []
   - slug: UI Ask
     clip: {fileID: 8300000, guid: 5fb1265392577664b9226dbd7234bc04, type: 3}
-    volume: 0.6
+    baseVolume: 0.6
     loop: 0
     autoPlayOnScenes: []
   - slug: UI Back
     clip: {fileID: 8300000, guid: 7edf61e591271f848bfb91ab08af0076, type: 3}
-    volume: 0.6
+    baseVolume: 0.6
     loop: 0
     autoPlayOnScenes: []
   - slug: UI Coin
     clip: {fileID: 8300000, guid: cc11c6f8e14ab734f88ee84b4b78cc0e, type: 3}
-    volume: 0.35
+    baseVolume: 0.35
+    loop: 0
+    autoPlayOnScenes: []
+  - slug: Death Bonk 1
+    clip: {fileID: 8300000, guid: 0bce62ddf65dcc747bd7dbe878097766, type: 3}
+    baseVolume: 0.5
+    loop: 0
+    autoPlayOnScenes: []
+  - slug: Death Bonk 2
+    clip: {fileID: 8300000, guid: 4ace43e1376b68b43b25ae3228b99ae2, type: 3}
+    baseVolume: 0.5
     loop: 0
     autoPlayOnScenes: []

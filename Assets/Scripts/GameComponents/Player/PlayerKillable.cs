@@ -1,5 +1,6 @@
 using System.Collections;
 using DG.Tweening;
+using Global.Sound;
 using Interfaces;
 using UnityEngine;
 using UnityEngine.AI;
@@ -14,7 +15,7 @@ namespace GameComponents.Player
         private Transform _transform;
         private NavMeshAgent _agent;
         private Collider _collider;
-        
+
         private void Start()
         {
             _transform = GetComponent<Transform>();

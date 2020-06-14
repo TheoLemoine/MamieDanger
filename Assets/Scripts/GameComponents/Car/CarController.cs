@@ -1,3 +1,4 @@
+using Global.Sound;
 using Interfaces;
 using UnityEngine;
 
@@ -16,6 +17,7 @@ namespace GameComponents.Car
         [SerializeField] private WheelCollider wheelFrontRight;
         [SerializeField] private WheelCollider wheelFrontLeft;
 
+        private readonly string[] _bonks = { "Death Bonk 1", "Death Bonk 2" };
         private Rigidbody _rb;
         private Transform _transform;
         
@@ -44,7 +46,11 @@ namespace GameComponents.Car
         private void OnCollisionEnter(Collision other)
         {
             var killable = other.gameObject.GetComponent<IKillable>();
-            killable?.Kill(gameObject);
+            if (killable != null)
+            {
+                SoundManager.PlayStatic(_bonks[Random.Range(0, _bonks.Length)]);
+                killable.Kill(gameObject);
+            }
         }
     }
 }
