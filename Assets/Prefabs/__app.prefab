@@ -175,3 +175,23 @@ MonoBehaviour:
     baseVolume: 0.5
     loop: 0
     autoPlayOnScenes: []
+  - slug: Granny Voice 1
+    clip: {fileID: 8300000, guid: dd4accd15106f1c4b9117b2f42e0e260, type: 3}
+    baseVolume: 0.4
+    loop: 0
+    autoPlayOnScenes: []
+  - slug: Granny Voice 2
+    clip: {fileID: 8300000, guid: 19f963824ecae9d469d75055db3d193a, type: 3}
+    baseVolume: 0.4
+    loop: 0
+    autoPlayOnScenes: []
+  - slug: Granny Voice 3
+    clip: {fileID: 8300000, guid: 7df886a5a9c3a664789805adf9d37a34, type: 3}
+    baseVolume: 0.4
+    loop: 0
+    autoPlayOnScenes: []
+  - slug: Granny Voice 4
+    clip: {fileID: 8300000, guid: 0323344a66322ee4cab56885e7e4f601, type: 3}
+    baseVolume: 0.4
+    loop: 0
+    autoPlayOnScenes: []
