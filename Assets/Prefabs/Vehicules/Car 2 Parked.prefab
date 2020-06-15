@@ -33,6 +33,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5420630730778235101, guid: 57597247a7af45240acf46e53580a70c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 34c0b72754bf90f41811e15f88826472, type: 2}
     - target: {fileID: 5702055364253985132, guid: 57597247a7af45240acf46e53580a70c,
         type: 3}
       propertyPath: m_RootOrder
@@ -58,6 +63,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Car 2 Parked
       objectReference: {fileID: 0}
+    - target: {fileID: 7436309411411996489, guid: 57597247a7af45240acf46e53580a70c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 186faa26456392a488466712fb872065, type: 2}
     m_RemovedComponents:
     - {fileID: 2721698933547143013, guid: 57597247a7af45240acf46e53580a70c, type: 3}
     - {fileID: 2313959271389631550, guid: 57597247a7af45240acf46e53580a70c, type: 3}
