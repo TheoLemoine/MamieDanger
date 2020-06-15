@@ -860,6 +860,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: van
       objectReference: {fileID: 0}
+    - target: {fileID: 72690043237700274, guid: a211ec018fac82143b7c52e4735ce144,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e6412c817a36f5646977542ef84dcab7, type: 2}
     - target: {fileID: 511576723688093929, guid: a211ec018fac82143b7c52e4735ce144,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -870,6 +875,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6a87e1b654fe4b24791382b0dedba6c9, type: 2}
+    - target: {fileID: 3245083058229308710, guid: a211ec018fac82143b7c52e4735ce144,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 429af8b05b0d94a45a6032d648029657, type: 2}
     - target: {fileID: 3903482002083806783, guid: a211ec018fac82143b7c52e4735ce144,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
