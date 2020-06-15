@@ -57,7 +57,7 @@ LightmapSettings:
   m_LightmapEditorSettings:
     serializedVersion: 12
     m_Resolution: 2
-    m_BakeResolution: 7
+    m_BakeResolution: 4
     m_AtlasSize: 1024
     m_AO: 1
     m_AOMaxDistance: 1
@@ -1006,7 +1006,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2.352e-41, z: 0, w: 9.403955e-38}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -5653,7 +5653,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1.2141e-41, z: 0, w: 0.000000027241185}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: -1}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -10860,7 +10860,7 @@ PrefabInstance:
     - target: {fileID: 1201566432873118779, guid: 65d72a9cbeeba7943a28fd1129981f54,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 20.775
+      value: 20.775002
       objectReference: {fileID: 0}
     - target: {fileID: 1201566432873118779, guid: 65d72a9cbeeba7943a28fd1129981f54,
         type: 3}
