@@ -5779,7 +5779,7 @@ PrefabInstance:
     - target: {fileID: 1093032293677542274, guid: 80e69c7dd129843469fa1a6a13fcfece,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 0.0027808547
+      value: 0.0027861
       objectReference: {fileID: 0}
     - target: {fileID: 1093032293677542274, guid: 80e69c7dd129843469fa1a6a13fcfece,
         type: 3}
@@ -5789,7 +5789,7 @@ PrefabInstance:
     - target: {fileID: 1093032293677542274, guid: 80e69c7dd129843469fa1a6a13fcfece,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 0.94999826
+      value: 0.95000136
       objectReference: {fileID: 0}
     - target: {fileID: 3485583470954195564, guid: 80e69c7dd129843469fa1a6a13fcfece,
         type: 3}
@@ -5900,11 +5900,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Trash can
-      objectReference: {fileID: 0}
-    - target: {fileID: 7238479404011351237, guid: 80e69c7dd129843469fa1a6a13fcfece,
-        type: 3}
-      propertyPath: relativeTargetPosition.z
-      value: -1.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80e69c7dd129843469fa1a6a13fcfece, type: 3}
