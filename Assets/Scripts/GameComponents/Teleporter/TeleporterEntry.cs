@@ -38,6 +38,7 @@ namespace GameComponents.Teleporter
         {
             if (_waitToEnter)
             {
+                // Teleport only when player walked all the way through the teleporter
                 var playerPos = _coordinator.Player.transform.position;
                 var dist = (transform.position - playerPos).magnitude;
                 if (dist < 1f) Teleport();
@@ -48,6 +49,7 @@ namespace GameComponents.Teleporter
         {
             if (other.gameObject.GetInstanceID() == _coordinator.PlayerId && !_disableTeleport)
             {
+                //  When the player is teleported, he enter the trigger box and we dont want him to be sent back into the teleporter
                 if (_disableNextTriggerEnter)
                     _disableNextTriggerEnter = false;
                 else
@@ -85,16 +87,20 @@ namespace GameComponents.Teleporter
             var interacToggle = _coordinator.PlayerInteractor.CurrentInteracting;
             if (interacToggle != null)
             {
-                var navAgent = interacToggle.GetGameObject().GetComponent<NavMeshAgent>();
+                // Using dot product to know wether the interacting object is behind or in front of the player  
                 var agentDir = Vector3.Dot(forward,
                     interacToggle.GetGameObject().transform.position - _coordinator.Player.transform.position);
+                
+                // Adjust teleport position accordingly
                 var agentExitPos = agentDir < 0
                     ? exitPos + forward * 0.2f
                     : exitPos;
                 warpPos += agentDir < 0 ? -forward * 0.2f : Vector3.zero;
 
+                var navAgent = interacToggle.GetGameObject().GetComponent<NavMeshAgent>();
                 if (navAgent != null)
                 {
+                    // Navmesh agents must be teleported using warp
                     navAgent.Warp(agentExitPos);
                     navAgent.Warp(agentExitPos + forward * 2f);
                 }

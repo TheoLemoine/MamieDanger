@@ -32,6 +32,7 @@ namespace UI
             var levelsData = SaveManager.Instance.Data.levels;
             var index = 0;
             var locked = false;
+            // Init layout of each level
             foreach (var level in levels)
             {
                 var levelName = level.LevelButton.levelSceneName;
@@ -54,11 +55,12 @@ namespace UI
         {
             var goId = hit.collider.transform.parent.gameObject.GetInstanceID();
             var newIndex = Array.IndexOf(_goIds, goId);
+            
+            // If already on the clicked selector ( or close enough )
             if (newIndex == currentIndex || (newIndex == currentIndex - _indexDiff && Mathf.Abs(_indexDiff - _animProgression) < 0.25f))
             {
                 levels[newIndex].LevelButton.Click();
                 return;
-
             }
 
             // Complete animation if not already
@@ -66,7 +68,7 @@ namespace UI
                 _tween.Complete();
         
             _indexDiff = currentIndex - newIndex;
-
+            
             _tween = DOTween.To(value => _animProgression = value, 0f, _indexDiff, transitionDuration);
             _tween.onUpdate = CalcPos;
             _tween.onComplete = () =>
@@ -83,6 +85,7 @@ namespace UI
             var index = 0;
             foreach (var level in levels)
             {
+                // Move each level in an arc-like shape
                 var levelAngle = - Mathf.PI / 2f - angle * (index - currentIndex + _animProgression);
             
                 level.transform.localPosition = new Vector3(
@@ -91,6 +94,7 @@ namespace UI
                     Mathf.Sin(levelAngle) * radius
                 );
                 
+                // Create normalized value of how close each level is from being selected
                 var progFactor = 0f;
                 if (_indexDiff != 0)
                 {

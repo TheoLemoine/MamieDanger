@@ -21,6 +21,7 @@ namespace Terrain
 
         public void OnSetDestination(Vector3 newDestination, RaycastHit hit)
         {
+            // Cast another ray if the first cast is too far from destination or on a wall
             if (Vector3.Distance(newDestination, hit.point) > maxDistanceFromExpectation 
                 || (1 - Vector3.Dot(Vector3.up, hit.normal)) > slopeThreshold)
             {
