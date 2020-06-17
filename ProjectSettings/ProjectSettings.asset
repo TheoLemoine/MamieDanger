@@ -121,7 +121,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1
+  bundleVersion: 1.0.1
   preloadedAssets:
   - {fileID: 11400000, guid: d2cff02f1394fc64c95f06c72b0be02b, type: 2}
   metroInputSource: 0
@@ -168,7 +168,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: app.mamiedanger
   buildNumber: {}
-  AndroidBundleVersionCode: 1
+  AndroidBundleVersionCode: 3
   AndroidMinSdkVersion: 19
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
