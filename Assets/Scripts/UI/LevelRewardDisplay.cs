@@ -12,6 +12,11 @@ namespace UI
 
         public void LayoutPrefabs(int numberPicked)
         {
+            // Clean up list if it's not empty
+            if (_notFoundCoins != null && _notFoundCoins.Count != 0)
+                foreach (var notFoundCoin in _notFoundCoins)
+                    Destroy(notFoundCoin.gameObject);
+            
             _notFoundCoins = new List<Image>();
             for (int i = 0; i < 3; i++)
             {
