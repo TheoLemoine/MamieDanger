@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -19,11 +20,14 @@ namespace UI
         private float _lastBounceFactor = 1f;
         private bool _bounceIsFinished;
         private Tweener _tween;
+        private Material _defaultMaterial;
 
         public void UpdateMaterials()
         {
             if (locked)
                 rendererGroup.ChangeMaterial(lockedMaterial);
+            else
+                rendererGroup.ResetMaterial();
         }
 
         public void Click()

@@ -17,7 +17,7 @@ namespace UI
         {
             levelRewardDisplay.LayoutPrefabs(pickedCoinNumber);
             levelButton.locked = isLocked;
-            if (isLocked) levelButton.UpdateMaterials();
+            levelButton.UpdateMaterials();
         }
     }
 }

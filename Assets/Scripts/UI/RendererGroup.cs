@@ -9,6 +9,7 @@ namespace UI
         [SerializeField] private GameObject parentObject;
         [SerializeField] private Renderer[] rendererArray;
         private int[] _origLayers;
+        private Material[] _origMaterial;
 
         private void Start()
         {
@@ -18,10 +19,17 @@ namespace UI
                 rendererArray = parentObject.GetComponentsInChildren<Renderer>();
             }
 
+            FillOrigArrays();
+        }
+
+        private void FillOrigArrays()
+        {
             _origLayers = new int[rendererArray.Length];
+            _origMaterial = new Material[rendererArray.Length];
             for (var i = 0; i < rendererArray.Length; i++)
             {
                 _origLayers[i] = rendererArray[i].gameObject.layer;
+                _origMaterial[i] = rendererArray[i].material;
             }
         }
 
@@ -30,6 +38,7 @@ namespace UI
             parentObject = parent;
             useParent = true;
             rendererArray = parentObject.GetComponentsInChildren<Renderer>();
+            FillOrigArrays();
         }
     
         public Renderer[] GetRenderers()
@@ -58,6 +67,14 @@ namespace UI
             for (var i = 0; i < rendererArray.Length; i++)
             {
                 rendererArray[i].material = material;
+            }
+        }
+
+        public void ResetMaterial()
+        {
+            for (var i = 0; i < rendererArray.Length; i++)
+            {
+                rendererArray[i].material = _origMaterial[i];
             }
         }
     }

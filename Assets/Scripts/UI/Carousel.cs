@@ -110,5 +110,54 @@ namespace UI
                 index++;
             }
         }
+
+        public void UnlockAll()
+        {
+            // Cannot edit a dictionnary while iterating over it with a foreach
+            var levelsCopy = new Dictionary<string, SaveData.LevelResults>(SaveManager.Instance.Data.levels);
+            foreach (var keyValuePair in SaveManager.Instance.Data.levels)
+            {
+                var level = keyValuePair.Value;
+                level.finished = true;
+                levelsCopy[keyValuePair.Key] = level;
+            }
+            
+            var index = 0;
+            foreach (var levelSelector in levels)
+            {
+                levels[index].LayoutLevelSelector(false,
+                    SaveManager.Instance.Data.levels.ContainsKey(levelSelector.LevelButton.levelSceneName)
+                        ? SaveManager.Instance.Data.levels[levelSelector.LevelButton.levelSceneName].coinsPicked.Count
+                        : 0
+                    );
+                index++;
+            }
+
+            SaveManager.Instance.Data.levels = levelsCopy;
+            SaveManager.Instance.Persist();
+        }
+        
+        public void ResetAll()
+        {
+            // Cannot edit a dictionnary while iterating over it with a foreach
+            var levelsCopy = new Dictionary<string, SaveData.LevelResults>(SaveManager.Instance.Data.levels);
+            foreach (var keyValuePair in SaveManager.Instance.Data.levels)
+            {
+                var level = keyValuePair.Value;
+                level.finished = false;
+                level.coinsPicked = new List<string>();
+                levelsCopy[keyValuePair.Key] = level;
+            }
+
+            var index = 0;
+            foreach (var levelSelector in levels)
+            {
+                levelSelector.LayoutLevelSelector(index != 0, 0);
+                index++;
+            }
+            
+            SaveManager.Instance.Data.levels = levelsCopy;
+            SaveManager.Instance.Persist();
+        }
     }
 }
