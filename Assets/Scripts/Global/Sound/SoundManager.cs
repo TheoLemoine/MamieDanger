@@ -22,6 +22,7 @@ namespace Global.Sound
         [SerializeField] private List<SoundEffect> sounds;
         private static SoundManager _instance;
         public static VolumeLevels GlobalVolume => SaveManager.Instance.Data.settings.volume;
+        public static event Action<VolumeLevels> OnGlobalVolumeChanged; 
         
         private void Awake()
         {
@@ -83,6 +84,8 @@ namespace Global.Sound
         {
             SaveManager.Instance.Data.settings.volume = level;
             SaveManager.Instance.Persist();
+
+            OnGlobalVolumeChanged?.Invoke(level);
             UpdateVolumeStatic(level);
         }
     }

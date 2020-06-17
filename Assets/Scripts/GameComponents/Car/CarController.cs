@@ -1,6 +1,8 @@
+using System;
 using Global.Sound;
 using Interfaces;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace GameComponents.Car
 {
@@ -20,11 +22,39 @@ namespace GameComponents.Car
         private readonly string[] _bonks = { "Death Bonk 1", "Death Bonk 2" };
         private Rigidbody _rb;
         private Transform _transform;
+        private AudioSource _engineAudio;
+        
+        private float _baseVolume; 
         
         protected virtual void Start()
         {
             _rb = GetComponent<Rigidbody>();
             _transform = GetComponent<Transform>();
+
+            _engineAudio = GetComponent<AudioSource>();
+            _baseVolume = _engineAudio.volume;
+            SoundManager.OnGlobalVolumeChanged += UpdateEngineVolume;
+        }
+
+        private void OnDestroy()
+        {
+            SoundManager.OnGlobalVolumeChanged -= UpdateEngineVolume;
+        }
+
+        private void UpdateEngineVolume(VolumeLevels level)
+        {
+            switch (level)
+            {
+                case VolumeLevels.Loud:
+                    _engineAudio.volume = _baseVolume;
+                    break;
+                case VolumeLevels.Low:
+                    _engineAudio.volume = _baseVolume * 0.5f;
+                    break;
+                case VolumeLevels.Mute:
+                    _engineAudio.volume = 0;
+                    break;
+            }
         }
 
         private void FixedUpdate()
