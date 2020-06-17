@@ -25,10 +25,14 @@ namespace Terrain
         {
             _objHasBeenDestroy = _objHasBeenDestroy || objectToFollow == null;
             if (_objHasBeenDestroy) return;
+            
+            // Cast a ray to the ground where the quad should go
             if (Physics.Raycast(objectToFollow.position + objectToFollow.TransformVector(raycastOriginAdjustment), Vector3.down, out var hit, maxRaycastDistance, groundLayer.Mask))
             {
                 _transform.position = hit.point + hit.normal * normalOffset;
+                // Quad rotation can follow object y rotation with "keepObjectRotation" var
                 var yRotation = keepObjectRotation ? objectToFollow.rotation.eulerAngles.y : 0f;
+                // Quad rotation take into account the slope of the floor
                 _transform.rotation = Quaternion.LookRotation(hit.normal, Vector3.up) * Quaternion.Euler(objectRotationAdjustment) * Quaternion.AngleAxis(yRotation, Vector3.up);
             }
         }

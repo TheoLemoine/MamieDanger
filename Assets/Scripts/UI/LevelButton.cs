@@ -29,6 +29,7 @@ namespace UI
         public void Click()
         {
             _bounceIsFinished = false;
+            // Change tween params depending on level state
             var usedBounceFactor = lockedBounceFactor;
             var duration = lockedBounceDuration;
             if (!locked)
@@ -39,6 +40,7 @@ namespace UI
             }
             
             if (_tween != null && !_tween.IsComplete()) _tween.Kill();
+            // Bounce is made of two tweens
             _tween = DOTween.To(value => _currentBounceFactor = value, 1f, usedBounceFactor, duration);
             _tween.SetEase(Ease.OutSine);
             _tween.onUpdate = UpdateScale;
@@ -64,6 +66,7 @@ namespace UI
 
         private void UpdateScale()
         {
+            // Scale only by the difference between last and current scale
             transform.localScale *= _currentBounceFactor / _lastBounceFactor;
             _lastBounceFactor = _currentBounceFactor;
         }
