@@ -62,7 +62,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: -334000983
   m_Radius: 0.8
-  m_Speed: 3.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 250
@@ -185,7 +185,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   offset: {x: 1.8, y: 0, z: 0}
-  slowFactor: 2
+  slowFactor: 1.5
   animator: {fileID: 7923143085491239314}
   animationSpeedModifier: 0.7
 --- !u!114 &132396505395922708
